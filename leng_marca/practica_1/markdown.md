@@ -37,9 +37,11 @@ Este lenguaje permite dar formato a textos empleando una serie de caracteres de 
 
 ![imagen.jpg](https://document360.com/wp-content/uploads/2020/01/Introductory-Guide-to-Markdown-for-Documentation-Writers-Document360-1200x683.jpg)
 
-| cabecera1 | | cabecera2 | | cabecera3 |
-|-----------| |-----------| |-----------|
-| contenido1 | | contenido2 | | contenido3 |
+| cabecera 1 | cabcera 2 | cabecera 3 |
+|----------|----------|----------|
+| contenido 1    | contenido 2   | contenido 3   |
+| contenido 4    | contenido 5   | contenido 6   |
+
 
 [Segundo documento markdown](markdown2.md)
 
