@@ -5,7 +5,6 @@
 /**
  * 
  */
-import java.awt.SystemColor;
 import java.util.*;
 public class holamundo {
 
@@ -22,8 +21,9 @@ public class holamundo {
 			Comentario
 			Varias líneas
 		 */
-		
-		
+		mostrar("Hola Mundo!")
+	}
+		public static void mostrar(String s) {
 		System.out.println("Hola mundo!");
 	}
 

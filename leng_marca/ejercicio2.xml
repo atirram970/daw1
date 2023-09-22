@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipos>
+    <equipo nombre="Real Madrid">
+        <num_jugadores></num_jugadores>
+        <rol_jugador>
+            <porteros></porteros>
+            <delanteros></delanteros>
+            <centros></centros>
+            <defensas></defensas>
+        </rol_jugador>
+
+    </equipo>
+</equipos>

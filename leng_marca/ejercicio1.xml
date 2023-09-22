@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehiculos>
+    <vehiculo tipo="coche">
+        <marca></marca>
+        <modelo></modelo>
+        <fecha_fab></fecha_fab>
+        <num_ruedas></num_ruedas>
+        <peso></peso>
+        <motor></motor>
+    </vehiculo>
+</vehiculos>
