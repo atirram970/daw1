@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vehiculos>
-    <vehiculo tipo="coche">
-        <marca></marca>
-        <modelo></modelo>
-        <fecha_fab></fecha_fab>
-        <num_ruedas></num_ruedas>
-        <peso></peso>
-        <motor></motor>
-    </vehiculo>
-</vehiculos>
+        <libros>
+            <libro>
+                <titulo></titulo>
+                <autor></autor>
+                <editorial></editorial>
+                <fech_publica></fech_publica>
+                <isb></isb>
+                <precio></precio>
+                <num_pag></num_pag>
+            </libro>
+        </libros>
