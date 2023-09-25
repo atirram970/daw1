@@ -5,7 +5,6 @@
                 <autor></autor>
                 <editorial></editorial>
                 <fech_publica></fech_publica>
-                <isb></isb>
                 <precio></precio>
                 <num_pag></num_pag>
             </libro>
