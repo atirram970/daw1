@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!--1a.Diferencias entre los 2 documentos-->
+        <!--El primer archivo xml trata los datos como atributos, mientras que el segundo, los trata como etiquetas a parte-->
+
+        <!--1b.Añade el autor “Domingo Fernández Pérez" al libro-->
+        <libros>
+            <libro
+                autor1="Isabel Castro"
+                autor2="Domingo Fernández Pérez"
+                titulo="XML Guía de Aprendizaje"
+                precio="30€">
+            </libro>
+
+            <libro>
+                <autor>Isabel Castro</autor>
+                <autor>Domingo Fernández Pérez</autor>
+                <titulo>XML Guía de Aprendizaje</titulo>
+                <precio moneda="euros">30</precio>
+            </libro>
+        </libros>
