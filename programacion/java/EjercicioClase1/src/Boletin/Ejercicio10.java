@@ -30,7 +30,6 @@ public class Ejercicio10 {
 				"El número está entre 75 y 100, incluyendo ambos" : 
 					"El número no está entre 75 y 100, incluyendo ambos";
 		
-		//Extra
 		msg=((d>=0 && d<=25) || (d>=75 && d<=100)) ? 
 				"El número está entre 0 y 25 o entre 75 y 100, incluyendo todos" : 
 					"El número no está entre 0 y 25 ni entre 75 y 100, incluyendo todos";
