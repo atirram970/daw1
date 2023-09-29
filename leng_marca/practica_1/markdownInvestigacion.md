@@ -54,12 +54,10 @@ print(suma(2, 3))
 
 ---
 
-Voy a usar [ASPOSE](https://products.aspose.app/html/es/conversion/md-to-html) para transformar mi documento markdown a HTML
+Voy a usar [Free Markdown to HTML](https://markdowntohtml.com/) para transformar mi documento markdown a HTML
 
 ## Diferencias entre Markdown y HTML visualmente:
-1. las tablas no cargan 
-2. los hipervínculos entre los 2 documentos no funciona correctamente
-3. Al usar una web online no se codifica como UTF-8 y no se ven las tildes
+- Con el convertidor que he usado, no he notado ninguna diferencia visual notable
 
 Aquí Un enlace del segundo archivo de markdown con la sintaxis de esta
 

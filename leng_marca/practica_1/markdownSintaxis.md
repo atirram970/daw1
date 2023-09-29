@@ -51,11 +51,21 @@ _Texto en cursiva con barras bajas_
 `commit -m "$mensaje"`
 `git push`
 
+### Tabla
+
+| uno | dos | tres|
+| ------ | ------ | ------ |
+| c1 | c2 | c3 |
+| c1 | c2 | c3 | 
+| c1 | c2 | c3 |
+| c1 | c2 | c3 |
+| c1 | c2 | c3 |
+| c1 | c2 | c3 |
 
 ### Imagen
 
   
-![Texto alternativo](https://justyy.com/wp-content/uploads/2016/01/markdown-syntax-language.png)
+![Texto alternativo](markdown.png)
 
 ### Enlace:
-[Documento Investigación Markdown](markdownInvestigacion.md)                                                                                                                                                                                                                                                                                                                                                                               
+[Documento Investigación Markdown](markdownInvestigacion.md)
