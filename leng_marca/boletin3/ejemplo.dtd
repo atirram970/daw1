@@ -1,0 +1,9 @@
+<!ELEMENT biblioteca (libro)>
+<!ELEMENT libro ANY>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT fec_creac (#PCDATA)>
+<!ELEMENT fec_prest (#PCDATA)>
+<!ELEMENT fec_devol (#PCDATA)>
