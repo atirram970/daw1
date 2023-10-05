@@ -48,6 +48,7 @@ public class ejConversionNumAMes {
 		System.out.println(Nota);
 		System.out.println(NotaRedondeada);
 		
+		//Encargado de elegir el mes segun el numero
 		switch ( NotaRedondeada ) 
 		{
 		case 0,1,2,3,4: {

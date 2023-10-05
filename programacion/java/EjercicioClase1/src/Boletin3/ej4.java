@@ -1,20 +1,20 @@
 /**
  * 
  */
-package Boletin2;
+package Boletin3;
 
 import java.util.Scanner;
 
 /**
  * 
  */
-public class ejCalculaTipoTest {
+public class ej4 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//Ejercicio calcular nota tipo test
+		//Ejercicio calcular ecuacion segundo grado
 		
 	}
 
