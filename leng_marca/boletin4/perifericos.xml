@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    **Enunciado**
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE perifericos [
+ <!ELEMENT perifericos (#PCDATA)>
+]>
+<perifericos>
+ <periferico>impresora</periferico>
+ <periferico>monitor</periferico>
+ <periferico>teclado</periferico>
+</perifericos>
+-->
+
+<!DOCTYPE perifericos [
+<!ELEMENT perifericos (#PCDATA)>
+]>
+<perifericos>
+    impresoras
+    monitor
+    teclado
+</perifericos>
