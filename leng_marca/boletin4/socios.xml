@@ -30,11 +30,11 @@
 -->
 <!DOCTYPE socios [
  <!ELEMENT socios (socio)*>
- <!ELEMENT socio (nombre*,edad?, numero?, clave?)>
- <!ELEMENT clave (#PCDATA)>
- <!ELEMENT edad (#PCDATA)>
+ <!ELEMENT socio (nombre, edad?, numero?, clave?)>
  <!ELEMENT nombre (#PCDATA)>
+ <!ELEMENT edad (#PCDATA)>
  <!ELEMENT numero (#PCDATA)>
+ <!ELEMENT clave (#PCDATA)>
 ]>
 <socios>
     <socio>
