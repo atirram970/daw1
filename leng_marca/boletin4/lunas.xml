@@ -20,8 +20,8 @@
  <!ELEMENT lunas (luna)*>
  <!ELEMENT luna EMPTY>
     <!ATTLIST luna numero ID #REQUIRED>
-    <!ATTLIST luna nombre ID #REQUIRED>
-    <!ATTLIST luna planeta #IMPLIED>
+    <!ATTLIST luna nombre CADATA #REQUIRED>
+    <!ATTLIST luna planeta CDATA #IMPLIED>
 ]>
 <lunas>
     <luna numero="N234" nombre="Galatea"/>
