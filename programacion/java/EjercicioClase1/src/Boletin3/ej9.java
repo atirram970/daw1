@@ -34,7 +34,7 @@ public class ej9 {
 		//normal
 		for (int columnas=1; columnas<NumColumnas; columnas++) 
 		{
-			for (int filas=1; filas<NumFilas ; filas++) 
+			for (int filas=1; filas<=NumFilas ; filas++) 
 			{
 				System.out.println(entrada);
 				entrada=entrada+PrimeraEntrada;
