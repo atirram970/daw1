@@ -2,7 +2,8 @@ package com.adriantirado.tarea2;
 
 import java.util.Scanner;
 
-public class Ejercicio2 {
+public class Ejercicio2 
+{
 
 	public static void main(String[] args) 
 	{
@@ -16,31 +17,42 @@ public class Ejercicio2 {
 		int aleatorio = (int) (100*Math.random()+1);
 		 */
 	
+		//generador de numero aleatorio
 		int aleatorio = (int) (100*Math.random()+1);
-		int numUSU=0;
+		//declarar variable del numero que va a introducir el usuario
+		int numUSU;
+		//declaro variable de oportunidades que tiene el usuario
 		int oportunidades=5;
-		
-		Scanner scannerUSU = new Scanner(System.in); // create scanner object outside the loop
+		//apertura de scaner de lo que va a introducir el usuario
+		Scanner scannerUSU = new Scanner(System.in);
 		
 		for (int contador = 1; contador <= oportunidades; contador++) 
 		{
+			//pedir numero al usuario entre 1 y 100
 			System.out.println("Introduce un número(1-100): ");
 			numUSU=scannerUSU.nextInt();
 			
-			if (numUSU==aleatorio) 
+			//si numero introducido equivale al aleatorio -->
+			if (numUSU == aleatorio) 
 			{
+				//mensaje de que se ha acertado el numero junto a los intentos y mostrando el numero aleatorio
 				System.out.println("Has acertado en el intento numero: "+contador);
 				System.out.println("El número era: "+aleatorio);
-				break; // exit the loop if the number is guessed correctly
+				break;
 			}
+			//si aleatorio es mayor al numero introducido -->
+			//junto a control de errores para que el usuario no introduzca numeros fuera del rango
 			else if (aleatorio>numUSU && (numUSU>=0 && numUSU<=100)) 
 			{
 				System.out.println(contador+" intento.\nHas fallado, el número es más grande\nTe quedan: "+(oportunidades-contador)+" oportunidades");
 			}
+			//si aleatorio es menor al numero introducido -->
+			//junto a control de errores para que el usuario no introduzca numeros fuera del rango
 			else if (aleatorio<numUSU && (numUSU>=0 && numUSU<=100)) 
 			{
 				System.out.println(contador+" intento.\nHas fallado, el número es más pequeño\nTe quedan: "+(oportunidades-contador)+" oportunidades");
 			}
+			//Si el usuario introduce un numero fuera del rango, mostrar este mensaje
 			else
 			{
 				System.out.println("Te has pasado de rango");
