@@ -20,8 +20,17 @@ public class Ejercicio3
             {
 	            case 0: 
 	            {
-	                System.out.println("Has elegido salir del programa");
-	                break;
+	                System.out.println("Has elegido salir del programa, pulsa cualquier tecla para continuar");
+	                String esperar = scannerUSU.next();
+	                if (esperar.isEmpty() | esperar.isBlank()) 
+	                {
+	                	System.out.println("Hasta luego");
+					}
+	                else
+	                {
+	                	System.out.println("Hasta luego");
+	                }
+	                System.exit(0);
 	            }
                 case 1: 
                 {

@@ -21,7 +21,7 @@ public class Ejercicio4
 		
 		//pedir al uaurio cualquier numero
 		Scanner scannerUSU = new Scanner(System.in);
-		System.out.println("Introduce un número(con \"-1\" se acaba): ");
+		System.out.println("Introduce un número(con -1 se acaba): ");
 		
 		//mientras que el usuario no introduzca "-1" haz -->
 		while (entradaUSU != -1) 

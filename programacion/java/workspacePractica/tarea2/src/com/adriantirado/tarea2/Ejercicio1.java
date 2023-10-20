@@ -32,7 +32,7 @@ public class Ejercicio1
 			{
 				//Mensaje en caso de acierto con el contador de nº de intentos junto a la contraseña
 				System.out.println("Has acertado en el intento nº " + contador + ", la contraseña era: " + contrasena);
-				return;
+				System.exit(0);
 			}
 			else
 			{
