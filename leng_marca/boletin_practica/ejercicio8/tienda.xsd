@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tiendas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre_t" type="xs:string"/>
+                <xs:element name="dueno">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre_d"/>
+                            <xs:element name="dni"/>
+                            <xs:element name="contacto">
+                                <xs:simpleType>
+                                    <xs:sequence>
+                                        <xs:element name="tlf" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:simpleType>
+                            <xs:element name="direccion" type="xs:string"/>    
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="almacen">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="stock">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cantidad" type="xs:positiveInteger"/>
+                                        <xs:element name="precio" type="xs:positiveInteger"/>
+                                        <xs:element name="unidad" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="socios">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="socio">
+                                <xs:complexType>
+                                    <xs:any>
+                                        <xs:element name="nombre_s" type="xs:string"/>
+                                        <xs:element name="telefono" type="tlf"/>
+                                        <xs:element name="reservas">
+                                            <xs:complexType>
+                                                <xs:any>
+                                                    
+                                                </xs:any>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:any>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

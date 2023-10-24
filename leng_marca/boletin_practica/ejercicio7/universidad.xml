@@ -1,0 +1,47 @@
+<universidad>
+    <alumno>
+        <datos_personales>
+            <dni_pasaporte>12345678A</dni_pasaporte>
+            <nombre>Juan</nombre>
+            <primer_apellido>García</primer_apellido>
+            <fecha_nacimiento>1990-01-01</fecha_nacimiento>
+            <contacto>
+                <direccion_postal>Calle Falsa 123, Sevilla</direccion_postal>
+                <telefono>600123456</telefono>
+                <email>juan.garcia@example.com</email>
+            </contacto>
+        </datos_personales>
+        <asignaturas>
+            <asignatura_ref>
+                <codigo>INF101</codigo>
+                <nota>NT</nota>
+            </asignatura_ref>
+        </asignaturas>
+    </alumno>
+
+    <profesor>
+        <datos_personales>
+            <dni_pasaporte>87654321Z</dni_pasaporte>
+            <nombre>Maria</nombre>
+            <primer_apellido>López</primer_apellido>
+            <fecha_nacimiento>1980-01-01</fecha_nacimiento>
+        </datos_personales>
+        <despacho>2.2B</despacho>
+        <horario_tutorias>Lunes 10:00-12:00</horario_tutorias>
+        <asignaturas>
+            <asignatura_ref>
+                <codigo>INF101</codigo>
+                <nota></nota>
+            </asignatura_ref>
+        </asignaturas>
+    </profesor>
+
+    <asignatura>
+        <codigo>INF101</codigo>
+        <creditos>6</creditos>
+        <carrera>Ingeniería Informática</carrera>
+        <curso>1</curso>
+        <tipo>Obligatoria</tipo>
+    </asignatura>
+
+</universidad>

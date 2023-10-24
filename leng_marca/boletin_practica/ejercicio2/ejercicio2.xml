@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <plato nombre="Pastel o tarta de picantón y verduras">
+        <descripcion>Plato de ave relleno de verduras y cubierto de hojaldre</descripcion> 
+        <precio>15€</precio>
+        <ingredientes>picantón, cebolla, puerro, zanahoria, calabacín, champiñones, hojaldre, mantequilla, huevo, sal y pimienta</ingredientes>
+        <categoría>Plato principal</categoría>
+        <puntuacion>3.7/5</puntuacion>
+    </plato>
+    <plato nombre="Gambas al ajillo">
+        <descripcion>Plato típico español de gambas salteadas con ajo, aceite de oliva y pimentón</descripcion> 
+        <precio>10€</precio>
+        <ingredientes>gambas, ajo, aceite de oliva, pimentón, sal y perejil</ingredientes>
+        <categoría>Entrante</categoría>
+        <puntuacion>4.7/5</puntuacion>
+    </plato>
+    <plato nombre="Rossejat de fideos">
+        <descripcion>Plato tradicional catalán de fideos tostados y caldosos con marisco y alioli</descripcion> 
+        <precio>15€</precio>
+        <ingredientes>fideos, caldo de pescado, gambas, mejillones, ajo, aceite de oliva, sal, pimentón y azafrán</ingredientes>
+        <categoría>Plato principal</categoría>
+        <puntuacion>4.6/5</puntuacion>
+    </plato>
+    <plato nombre="Crema catalana">
+        <descripcion>Postre típico catalán de crema pastelera con azúcar quemado en la superficie</descripcion> 
+        <precio>5€</precio>
+        <ingredientes>leche, huevos, azúcar, maicena, canela, limón y azúcar moreno</ingredientes>
+        <categoría>Postre</categoría>
+        <puntuacion>4.4/5</puntuacion>
+    </plato>
+</menu>

@@ -1,0 +1,24 @@
+<!ELEMENT universidad (alumno*, profesor*, asignatura*)>
+<!ELEMENT alumno (datos_personales, asignaturas)>
+<!ELEMENT profesor (datos_personales, despacho, horario_tutorias, asignaturas)>
+<!ELEMENT asignatura (codigo, creditos, carrera, curso, tipo)>
+<!ELEMENT datos_personales (dni_pasaporte, nombre, primer_apellido, segundo_apellido?, fecha_nacimiento, contacto*)>
+<!ELEMENT dni_pasaporte (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT primer_apellido (#PCDATA)>
+<!ELEMENT segundo_apellido (#PCDATA)>
+<!ELEMENT fecha_nacimiento (#PCDATA)>
+<!ELEMENT contacto (direccion_postal?, telefono*, email*)>
+<!ELEMENT direccion_postal (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT despacho (#PCDATA)>
+<!ELEMENT horario_tutorias (#PCDATA)>
+<!ELEMENT asignaturas (asignatura_ref*)>
+<!ELEMENT asignatura_ref (codigo, nota)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+<!ELEMENT creditos (#PCDATA)>
+<!ELEMENT carrera (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
