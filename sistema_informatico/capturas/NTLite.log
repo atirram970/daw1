@@ -1,0 +1,518 @@
+﻿25/10/2023 19:41	Load tool settings
+25/10/2023 19:41	NTLite v1.5.0.5855
+25/10/2023 19:41	 - GCT
+25/10/2023 19:41		12 LPD
+25/10/2023 19:41	Gather host hardware
+25/10/2023 19:41	 - GH
+25/10/2023 19:41	 - ci
+25/10/2023 19:41	 - Gather image list
+25/10/2023 19:41	Save settings
+25/10/2023 19:41	Host: Windows 10 Pro Education 64-bit - Client 10.0.19041.1 (es-ES) - es-ES
+25/10/2023 19:41	Load image list
+25/10/2023 19:41	Predefinido borrado 'Sesión guardada automáticamente {4D852BAF-58B0-4B81-BC09-6EEB6A07BC05}'
+25/10/2023 19:41	Advertencia: La fuente seleccionada ya está en la lista:
+F:\isos\MiniOS10 PRO v2022.10 x64\Sources\install.wim
+25/10/2023 19:42	Advertencia: La fuente seleccionada ya está en la lista:
+F:\isos\MiniOS10 PRO v2022.10 x64\Sources\install.wim
+25/10/2023 19:43	Advertencia: La fuente seleccionada ya está en la lista:
+F:\isos\MiniOS10 PRO v2022.10 x64\Sources\install.wim
+25/10/2023 19:43	 - Gather image list
+25/10/2023 19:43	Save settings
+25/10/2023 19:43	Load image list
+25/10/2023 19:43	Cargar imagen F:\isos\MiniOS10 PRO v2022.10 x64\Sources\install.wim (MiniOS10 Pro + DELTA Lite) x64 Professional
+25/10/2023 19:43		Mount dir: C:\Users\1DAW\AppData\Local\Temp\NLMount01
+25/10/2023 19:43	Montando imagen: F:\isos\MiniOS10 PRO v2022.10 x64\Sources\install.wim (MiniOS10 Pro + DELTA Lite)
+25/10/2023 19:43	GWH
+25/10/2023 19:45	# 
+25/10/2023 19:45	Load data
+25/10/2023 19:45	- CPD
+25/10/2023 19:45	- UR ld0
+25/10/2023 19:45	- FUR
+25/10/2023 19:45	- UR ld0
+25/10/2023 19:45	Leyendo datos
+25/10/2023 19:45	- Gather hardware lists
+25/10/2023 19:45	- Gather packages
+25/10/2023 19:45	Connecting BC
+25/10/2023 19:45	- Filtering packages
+25/10/2023 19:45	- Gather existing drivers
+25/10/2023 19:45	- Gather existing Post-Setup
+25/10/2023 19:45	- Gather services
+25/10/2023 19:46	Service McpManagementService description extract error 2.
+25/10/2023 19:46	- Gather driver services
+25/10/2023 19:46	Service MsQuic description extract error 2.
+25/10/2023 19:46	- Gather components
+25/10/2023 19:46	- Gather languages
+25/10/2023 19:46	- Gather keyboards
+25/10/2023 19:46	- Gather fonts
+25/10/2023 19:46	- Connect drivers
+25/10/2023 19:46	- Gather tweaks
+25/10/2023 19:46	- Gather unattended data
+25/10/2023 19:46		- Timezones
+25/10/2023 19:46		- Keyboards
+25/10/2023 19:46		- Locales
+25/10/2023 19:46	- Gather unattended options
+25/10/2023 19:46	# 
+25/10/2023 19:46	Windows 10 Enterprise 64-bit - Client 10.0.19041.2006
+25/10/2023 19:46	Cargar predefinido: Sesión guardada automáticamente {4D852BAF-58B0-4B81-BC09-6EEB6A07BC05}
+25/10/2023 19:46		-Loading components
+25/10/2023 19:46	- Apply compatibility options
+25/10/2023 19:46		- Reset
+25/10/2023 19:46		-Loading features
+25/10/2023 19:46		-Loading updates
+25/10/2023 19:46		-Loading drivers
+25/10/2023 19:46		-Loading unattended
+25/10/2023 19:46	- Gather unattended options
+25/10/2023 19:46		-Loading tweaks
+25/10/2023 19:46		-Loading execution list
+25/10/2023 19:46		-Loading registry list
+25/10/2023 19:46		-Loading apply options
+25/10/2023 19:46	# 
+25/10/2023 19:46	# 
+25/10/2023 19:46	- UR ld0
+25/10/2023 19:46	Completado - Cargar imagen
+25/10/2023 19:46	 - Gather image list
+25/10/2023 19:46	Save settings
+25/10/2023 19:46	Load image list
+25/10/2023 19:47	Exit from UI
+25/10/2023 19:47	Create ISO
+25/10/2023 19:47	 - Source Image root F:\isos\MiniOS10 PRO v2022.10 x64
+25/10/2023 19:47	 - Gather image list
+25/10/2023 19:47	Save settings
+25/10/2023 19:47	Load image list
+25/10/2023 19:48	- Listing components
+25/10/2023 20:18	- Gathering update package info
+25/10/2023 20:18	Leyendo información del paquete 1/1 (C:\Users\1DAW\Downloads\windows-kb890830-x64-v5.117_4e8e5e229c5f7dadef32ac5f182a0662d0c2f370.exe)
+25/10/2023 20:18	Error 1813 extracting package info: C:\Users\1DAW\Downloads\windows-kb890830-x64-v5.117_4e8e5e229c5f7dadef32ac5f182a0662d0c2f370.exe
+25/10/2023 20:18	# 
+25/10/2023 20:18	- UR ld0
+25/10/2023 20:18	Añadidos los paquetes a la lista de integración.
+25/10/2023 20:19	Drivers page fill
+25/10/2023 20:19	- Hardware list refresh
+25/10/2023 20:19	- Listing added drivers
+25/10/2023 20:19	- Listing hardware
+25/10/2023 20:19	Refreshing hardware list selection
+25/10/2023 20:19	Refreshing hardware list selection
+25/10/2023 20:19	- Listing post-setup executions
+25/10/2023 20:20	Refreshing hardware list selection
+25/10/2023 20:27	Leyendo información de archivos del controlador
+25/10/2023 20:27	Leyendo la información del controlador 1/4 (prnms001.Inf)
+25/10/2023 20:27	Leyendo la información del controlador 2/4 (VBoxWddm.inf)
+25/10/2023 20:27	Leyendo la información del controlador 3/4 (prnms009.Inf)
+25/10/2023 20:27	Leyendo la información del controlador 4/4 (VBoxGuest.inf)
+25/10/2023 20:27	Refreshing hardware list selection
+25/10/2023 20:27	Controladores añadidos a la cola (4)
+25/10/2023 20:27	Controladores eliminados de la cola (4)
+25/10/2023 20:27	Refreshing hardware list selection
+25/10/2023 20:27	Leyendo información de archivos del controlador
+25/10/2023 20:27	Refreshing hardware list selection
+25/10/2023 20:27	Controladores añadidos a la cola (25)
+25/10/2023 20:39	Refreshing hardware list selection
+25/10/2023 20:40	Refreshing hardware list selection
+25/10/2023 20:41	Empiece a aplicar todos los cambios pendientes.
+25/10/2023 20:41	# 
+25/10/2023 20:41	Save settings
+25/10/2023 20:41	- Save preset: Sesión guardada automáticamente {4D852BAF-58B0-4B81-BC09-6EEB6A07BC05}
+25/10/2023 20:41	Unattended: root
+25/10/2023 20:41	Unattended: pass 'Generalizar'
+25/10/2023 20:41	Unattended: pass 'OOBE (opciones de instalación final)'
+25/10/2023 20:41	Unattended: pass 'Especial'
+25/10/2023 20:41	Unattended: pass 'WindowsPE (Opciones instalación)'
+25/10/2023 20:41	Unattended: root
+25/10/2023 20:41	Unattended: pass 'Generalizar'
+25/10/2023 20:41	Unattended: pass 'OOBE (opciones de instalación final)'
+25/10/2023 20:41	Unattended: pass 'Especial'
+25/10/2023 20:41	Unattended: pass 'WindowsPE (Opciones instalación)'
+25/10/2023 20:41	# 
+25/10/2023 20:41	Preparando la configuración
+25/10/2023 20:41	DISM Scratch dir: C:\Users\1DAW\AppData\Local\Temp\NLScratch\NLDScratch
+25/10/2023 20:41	- DI
+25/10/2023 20:41	DM1
+25/10/2023 20:41	- UR ld1
+25/10/2023 20:41	Cleaning D-Scratch dir
+25/10/2023 20:41	Activando: Hyper-V
+25/10/2023 20:41	Activando: KB5017308  |  Instalar servicios de TCPIP simple
+25/10/2023 20:41	Activando: Telnet Client
+25/10/2023 20:41	- UR ld1
+25/10/2023 20:41	- DCS
+25/10/2023 20:41	- DS
+25/10/2023 20:41	- CPD
+25/10/2023 20:41	- UR ld0
+25/10/2023 20:41	# 
+25/10/2023 20:41	RCT
+25/10/2023 20:41	Preparando datos
+25/10/2023 20:41	 - Preparing registry
+25/10/2023 20:41	 - Pre-loading selected data
+25/10/2023 20:41	- section 1
+25/10/2023 20:41	- section 2
+25/10/2023 20:41	- section 3
+25/10/2023 20:41	- section 4
+25/10/2023 20:41	- section 5
+25/10/2023 20:41	- section 6
+25/10/2023 20:41	- section 7
+25/10/2023 20:41	- section 8
+25/10/2023 20:41	- section 9
+25/10/2023 20:41	- section 10
+25/10/2023 20:41	Preparando datos
+25/10/2023 20:41	 - RDS
+25/10/2023 20:41	Stack %SystemRoot%\winsxs\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.19041.1940_none_7dd80d767cb5c7b0
+25/10/2023 20:41	RDS clean 0
+25/10/2023 20:41	 - Collect
+25/10/2023 20:42	 - PMR
+25/10/2023 20:42	PWF
+25/10/2023 20:42	RAEC
+25/10/2023 20:42	Disable cw
+25/10/2023 20:42	Protector de funciones
+25/10/2023 20:42	- static
+25/10/2023 20:42	- kept components
+25/10/2023 20:42	Removing components
+25/10/2023 20:42	- UR ld0
+25/10/2023 20:42	DISM Scratch dir: C:\Users\1DAW\AppData\Local\Temp\NLScratch\NLDScratch
+25/10/2023 20:42	Eliminando: Advanced Micro Devices, Inc.  |  amdi2c.inf
+25/10/2023 20:42	 - 0.05 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iagpio.inf
+25/10/2023 20:42	 - 0.04 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iai2c.inf
+25/10/2023 20:42	 - 0.09 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iaLPSS2i_GPIO2_BXT_P.inf
+25/10/2023 20:42	 - 0.1 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iaLPSS2i_GPIO2_CNL.inf
+25/10/2023 20:42	 - 0.1 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iaLPSS2i_GPIO2_GLK.inf
+25/10/2023 20:42	 - 0.1 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iaLPSS2i_GPIO2_SKL.inf
+25/10/2023 20:42	 - 0.09 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iaLPSS2i_I2C_BXT_P.inf
+25/10/2023 20:42	 - 0.2 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iaLPSS2i_I2C_CNL.inf
+25/10/2023 20:42	 - 0.2 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iaLPSS2i_I2C_GLK.inf
+25/10/2023 20:42	 - 0.2 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  iaLPSS2i_I2C_SKL.inf
+25/10/2023 20:42	 - 0.2 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  ialpssi_gpio.inf
+25/10/2023 20:42	 - 0.05 MB
+25/10/2023 20:42	Eliminando: Intel Corporation  |  ialpssi_i2c.inf
+25/10/2023 20:42	 - 0.1 MB
+25/10/2023 20:42	Eliminando: Intel(R) Telemetry Aggregator Device  |  intelta.inf
+25/10/2023 20:42	 - 0.04 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  acpidev.inf
+25/10/2023 20:42	 - 0.03 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  acpipagr.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  acpipmi.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  acpitime.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  battery.inf
+25/10/2023 20:42	 - 0.04 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  bcmfn2.inf
+25/10/2023 20:42	 - 0.01 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  c_battery.inf
+25/10/2023 20:42	 - 0.003 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  c_fdc.inf
+25/10/2023 20:42	 - 0.003 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  c_floppydisk.inf
+25/10/2023 20:42	 - 0.003 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  ChargeArbitration.inf
+25/10/2023 20:42	 - 0.07 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  cht4nulx64.inf
+25/10/2023 20:42	 - 0.07 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  cht4vx64.inf
+25/10/2023 20:42	 - 1.9 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  circlass.inf
+25/10/2023 20:42	 - 0.08 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  cmbatt.inf
+25/10/2023 20:42	 - 0.04 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  eaphost.inf
+25/10/2023 20:42	 - 0.004 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  errdev.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  fdc.inf
+25/10/2023 20:42	 - 0.04 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  flpydisk.inf
+25/10/2023 20:42	 - 0.05 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  hidbatt.inf
+25/10/2023 20:42	 - 0.04 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  intelpep.inf
+25/10/2023 20:42	 - 0.4 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  intelpmax.inf
+25/10/2023 20:42	 - 0.03 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  ipmidrv.inf
+25/10/2023 20:42	 - 0.1 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  microsoft_bluetooth_hfp_ag.inf
+25/10/2023 20:42	 - 0.004 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  microsoft_bluetooth_hfp_hf.inf
+25/10/2023 20:42	 - 0.004 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  mlx4_bus.inf
+25/10/2023 20:42	 - 2.0 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  modemcsa.inf
+25/10/2023 20:42	 - 0.3 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  netbvbda.inf
+25/10/2023 20:42	 - 0.5 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  netevbda.inf
+25/10/2023 20:42	 - 3.6 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  pnpxinternetgatewaydevices.inf
+25/10/2023 20:42	 - 0.005 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  prnms007.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  prnms008.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  prnms010.inf
+25/10/2023 20:42	Preparando la desinstalación del controlador
+25/10/2023 20:42	- DI
+25/10/2023 20:42	DM1
+25/10/2023 20:42	- UR ld1
+25/10/2023 20:42	Cleaning D-Scratch dir
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  prnms011.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  prnms012.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  prnms014.inf
+25/10/2023 20:42	 - 0.03 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  qd3x64.inf
+25/10/2023 20:42	 - 0.010 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  rdlsbuscbs.inf
+25/10/2023 20:42	 -  MB
+25/10/2023 20:42	Eliminando: Microsoft  |  rhproxy.inf
+25/10/2023 20:42	 - 0.1 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  scmbus.inf
+25/10/2023 20:42	 - 0.2 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  scsidev.inf
+25/10/2023 20:42	 - 0.08 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  tsgenericusbdriver.inf
+25/10/2023 20:42	 - 0.09 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  tsusbhub.inf
+25/10/2023 20:42	 -  MB
+25/10/2023 20:42	Eliminando: Microsoft  |  WindowsTrustedRTProxy.inf
+25/10/2023 20:42	 - 0.02 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  wsynth3dvsc.inf
+25/10/2023 20:42	 - 0.06 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  wvmbus.inf
+25/10/2023 20:42	 - 0.2 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  wvmic_guestinterface.inf
+25/10/2023 20:42	 - 0.006 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  wvmic_heartbeat.inf
+25/10/2023 20:42	 - 0.006 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  wvmic_kvpexchange.inf
+25/10/2023 20:42	 - 0.006 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  wvmic_shutdown.inf
+25/10/2023 20:42	 - 0.006 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  wvmic_timesync.inf
+25/10/2023 20:42	 - 0.006 MB
+25/10/2023 20:42	Eliminando: Microsoft  |  xboxgip.inf
+25/10/2023 20:42	 - 0.4 MB
+25/10/2023 20:42	Eliminando: Administrador de la red Wi-Fi (Wi-Fi Sense)
+25/10/2023 20:42	 - 1.0 MB
+25/10/2023 20:42	Eliminando: Alemán
+25/10/2023 20:42	 - 0.8 MB
+25/10/2023 20:42	Eliminando: Animación en la primera sesión
+25/10/2023 20:42	 - 0.2 MB
+25/10/2023 20:42	Eliminando: App Xbox
+25/10/2023 20:42	 - 63.9 MB
+25/10/2023 20:42	Eliminando: Batería
+25/10/2023 20:42	 - 0.3 MB
+25/10/2023 20:42	Eliminando: Búlgaro
+25/10/2023 20:42	 - 0.5 MB
+25/10/2023 20:42	Eliminando: Carpetas de trabajo del cliente
+25/10/2023 20:42	 - 4.0 MB
+25/10/2023 20:42	Eliminando: Checo
+25/10/2023 20:42	 - 0.7 MB
+25/10/2023 20:42	Eliminando: Chino simplificado
+25/10/2023 20:42	 - 4.5/7.8 MB
+25/10/2023 20:42	Eliminando: Chino tradicional
+25/10/2023 20:42	 - 4.6/8.4 MB
+25/10/2023 20:42	Eliminando: Chino tradicional (IME)
+25/10/2023 20:42	 - 17.6 MB
+25/10/2023 20:42	Eliminando: Compartir el panel de control multimedia
+25/10/2023 20:42	 -  MB
+25/10/2023 20:42	Eliminando: Configurar módem compartido (mdmgl*.inf)
+25/10/2023 20:42	 -  MB
+25/10/2023 20:42	Eliminando: Consejos (Al iniciar)
+25/10/2023 20:42	 - 13.9 MB
+25/10/2023 20:42	Eliminando: Coreano
+25/10/2023 20:42	 - 3.3/5.4 MB
+25/10/2023 20:42	Eliminando: Coreano (IME)
+25/10/2023 20:42	 - 8.1 MB
+25/10/2023 20:42	Eliminando: Correo de Windows
+25/10/2023 20:42	 - 230.2 MB
+25/10/2023 20:42	Eliminando: Croata
+25/10/2023 20:42	 - 0.5 MB
+25/10/2023 20:42	Eliminando: Danés
+25/10/2023 20:42	 - 0.7 MB
+25/10/2023 20:42	Eliminando: Datos del contacto
+25/10/2023 20:42	 - 2.6 MB
+25/10/2023 20:42	Eliminando: Disquete
+25/10/2023 20:42	 -  MB
+25/10/2023 20:42	Eliminando: Enviar al Correo y Escritorio
+25/10/2023 20:42	 - 0.3 MB
+25/10/2023 20:42	Eliminando: Eslovaco
+25/10/2023 20:42	 - 0.5 MB
+25/10/2023 20:42	Eliminando: Esloveno
+25/10/2023 20:42	 - 0.5 MB
+25/10/2023 20:42	Eliminando: Español (GB)
+25/10/2023 20:42	 - 0.5 MB
+25/10/2023 20:42	Eliminando: Español (US)
+25/10/2023 20:42	 - 0.7 MB
+25/10/2023 20:42	Eliminando: Estonio
+25/10/2023 20:42	 - 0.5 MB
+25/10/2023 20:42	Eliminando: Experiencia del dispositivo
+25/10/2023 20:42	 - 3.3 MB
+25/10/2023 20:42	Eliminando: Finlandés
+25/10/2023 20:42	 - 0.7 MB
+25/10/2023 20:42	Eliminando: Francés
+25/10/2023 20:42	 - 0.8 MB
+25/10/2023 20:42	Eliminando: Francés (canadiense)
+25/10/2023 20:42	 - 0.6 MB
+25/10/2023 20:42	Eliminando: Griego
+25/10/2023 20:42	 - 0.8 MB
+25/10/2023 20:42	Eliminando: Hebreo
+25/10/2023 20:42	 - 0.3 MB
+25/10/2023 20:42	Eliminando: Herramientas de accesibilidad
+25/10/2023 20:42	 - 15.0 MB
+25/10/2023 20:42	Eliminando: Holandés
+25/10/2023 20:42	 - 0.7 MB
+25/10/2023 20:42	Eliminando: Húngaro
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Italiano
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Japonés
+25/10/2023 20:43	 - 3.0/4.5 MB
+25/10/2023 20:43	Eliminando: Japonés (IME)
+25/10/2023 20:43	 - 25.0 MB
+25/10/2023 20:43	Eliminando: Editor del método de entrada (IME)
+25/10/2023 20:43	 - 66.6 MB
+25/10/2023 20:43	Eliminando: Letón
+25/10/2023 20:43	 - 0.5 MB
+25/10/2023 20:43	Eliminando: Lituano
+25/10/2023 20:43	 - 0.5 MB
+25/10/2023 20:43	Eliminando: Módem
+25/10/2023 20:43	 - 1.9 MB
+25/10/2023 20:43	Eliminando: Noruego
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Otros temas
+25/10/2023 20:43	 - 0.007 MB
+25/10/2023 20:43	Eliminando: ParentalControls
+25/10/2023 20:43	 - 11.6 MB
+25/10/2023 20:43	Eliminando: Periféricos para juegos (Xbox GIP)
+25/10/2023 20:43	 -  MB
+25/10/2023 20:43	Eliminando: Polaco
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Portugués
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Portugués (brasileño)
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Rumano
+25/10/2023 20:43	 - 0.5 MB
+25/10/2023 20:43	Eliminando: Ruso
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Serbio
+25/10/2023 20:43	 - 0.5 MB
+25/10/2023 20:43	Eliminando: Servicio de ubicación
+25/10/2023 20:43	 - 3.1 MB
+25/10/2023 20:43	Eliminando: Sonidos (predeterminado)
+25/10/2023 20:43	 - 18.4 MB
+25/10/2023 20:43	Eliminando: Sueco
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Tailandés
+25/10/2023 20:43	 - 0.3 MB
+25/10/2023 20:43	Eliminando: Teclado en pantalla (Herramientas de accesibilidad)
+25/10/2023 20:43	 - 0.6 MB
+25/10/2023 20:43	Eliminando: Teclado en pantalla (Tableta PC)
+25/10/2023 20:43	 - 7.7 MB
+25/10/2023 20:43	Eliminando: Turco
+25/10/2023 20:43	 - 0.7 MB
+25/10/2023 20:43	Eliminando: Ucraniano
+25/10/2023 20:43	 - 0.5 MB
+25/10/2023 20:43	Eliminando: Windows TIFF IFilter (OCR)
+25/10/2023 20:43	 - 2.1 MB
+25/10/2023 20:43	Eliminando: Wordpad
+25/10/2023 20:43	 - 6.2 MB
+25/10/2023 20:43	Eliminando: Xbox.TCUI
+25/10/2023 20:43	 - 8.3 MB
+25/10/2023 20:43	Eliminando: XboxGameCallableUI
+25/10/2023 20:43	 -  MB
+25/10/2023 20:43	Eliminando: XboxGameOverlay
+25/10/2023 20:43	 - 2.9 MB
+25/10/2023 20:43	Eliminando: XboxGamingOverlay
+25/10/2023 20:43	 - 3.6 MB
+25/10/2023 20:43	Eliminando: XboxSpeechToTextOverlay
+25/10/2023 20:43	 - 0.8 MB
+25/10/2023 20:43	Eliminando: Árabe
+25/10/2023 20:43	 - 0.4 MB
+25/10/2023 20:43	- UR ld1
+25/10/2023 20:43	- DCS
+25/10/2023 20:43	- DS
+25/10/2023 20:43	- CPD
+25/10/2023 20:43	- UR ld0
+25/10/2023 20:43	Limpiando las entradas sobrantes
+25/10/2023 20:43	Limpiando las carpetas vacías
+25/10/2023 20:43	# 
+25/10/2023 20:43	DISM Scratch dir: C:\Users\1DAW\AppData\Local\Temp\NLScratch\NLDScratch
+25/10/2023 20:43	Preparando integración
+25/10/2023 20:43	- DI
+25/10/2023 20:43	DM1
+25/10/2023 20:43	- UR ld1
+25/10/2023 20:43	Cleaning D-Scratch dir
+25/10/2023 20:43	Integrando: Advanced Micro Devices  |  amdpcidev.inf  |  oem16.inf
+25/10/2023 20:43	Integrando: Advanced Micro Devices  |  amdpcidev.inf  |  oem24.inf
+25/10/2023 20:43	Integrando: Advanced Micro Devices Inc.  |  amdpsp.inf  |  oem4.inf
+25/10/2023 20:43	Integrando: Advanced Micro Devices, Inc  |  amdgpio2.inf  |  oem0.inf
+25/10/2023 20:43	Integrando: Advanced Micro Devices, Inc  |  smbusamd.inf  |  oem7.inf
+25/10/2023 20:43	Integrando: Advanced Micro Devices, Inc.  |  amdgpio3.inf  |  oem10.inf
+25/10/2023 20:43	Integrando: Generic PC/SC  |  emvscard.inf  |  oem13.inf
+25/10/2023 20:43	Integrando: HP  |  hpygid29_v4.inf  |  oem27.inf
+25/10/2023 20:43	Integrando: HP  |  hpygid29_v4.inf  |  oem6.inf
+25/10/2023 20:43	Integrando: Intel  |  heci.inf  |  oem19.inf
+25/10/2023 20:43	Integrando: INTEL  |  skylakesystem.inf  |  oem12.inf
+25/10/2023 20:43	Integrando: INTEL  |  sunrisepoint-hsystem.inf  |  oem18.inf
+25/10/2023 20:43	Integrando: Intel Corporation  |  iaahcic.inf  |  oem9.inf
+25/10/2023 20:43	Integrando: Intel(R) Corporation  |  intcdaud.inf  |  oem1.inf
+25/10/2023 20:43	Integrando: Intel(R) Corporation  |  intcdaud.inf  |  oem20.inf
+25/10/2023 20:43	Integrando: Microsoft  |  prnms014.inf
+25/10/2023 20:43	Integrando: NVIDIA  |  nv_dispi.inf  |  oem11.inf
+25/10/2023 20:43	Integrando: NVIDIA  |  nvppc.inf  |  oem2.inf
+25/10/2023 20:43	Integrando: NVIDIA Corporation  |  nvhda.inf  |  oem5.inf
+25/10/2023 20:43	Integrando: NVIDIA Corporation  |  nvhda.inf  |  oem8.inf
+25/10/2023 20:43	Integrando: Oracle Corporation  |  vboxnetadp6.inf  |  oem17.inf
+25/10/2023 20:43	Integrando: Oracle Corporation  |  vboxusb.inf  |  oem22.inf
+25/10/2023 20:43	Integrando: Realtek  |  rt640x64.inf  |  oem21.inf
+25/10/2023 20:44	Integrando: Realtek Semiconductor Corp.  |  hdxrtgi.inf  |  oem14.inf
+25/10/2023 20:44	Integrando: Realtek Semiconductor Corp.  |  netrtwlanu.inf  |  oem3.inf
+25/10/2023 20:44	- UR ld1
+25/10/2023 20:44	- DCS
+25/10/2023 20:44	- DS
+25/10/2023 20:44	- CPD
+25/10/2023 20:44	- UR ld0
+25/10/2023 20:44	# 
+25/10/2023 20:44	# 
+25/10/2023 20:44	Aplicando - Ajustes
+25/10/2023 20:44	# 
+25/10/2023 20:44	# 
+25/10/2023 20:44	Aplicando - Instalación desatendida
+25/10/2023 20:44	Unattended: start
+25/10/2023 20:44	Unattended: root
+25/10/2023 20:44	Unattended: pass 'Generalizar'
+25/10/2023 20:44	Unattended: pass 'OOBE (opciones de instalación final)'
+25/10/2023 20:44	Unattended: pass 'Especial'
+25/10/2023 20:44	Unattended: pass 'WindowsPE (Opciones instalación)'
+25/10/2023 20:44	Unattended: saving file
+25/10/2023 20:44	Unattended: done, code 0
+25/10/2023 20:44	# 
+25/10/2023 20:44	Aplicando - Tareas post-instalación
+25/10/2023 20:44	Integrando: C:\Users\1DAW\Downloads\7z2301-x64.exe
+25/10/2023 20:44	# 
+25/10/2023 20:44	Total removed: 566.2 MB (WIM internal) / 26.1 MB (ISO external)
+25/10/2023 20:44	- CPD
+25/10/2023 20:44	- UR ld0
+25/10/2023 20:44	- FUR
+25/10/2023 20:44	Descargando imagen, descartando los cambios - F:\isos\MiniOS10 PRO v2022.10 x64\Sources\install.wim (MiniOS10 Pro + DELTA Lite)
+25/10/2023 20:45	Borrando archivos temporales
+25/10/2023 20:45	Borrando archivos temporales
+25/10/2023 20:45	# 
+25/10/2023 20:45	Exportando F:\isos\MiniOS10 PRO v2022.10 x64\Sources\install.wim:1 -> C:\Users\1DAW\AppData\Local\Temp\install.wim
+25/10/2023 20:45	 - WG Export
+25/10/2023 20:45	GWH
+25/10/2023 20:45	Image compression: 2
+25/10/2023 20:45	GWH
+25/10/2023 20:46	# 

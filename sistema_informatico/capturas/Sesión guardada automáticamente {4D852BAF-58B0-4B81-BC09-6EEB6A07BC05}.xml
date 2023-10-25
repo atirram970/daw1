@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>10/25/2023 20:41</Date>
+	<AppInfo>
+		<Version>1.5.0.5855</Version>
+		<Licensed>Yes</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 10 Pro Education 64-bit - Client 10.0.19041.1 (es-ES) - es-ES</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 10 Enterprise 64-bit - Client 10.0.19041.2006 (es-ES)</Version>
+		<GUID>{4D852BAF-58B0-4B81-BC09-6EEB6A07BC05}</GUID>
+	</ImageInfo>
+	<RemoveComponents>
+		<c>accessibility 'Herramientas de accesibilidad'</c>
+		<c>battery 'Batería'</c>
+		<c>deviceexperience 'Experiencia del dispositivo'</c>
+		<c>driver_acpidev.inf</c>
+		<c>driver_acpipagr.inf</c>
+		<c>driver_acpipmi.inf</c>
+		<c>driver_acpitime.inf</c>
+		<c>driver_amdi2c.inf</c>
+		<c>driver_battery.inf</c>
+		<c>driver_bcmfn2.inf</c>
+		<c>driver_c_battery.inf</c>
+		<c>driver_c_fdc.inf</c>
+		<c>driver_c_floppydisk.inf</c>
+		<c>driver_chargearbitration.inf</c>
+		<c>driver_cht4nulx64.inf</c>
+		<c>driver_cht4vx64.inf</c>
+		<c>driver_circlass.inf</c>
+		<c>driver_cmbatt.inf</c>
+		<c>driver_eaphost.inf</c>
+		<c>driver_errdev.inf</c>
+		<c>driver_fdc.inf</c>
+		<c>driver_flpydisk.inf</c>
+		<c>driver_hidbatt.inf</c>
+		<c>driver_iagpio.inf</c>
+		<c>driver_iai2c.inf</c>
+		<c>driver_ialpss2i_gpio2_bxt_p.inf</c>
+		<c>driver_ialpss2i_gpio2_cnl.inf</c>
+		<c>driver_ialpss2i_gpio2_glk.inf</c>
+		<c>driver_ialpss2i_gpio2_skl.inf</c>
+		<c>driver_ialpss2i_i2c_bxt_p.inf</c>
+		<c>driver_ialpss2i_i2c_cnl.inf</c>
+		<c>driver_ialpss2i_i2c_glk.inf</c>
+		<c>driver_ialpss2i_i2c_skl.inf</c>
+		<c>driver_ialpssi_gpio.inf</c>
+		<c>driver_ialpssi_i2c.inf</c>
+		<c>driver_intelpep.inf</c>
+		<c>driver_intelpmax.inf</c>
+		<c>driver_intelta.inf</c>
+		<c>driver_ipmidrv.inf</c>
+		<c>driver_microsoft_bluetooth_hfp_ag.inf</c>
+		<c>driver_microsoft_bluetooth_hfp_hf.inf</c>
+		<c>driver_mlx4_bus.inf</c>
+		<c>driver_modemcsa.inf</c>
+		<c>driver_netbvbda.inf</c>
+		<c>driver_netevbda.inf</c>
+		<c>driver_pnpxinternetgatewaydevices.inf</c>
+		<c>driver_prnms007.inf</c>
+		<c>driver_prnms008.inf</c>
+		<c>driver_prnms010.inf</c>
+		<c>driver_prnms011.inf</c>
+		<c>driver_prnms012.inf</c>
+		<c>driver_prnms014.inf</c>
+		<c>driver_qd3x64.inf</c>
+		<c>driver_rdlsbuscbs.inf</c>
+		<c>driver_rhproxy.inf</c>
+		<c>driver_scmbus.inf</c>
+		<c>driver_scsidev.inf</c>
+		<c>driver_tsgenericusbdriver.inf</c>
+		<c>driver_tsusbhub.inf</c>
+		<c>driver_windowstrustedrtproxy.inf</c>
+		<c>driver_wsynth3dvsc.inf</c>
+		<c>driver_wvmbus.inf</c>
+		<c>driver_wvmic_guestinterface.inf</c>
+		<c>driver_wvmic_heartbeat.inf</c>
+		<c>driver_wvmic_kvpexchange.inf</c>
+		<c>driver_wvmic_shutdown.inf</c>
+		<c>driver_wvmic_timesync.inf</c>
+		<c>driver_xboxgip.inf</c>
+		<c>enterpriseclientsync 'Carpetas de trabajo del cliente'</c>
+		<c>firstlogonanim 'Animación en la primera sesión'</c>
+		<c>gamingperipherals 'Periféricos para juegos (Xbox GIP)'</c>
+		<c>hwsupport_floppy 'Disquete'</c>
+		<c>hwsupport_modem 'Módem'</c>
+		<c>hwsupport_modemsettings 'Configurar módem compartido (mdmgl*.inf)'</c>
+		<c>langarabic 'Árabe'</c>
+		<c>langbulgarian 'Búlgaro'</c>
+		<c>langchineses 'Chino simplificado'</c>
+		<c>langchineset 'Chino tradicional'</c>
+		<c>langcroatian 'Croata'</c>
+		<c>langczech 'Checo'</c>
+		<c>langdanish 'Danés'</c>
+		<c>langdutch 'Holandés'</c>
+		<c>langenglishgb 'Español (GB)'</c>
+		<c>langenglishus 'Español (US)'</c>
+		<c>langestonian 'Estonio'</c>
+		<c>langfinnish 'Finlandés'</c>
+		<c>langfrench 'Francés'</c>
+		<c>langfrenchcanadian 'Francés (canadiense)'</c>
+		<c>langgerman 'Alemán'</c>
+		<c>langgreek 'Griego'</c>
+		<c>langhebrew 'Hebreo'</c>
+		<c>langhungarian 'Húngaro'</c>
+		<c>langime 'Editor del método de entrada (IME)'</c>
+		<c>langimejp 'Japonés (IME)'</c>
+		<c>langimeko 'Coreano (IME)'</c>
+		<c>langimetc 'Chino tradicional (IME)'</c>
+		<c>langitalian 'Italiano'</c>
+		<c>langjapanese 'Japonés'</c>
+		<c>langkorean 'Coreano'</c>
+		<c>langlatvian 'Letón'</c>
+		<c>langlithuanian 'Lituano'</c>
+		<c>langnorwegian 'Noruego'</c>
+		<c>langpolish 'Polaco'</c>
+		<c>langportuguesebr 'Portugués (brasileño)'</c>
+		<c>langportuguesept 'Portugués'</c>
+		<c>langromanian 'Rumano'</c>
+		<c>langrussian 'Ruso'</c>
+		<c>langserbian 'Serbio'</c>
+		<c>langslovak 'Eslovaco'</c>
+		<c>langslovenian 'Esloveno'</c>
+		<c>langswedish 'Sueco'</c>
+		<c>langthai 'Tailandés'</c>
+		<c>langturkish 'Turco'</c>
+		<c>langukrainian 'Ucraniano'</c>
+		<c>location 'Servicio de ubicación'</c>
+		<c>Microsoft.Getstarted 'Consejos (Al iniciar)'</c>
+		<c>Microsoft.Windows.ParentalControls 'ParentalControls'</c>
+		<c>microsoft.windowscommunicationsapps 'Correo de Windows'</c>
+		<c>Microsoft.Xbox.TCUI 'Xbox.TCUI'</c>
+		<c>Microsoft.XboxApp 'App Xbox'</c>
+		<c>Microsoft.XboxGameCallableUI 'XboxGameCallableUI'</c>
+		<c>Microsoft.XboxGameOverlay 'XboxGameOverlay'</c>
+		<c>Microsoft.XboxGamingOverlay 'XboxGamingOverlay'</c>
+		<c>Microsoft.XboxSpeechToTextOverlay 'XboxSpeechToTextOverlay'</c>
+		<c>osk 'Teclado en pantalla (Tableta PC)'</c>
+		<c>osk_acc 'Teclado en pantalla (Herramientas de accesibilidad)'</c>
+		<c>otherthemes 'Otros temas'</c>
+		<c>pimindexmaintenancesvc 'Datos del contacto'</c>
+		<c>sendmail 'Enviar al Correo y Escritorio'</c>
+		<c>sharemediacpl 'Compartir el panel de control multimedia'</c>
+		<c>soundsdefault 'Sonidos (predeterminado)'</c>
+		<c>wifinetworkmanager 'Administrador de la red Wi-Fi (Wi-Fi Sense)'</c>
+		<c>winocr 'Windows TIFF IFilter (OCR)'</c>
+		<c>wordpad</c>
+	</RemoveComponents>
+	<Compatibility protectHidden="true">
+		<ComponentFeatures>
+			<Feature enabled="yes">Activation</Feature>
+			<Feature enabled="yes">ActivationKMS</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="yes">OOBE</Feature>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="no">Hyper-V</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="no">USBModem</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="yes">VideoPlayback</Feature>
+			<Feature enabled="no">SamsungSwitch</Feature>
+			<Feature enabled="yes">AppxSupport</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+			<Feature enabled="yes">WLAN</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMware VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features>
+		<Feature name="Microsoft-Hyper-V-All">true</Feature>
+		<Feature name="SimpleTCP">true</Feature>
+		<Feature name="TelnetClient">true</Feature>
+	</Features>
+	<AddPackages></AddPackages>
+	<Drivers showHidden="true">
+		<AddDrivers>
+			<Driver>host_imported\amdpcidev.inf_amd64_52c4b45d2aa3129e\amdpcidev.inf</Driver>
+			<Driver>host_imported\amdpcidev.inf_amd64_2dbed7efd5f2b448\amdpcidev.inf</Driver>
+			<Driver>host_imported\amdpsp.inf_amd64_321e2721fb35470c\amdpsp.inf</Driver>
+			<Driver>host_imported\amdgpio2.inf_amd64_26fd146b41c45ce2\amdgpio2.inf</Driver>
+			<Driver>host_imported\smbusamd.inf_amd64_9152536a9d3c4972\smbusamd.inf</Driver>
+			<Driver>host_imported\amdgpio3.inf_amd64_51b559724a96d4a1\amdgpio3.inf</Driver>
+			<Driver>host_imported\emvscard.inf_amd64_f0ac981237635ee4\emvscard.inf</Driver>
+			<Driver>host_imported\hpygid29_v4.inf_amd64_ea9f64b47fdaa6d2\hpygid29_v4.inf</Driver>
+			<Driver>host_imported\hpygid29_v4.inf_amd64_819f920e1a68da5d\hpygid29_v4.inf</Driver>
+			<Driver>host_imported\heci.inf_amd64_b86bda63cd2638e8\heci.inf</Driver>
+			<Driver>host_imported\skylakesystem.inf_amd64_cc99ef6e5cc846fb\skylakesystem.inf</Driver>
+			<Driver>host_imported\sunrisepoint-hsystem.inf_amd64_67433b8f329ae589\sunrisepoint-hsystem.inf</Driver>
+			<Driver>host_imported\iaahcic.inf_amd64_b5208b4b05626800\iaahcic.inf</Driver>
+			<Driver>host_imported\intcdaud.inf_amd64_66e0a5048e30f9c5\intcdaud.inf</Driver>
+			<Driver>host_imported\intcdaud.inf_amd64_52aa253845b75189\intcdaud.inf</Driver>
+			<Driver>host_imported\prnms014.inf_amd64_88f2505ec1b35a5a\prnms014.inf</Driver>
+			<Driver>host_imported\nv_dispi.inf_amd64_60daf66a00f2e0b6\nv_dispi.inf</Driver>
+			<Driver>host_imported\nvppc.inf_amd64_27e934acf40fccb7\nvppc.inf</Driver>
+			<Driver>host_imported\nvhda.inf_amd64_8c851035e5ac5dbf\nvhda.inf</Driver>
+			<Driver>host_imported\nvhda.inf_amd64_94100bc8eed6db59\nvhda.inf</Driver>
+			<Driver>host_imported\vboxnetadp6.inf_amd64_1e5e19be9cdd283b\vboxnetadp6.inf</Driver>
+			<Driver>host_imported\vboxusb.inf_amd64_4fb9fb3340e19285\vboxusb.inf</Driver>
+			<Driver>host_imported\rt640x64.inf_amd64_1bdad0da808fd978\rt640x64.inf</Driver>
+			<Driver>host_imported\hdxrtgi.inf_amd64_3241e0b1252477ee\hdxrtgi.inf</Driver>
+			<Driver>host_imported\netrtwlanu.inf_amd64_72d5dfede33f393a\netrtwlanu.inf</Driver>
+		</AddDrivers>
+	</Drivers>
+	<Unattended mode="1">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<settings pass="generalize">
+			<component name="Microsoft-Windows-PnpSysprep">
+				<DoNotCleanUpNonPresentDevices>false</DoNotCleanUpNonPresentDevices>
+			</component>
+		</settings>
+		<settings pass="oobeSystem">
+			<component name="Microsoft-Windows-International-Core">
+				<InputLocale>0c0a:0000040a</InputLocale>
+				<SystemLocale>es</SystemLocale>
+				<UILanguage>es-ES</UILanguage>
+				<UILanguageFallback>es-ES</UILanguageFallback>
+				<UserLocale>es</UserLocale>
+			</component>
+			<component name="Microsoft-Windows-Shell-Setup">
+				<TimeZone>Hora estándar romance</TimeZone>
+				<AutoLogon>
+					<Enabled>true</Enabled>
+					<LogonCount>9999999</LogonCount>
+					<Username>Adrián</Username>
+					<Password>
+						<PlainText>false</PlainText>
+						<Value>MgAxADAANABQAGEAcwBzAHcAbwByAGQA</Value>
+					</Password>
+				</AutoLogon>
+				<OOBE>
+					<HideEULAPage>true</HideEULAPage>
+					<HideLocalAccountScreen>false</HideLocalAccountScreen>
+					<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+					<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+					<NetworkLocation>Home</NetworkLocation>
+					<ProtectYourPC>3</ProtectYourPC>
+					<SkipMachineOOBE>true</SkipMachineOOBE>
+					<SkipUserOOBE>true</SkipUserOOBE>
+				</OOBE>
+				<UserAccounts>
+					<LocalAccounts>
+						<LocalAccount>
+							<DisplayName>Adrián</DisplayName>
+							<Group>Administrators</Group>
+							<Name>Adrián</Name>
+							<Password>
+								<PlainText>false</PlainText>
+								<Value>MgAxADAANABQAGEAcwBzAHcAbwByAGQA</Value>
+							</Password>
+						</LocalAccount>
+					</LocalAccounts>
+				</UserAccounts>
+			</component>
+		</settings>
+		<settings pass="specialize">
+			<component name="Microsoft-Windows-Security-SPP-UX">
+				<SkipAutoActivation>true</SkipAutoActivation>
+			</component>
+			<component name="Microsoft-Windows-Shell-Setup">
+				<ComputerName>Pc-Adrian</ComputerName>
+			</component>
+		</settings>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-International-Core-WinPE">
+				<InputLocale>0c0a:0000040a</InputLocale>
+				<SystemLocale>es</SystemLocale>
+				<UILanguage>es-ES</UILanguage>
+				<UILanguageFallback>es-ES</UILanguageFallback>
+				<UserLocale>es</UserLocale>
+				<SetupUILanguage>
+					<UILanguage>es-ES</UILanguage>
+				</SetupUILanguage>
+			</component>
+			<component name="Microsoft-Windows-Setup">
+				<Diagnostics>
+					<OptIn>false</OptIn>
+				</Diagnostics>
+				<DynamicUpdate>
+					<Enable>true</Enable>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/NAME</Key>
+								<Value>Windows 10 Pro</Value>
+							</MetaData>
+						</InstallFrom>
+					</OSImage>
+				</ImageInstall>
+				<UserData>
+					<AcceptEula>true</AcceptEula>
+					<ProductKey>
+						<Key></Key>
+					</ProductKey>
+				</UserData>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Settings>
+			<TweakGroup name="Windows">
+				<Tweak name="Activation\Manual">1</Tweak>
+			</TweakGroup>
+		</Settings>
+		<Services>
+			<TweakGroup name="services">
+				<Tweak name="tzautoupdate\tzautoupdate">2</Tweak>
+			</TweakGroup>
+		</Services>
+		<ExtraServices></ExtraServices>
+	</Tweaks>
+	<ApplyOptions>
+		<ImageTasks>
+			<Task>imageSaveRebuild</Task>
+			<Task>imageFormatWim</Task>
+			<Task>imageOptionsCreateIso</Task>
+		</ImageTasks>
+		<AutoIsoFile>C:\Users\1DAW\Desktop\Minios10-Adrian.iso</AutoIsoFile>
+		<AutoIsoLabel>Minios10-Adrian</AutoIsoLabel>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<CleanHotfixedLeftovers>false</CleanHotfixedLeftovers>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Add>
+			<Item type="File">
+				<Path>C:\Users\1DAW\Downloads\7z2301-x64.exe</Path>
+				<Params></Params>
+				<Index>0</Index>
+			</Item>
+			<Item type="Placeholder">
+				<Index>1</Index>
+			</Item>
+		</Add>
+		<Change></Change>
+		<Remove></Remove>
+	</Execution>
+	<Registry></Registry>
+</Preset>
