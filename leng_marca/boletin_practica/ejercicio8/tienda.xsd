@@ -58,19 +58,10 @@
                                                                     maxOccurs="unbounded"
                                                                     minOccurs="0">
                                                                     <xs:complexType>
-                                                                        <xs:simpleContent>
-                                                                            <xs:extension
-                                                                                base="xs:string">
-                                                                                <xs:attribute
-                                                                                    type="xs:string"
-                                                                                    name="cod_r"
-                                                                                    use="optional" />
-                                                                                <xs:attribute
-                                                                                    type="xs:string"
-                                                                                    name="referencia"
-                                                                                    use="optional" />
-                                                                            </xs:extension>
-                                                                        </xs:simpleContent>
+                                                                        <xs:all>  
+                                                                                <xs:attribute type="xs:string" name="cod_r" use="optional" />
+                                                                                <xs:attribute type="xs:string" name="referencia" use="optional" />
+                                                                        </xs:all>
                                                                     </xs:complexType>
                                                                 </xs:element>
                                                             </xs:sequence>

@@ -8,14 +8,14 @@
                         <xs:sequence>
                             <xs:element name="marca" type="xs:string"/>
                             <xs:element name="modelo" type="xs:string"/>
-                            <xs:simpleType>
+                            <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="f_fabricacion"/>
                                 </xs:sequence>
                                 <xs:attribute name="dia" type="xs:positiveInteger"/>
                                 <xs:attribute name="mes" type="xs:positiveInteger"/>
                                 <xs:attribute name="anio" type="xs:positiveInteger"/>
-                            </xs:simpleType>
+                            </xs:complexType>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
