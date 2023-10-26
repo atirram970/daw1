@@ -1,21 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="vehiculos">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="vehiculo">
+                <xs:element name="vehiculo" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="marca" type="xs:string"/>
                             <xs:element name="modelo" type="xs:string"/>
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="f_fabricacion"/>
-                                </xs:sequence>
-                                <xs:attribute name="dia" type="xs:positiveInteger"/>
-                                <xs:attribute name="mes" type="xs:positiveInteger"/>
-                                <xs:attribute name="anio" type="xs:positiveInteger"/>
-                            </xs:complexType>
+                            <xs:element name="f_fabricacion">
+                                <xs:complexType>
+                                    <xs:attribute name="dia" type="xs:integer"/>
+                                    <xs:attribute name="mes" type="xs:integer"/>
+                                    <xs:attribute name="anio">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:integer">
+                                                <xs:minInclusive value="2000"/>
+                                                <xs:maxInclusive value="2030"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="lugar_fabricacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="localidad">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="EU"/>
+                                                    <xs:enumeration value="US"/>
+                                                    <xs:enumeration value="AS"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="pais">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:length value="2"/>
+                                                <xs:pattern value="[A-Z]{2}"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="unidades" type="xs:integer"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
