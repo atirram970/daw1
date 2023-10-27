@@ -21,6 +21,7 @@
             <disco_duro>256GB</disco_duro>
             <camara>48 MP + 8 MP + 2 MP</camara>
         </caracteristicas>
+        
     </articulo>
     <articulo nombre="cable rj45 cat5e" categoria="cableado" edicion="2020">
         <descripcion>cable ethernet para conectar un equipo a el router o para comunicar 2 equipos</descripcion>
