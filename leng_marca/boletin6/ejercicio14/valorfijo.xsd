@@ -3,8 +3,13 @@
     <xs:element name="claves">
         <xs:complexType>
             <xs:sequence>
-                <xs:
-                <xs:element name="clave" type="valorFijo"/>
+                <xs:element name="valor">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="([A-Za-z]|[0-9]){10}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
