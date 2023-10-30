@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="factura">
+        <xs:complexType>
+            <xs:sequence>
+               <xs:element name="datos-emisor">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/> 
+                            <xs:element name="cif" type="xs:string"/> 
+                            <xs:element name="teléfono" type="xs:string"/>   
+                        </xs:sequence>
+                    </xs:complexType>
+               </xs:element>
+               <xs:element name="datos-cliente">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/> 
+                            <xs:element name="cif" type="xs:string"/> 
+                            <xs:element name="teléfono" type="xs:string"/>   
+                        </xs:sequence>
+                    </xs:complexType>
+               </xs:element>
+               <xs:element name="detalle-factura">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="línea">
+                                <xs:element name="descripción" type="xs:string" minOccurs="0"/>
+                                <xs:element name="cantidad" type="xs:positiveInteger"/>
+                                <xs:element name="oferta" type="xs:string"/>
+                                <xs:element name="pvp" type="xs:double"/>
+                            </xs:element>
+                            <xs:attribute name="código-artículo" type="xs:string" use="REQUIRED"/>
+                            <xs:attribute name="tipo" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+               </xs:element>
+               <xs:attribute name="importe" type="xs:double"/>     
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="número" type="xs:integer"/>
+    <xs:attribute name="fecha" type="xs:date"/>
+    <xs:attribute name="moneda" type="xs:string"/>
+</xs:schema>
