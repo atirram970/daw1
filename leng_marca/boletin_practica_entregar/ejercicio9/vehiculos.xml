@@ -5,7 +5,7 @@
         <modelo>Mustang</modelo>
         <f_fabricacion dia="09" mes="03" anio="2020"/>
         <lugar_fabricacion pais="EE">
-            <localidad>US</localidad>
+            <localidad>EEUU</localidad>
         </lugar_fabricacion>
         <unidades>325</unidades>
     </vehiculo>
@@ -14,7 +14,7 @@
         <modelo>Corola</modelo>
         <f_fabricacion dia="05" mes="08" anio="2015"/>
         <lugar_fabricacion pais="AS">
-            <localidad>AS</localidad>
+            <localidad>Asia</localidad>
         </lugar_fabricacion>
         <unidades>513</unidades>
     </vehiculo>

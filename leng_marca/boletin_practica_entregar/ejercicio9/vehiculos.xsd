@@ -27,9 +27,9 @@
                                         <xs:element name="localidad">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
-                                                    <xs:enumeration value="EU"/>
-                                                    <xs:enumeration value="US"/>
-                                                    <xs:enumeration value="AS"/>
+                                                    <xs:enumeration value="Europa"/>
+                                                    <xs:enumeration value="EEUU"/>
+                                                    <xs:enumeration value="Asia"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>

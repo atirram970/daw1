@@ -50,7 +50,8 @@
                                                 <xs:sequence>
                                                     <xs:element name="cantidad">
                                                         <xs:simpleType>
-                                                            <xs:restriction base="xs:positiveInteger">
+                                                            <xs:restriction base="xs:integer">
+                                                                <xs:minInclusive value="0"/>
                                                                 <xs:maxInclusive value="99"/>
                                                             </xs:restriction>
                                                         </xs:simpleType>
@@ -65,7 +66,7 @@
                                                         </xs:simpleType>
                                                     </xs:element>
                                                 </xs:sequence>
-                                                <xs:attribute name="cod" type="xs:string"/>
+                                                <xs:attribute name="cod" type="xs:ID"/>
                                                 <xs:attribute name="tipo" type="xs:string"/>
                                             </xs:complexType>
                                         </xs:element>
