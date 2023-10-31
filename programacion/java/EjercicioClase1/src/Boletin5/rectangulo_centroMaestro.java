@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Boletin4;
+package Boletin5;
 
 import java.awt.Dimension;
 import java.awt.Point;

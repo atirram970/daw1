@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Boletin4;
+package Boletin5;
 
 import java.awt.Dimension;
 import java.awt.Point;
@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
  * 
  */
-public class rectangulo {
+public class rectangulo_centro {
 
 	/**
 	 * @param args
@@ -27,7 +27,8 @@ public class rectangulo {
 		
 		Dimension dim = new Dimension (ancho, alto);
 		Point punto = new Point();
-		punto.y = alto;
+		double mitad_y = punto.y = alto/2;
+		double mitad_x = punto.x = ancho/2;
 		Rectangle rect = new Rectangle(punto, dim);
 		
 		System.out.println("La esquina superior izquierda del rectangulo esta situada en el punto: " + rect.x + " ," + rect.y);
