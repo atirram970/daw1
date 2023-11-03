@@ -2,14 +2,15 @@
 <!ELEMENT alumnos (alumno+)>
 <!ELEMENT profesores (profesor+)>
 <!ELEMENT asignaturas (asignatura+)>
-<!ELEMENT alumno ((dni|pasaporte), nombre, apellido1, apellido2?, fecha_nacimiento, contacto?, asignaturas)>
-<!ELEMENT profesor ((dni|pasaporte), nombre, apellido1, apellido2?, fecha_nacimiento, contacto?, despacho, tutorias, asignaturas)>
+<!ELEMENT alumno ((dni|pasaporte), nombre, ((apellido1, apellido2) | apellido), fecha_nacimiento, contacto?, asignaturas)>
+<!ELEMENT profesor ((dni|pasaporte), nombre, ((apellido1, apellido2) | apellido), fecha_nacimiento, contacto?, despacho, tutorias, asignaturas)>
 <!ELEMENT dni (#PCDATA)>
 <!ELEMENT pasaporte (#PCDATA)>
 <!ATTLIST pasaporte pais CDATA #REQUIRED>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT apellido1 (#PCDATA)>
 <!ELEMENT apellido2 (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
 <!ELEMENT fecha_nacimiento (#PCDATA)>
 <!ELEMENT contacto (direccion?, telefono*, correo*)>
 <!ELEMENT direccion (#PCDATA)>
@@ -18,7 +19,7 @@
 <!ELEMENT despacho (#PCDATA)>
 <!ELEMENT tutorias (#PCDATA)>
 <!ELEMENT asignatura (nota*, creditos, carrera, curso, tipo)>
-<!ELEMENT nota (#PCDATA)>
+<!ELEMENT nota (NP | ...)>
 <!ELEMENT creditos (#PCDATA)>
 <!ELEMENT carrera (#PCDATA)>
 <!ELEMENT curso (#PCDATA)>

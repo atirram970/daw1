@@ -39,7 +39,7 @@
         <profesor>
             <pasaporte pais="españa">12345678B</pasaporte>
             <nombre>Juan</nombre>
-            <apellido1>Pérez</apellido1>
+            <apellido>Pérez</apellido>
             <fecha_nacimiento>1970-01-01</fecha_nacimiento>
             <contacto>
                 <direccion>Calle Mayor, 2</direccion>

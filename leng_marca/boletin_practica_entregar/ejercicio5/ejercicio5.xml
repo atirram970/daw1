@@ -11,7 +11,7 @@
 <!ELEMENT cp (#PCDATA)>
 <!ELEMENT ciudad (#PCDATA)>
 <!ELEMENT provincia (#PCDATA)>
-<!ELEMENT telefonos (telcasa+, telmovil*, teltrabajo*)>
+<!ELEMENT telefonos (telcasa | telmovil | teltrabajo)+>
 <!ELEMENT telcasa (#PCDATA)>
 <!ELEMENT telmovil (#PCDATA)>
 <!ELEMENT teltrabajo (#PCDATA)>

@@ -21,7 +21,6 @@
  <!ATTLIST articulo color CDATA #FIXED "rojo">
 ]>
 <articulos>
-    <articulo color="rojo"/>bolígrafo<articulo/>
-    <articulo/>cuaderno<articulo/>
-    <articulo color="amarillo"/><articulo/>
+    <articulo color="rojo">cuaderno</articulo>
+    <articulo color="rojo"/>
 </articulos>
