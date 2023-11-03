@@ -24,49 +24,48 @@ public class ej4 {
 			varias veces con distintos valores, hacer un bucle para pedir valores por 
 			teclado y pasarlos a las funciones. Maneja las posibles excepciones
 		 */
+		
+		Scanner scan = new Scanner(System.in);
+		
 		while (true) 
 		{
 			try 
 			{
 				System.out.println("Introduce un número negativo: ");
 				imprimeNegativo(scan.nextInt());
+				System.out.println("Contenido de Scan deespues de poner un entero: " + scan.nextInt());
 				System.out.println("Introduce un número positivo: ");
 				imprimePositivo(scan.nextInt());
 			} 
 			catch (InputMismatchException e) 
 			{
 				System.out.println("Solo se pueden introducir numeros enteros");
+				System.out.println("TIENE BASURA:" + scan.next() + ":");
 			}
 			catch (Exception e)
 			{
-				System.out.println("ERROR. %s", e.getMessage());
+				System.out.printf("ERROR. %s", e.getMessage());
 			}
 		}
-			
+		
 	}
 	
-	private static int imprimePositivo(int p)
+	private static int imprimePositivo(int p) throws Exception
 	{
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Dame un numero: ");
-		int valor = scan.nextInt();
-		if (valor < 0) 
+		if (p < 0) 
 		{
-			throw new Exception();
+			throw new Exception("Error, El número debe ser positivo");
 		}
 		return p;
 	}
 	
-	private static int imprimeNegativo(int n)
+	private static int imprimeNegativo(int n) throws Exception
 	{
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Dame un numero: ");
-		int valor = scan.nextInt();
-		if (valor >= 0) 
+		if (n >= 0) 
 		{
-			throw new Exception();
+			throw new Exception("Error, El número debe ser negativo");
 		}
 		return n;
 	}
-	
+		
 }
