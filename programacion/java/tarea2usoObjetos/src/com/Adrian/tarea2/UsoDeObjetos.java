@@ -51,6 +51,21 @@ public class UsoDeObjetos
 		//System.out.println("digitoN (numero,exponente): "  + UtilidadesMatematicas.potencia(c,0));
 		System.out.println("digitoN (numero,exponente): "  + UtilidadesMatematicas.potencia('v',0));
 		//System.out.println("digitoN (numero,exponente): "  + UtilidadesMatematicas.potencia("d",0));
+		
+		
+		System.out.println("Probando la funcion esPalindromo");
+		System.out.println("esPalindromo (frase): "  + UtilidadesCadenasTexto.esPalindromo("ojorojo"));
+		System.out.println("esPalindromo (frase): "  + UtilidadesCadenasTexto.esPalindromo("ana"));
+		System.out.println("esPalindromo (frase): "  + UtilidadesCadenasTexto.esPalindromo("hola caracola"));
+		
+		System.out.println("Probando la funcion esHeterograma");
+		System.out.println("esHeterograma (frase): "  + UtilidadesCadenasTexto.esHeterograma("hola"));
+		System.out.println("esHeterograma (frase): "  + UtilidadesCadenasTexto.esHeterograma("centrifugado"));
+		System.out.println("esHeterograma (frase): "  + UtilidadesCadenasTexto.esHeterograma("acondicionar"));
+		
+		System.out.println("Probando la funcion contarPalabras");
+		System.out.println("contarPalabras (palabra): " + UtilidadesCadenasTexto.contarPalabras("aeiou"));
+		System.out.println("contarPalabras (palabra): " + UtilidadesCadenasTexto.contarPalabras("habichuela"));
 	}
 
 }

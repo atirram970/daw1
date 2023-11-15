@@ -326,13 +326,36 @@ public class funcionesMatematicas
 		int billete10 = 0;
 		int billete5 = 0;
 		
-		if(dineroCliente >= 500)
+		while (dineroCliente >= 0) 
 		{
-			billete500 = billete500 + 1;
-		}
-		else if(dineroCliente >=200)
-		{
-			billete200 = billete200 + 1;
+			if(dineroCliente >= 500)
+			{
+				billete500 = billete500 + 1;
+			}
+			else if(dineroCliente >=200)
+			{
+				billete200 = billete200 + 1;
+			}
+			else if(dineroCliente >=100)
+			{
+				billete100 = billete100 + 1;
+			}
+			else if(dineroCliente >=50)
+			{
+				billete50 = billete50 + 1;
+			}
+			else if(dineroCliente >=20)
+			{
+				billete20 = billete20 + 1;
+			}
+			else if(dineroCliente >=10)
+			{
+				billete10 = billete10 + 1;
+			}
+			else if(dineroCliente >=5)
+			{
+				billete5 = billete5 + 1;
+			}
 		}
 	}
 	

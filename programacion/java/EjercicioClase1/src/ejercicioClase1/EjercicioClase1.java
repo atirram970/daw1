@@ -6,12 +6,14 @@ package ejercicioClase1;
 /**
  * 
  */
-public class EjercicioClase1 {
+public class EjercicioClase1 
+{
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		//creacion y declaracion variables
 		double d1=10;
 		double d2=20;
