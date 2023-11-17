@@ -39,26 +39,28 @@ public class ejercicio5Array
 			}
 		}
 		scan.close();
-		int indMax = indiceMaximo(numeros);
-		int indMin = indiceMinimo(numeros);
+		//int indMax = indiceMaximo(numeros);
+		//int indMin = indiceMinimo(numeros);
 		
+		int[] minMax = getMinMax(numeros);
+	 	
 		for (int index = 0; index < numeros.length; index++) 
 		{
-			if (indMax == indMin)
+			if (numeros[index] == minMax[1])
 			{
 				System.out.println(numeros[index] + "Maximo y Minimo");
 			}
 			else
 			{
-				if (index == indMax)
+				if (numeros[index] == minMax[1])
 				{
 					System.out.println(numeros[index] + "\tMaximo");
 				}
-				else if (index == indMin) 
+				if (numeros[index] == minMax[0]) 
 				{
 					System.out.println(numeros[index] + "\tMinimo");
 				}
-				else
+				if (numeros[index] != minMax[0] && numeros[index] != minMax[1] )
 				{
 					System.out.println(numeros[index]);	
 				}
@@ -90,5 +92,26 @@ public class ejercicio5Array
 			}
 		}
 		return indiceMin;
+	}
+	
+	private static int[] getMinMax(int[] array)
+	{
+		int[] minMax = new int[2];
+		int min = Integer.MAX_VALUE;
+		int max = Integer.MIN_VALUE;
+		for (int i = 0; i < array.length; i++)
+		{
+			if (array[i] < min)
+			{
+				min = array[i];
+				minMax[0] = min;
+			}
+			if (array[i] > max)
+			{
+				max = array[i];
+				minMax[1] = max;
+			}
+		}
+		return minMax;
 	}
 }
