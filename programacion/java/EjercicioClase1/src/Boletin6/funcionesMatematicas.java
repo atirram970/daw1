@@ -357,6 +357,7 @@ public class funcionesMatematicas
 				billete5 = billete5 + 1;
 			}
 		}
+		System.out.println("El cambio será de: " + billete500 + " billetes de 200" + billete200 + " billetes de 100" + billete100 + " billetes de 50" + billete50 + " billetes de 20" + billete20 + " billetes de 10" + billete10 + " billetes de 5" + billete5 );
 	}
 	
 }

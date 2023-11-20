@@ -52,20 +52,42 @@ public class UsoDeObjetos
 		System.out.println("digitoN (numero,exponente): "  + UtilidadesMatematicas.potencia('v',0));
 		//System.out.println("digitoN (numero,exponente): "  + UtilidadesMatematicas.potencia("d",0));
 		
-		
+		//UtilidadesCadenasTexto
+		//pruebas para palindromo
 		System.out.println("Probando la funcion esPalindromo");
 		System.out.println("esPalindromo (frase): "  + UtilidadesCadenasTexto.esPalindromo("ojorojo"));
 		System.out.println("esPalindromo (frase): "  + UtilidadesCadenasTexto.esPalindromo("ana"));
 		System.out.println("esPalindromo (frase): "  + UtilidadesCadenasTexto.esPalindromo("hola caracola"));
 		
+		//pruebas heterograma
 		System.out.println("Probando la funcion esHeterograma");
 		System.out.println("esHeterograma (frase): "  + UtilidadesCadenasTexto.esHeterograma("hola"));
 		System.out.println("esHeterograma (frase): "  + UtilidadesCadenasTexto.esHeterograma("centrifugado"));
 		System.out.println("esHeterograma (frase): "  + UtilidadesCadenasTexto.esHeterograma("acondicionar"));
 		
+		//pruebas contar palabras
 		System.out.println("Probando la funcion contarPalabras");
 		System.out.println("contarPalabras (palabra): " + UtilidadesCadenasTexto.contarPalabras("aeiou"));
 		System.out.println("contarPalabras (palabra): " + UtilidadesCadenasTexto.contarPalabras("habichuela"));
+		
+		//UtilidadesFechas
+		//pruebas calcular edad
+		System.out.println("Probando la funcion calculadoraEdad");
+		System.out.println("calculadoraEdad (dia, mes, año): " + UtilidadesFechas.calculadoraEdad("21/04/2002"));
+		System.out.println("calculadoraEdad (dia, mes, año): " + UtilidadesFechas.calculadoraEdad("23/08/1976"));
+		System.out.println("calculadoraEdad (dia, mes, año): " + UtilidadesFechas.calculadoraEdad("15/07/2007"));
+		System.out.println("calculadoraEdad (dia, mes, año): " + UtilidadesFechas.calculadoraEdad("16/09/2047"));
+		
+		//pruebas esFechaPasada
+		System.out.println("Probando la funcion esFechaPasada");
+		System.out.println("esFechaPasada (dia, mes, año): " + UtilidadesFechas.esFechaPasada("19/11/2023"));
+		System.out.println("esFechaPasada (dia, mes, año): " + UtilidadesFechas.esFechaPasada("20/11/2023"));
+		System.out.println("esFechaPasada (dia, mes, año): " + UtilidadesFechas.esFechaPasada("21/11/2023"));
+		
+		//pruebas formatearFecha
+		System.out.println("Probando la funcion formatearFecha");
+		System.out.println("esFechaPasada (dia,mes,año,dd/MM/yyyy): " + UtilidadesFechas.formatearFecha("20/11/2023", "dd/MM/yyyy"));
+		System.out.println("esFechaPasada (dia,mes,año,dd/MM/yyyy): " + UtilidadesFechas.formatearFecha("20/11/2023", "yyyy/dd/MM"));
 	}
 
 }
