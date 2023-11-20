@@ -3,6 +3,7 @@ package com.Adrian.tarea2;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -92,4 +93,17 @@ public class UtilidadesFechas
 		return "";
 	}
 	
+	public static boolean esAnioBisiesto(String fechaPasada)
+	{
+		boolean esBisiesto = false;
+        
+        String fechaActual = fechaPasada;
+        int anio = Integer.parseInt(fechaActual);
+        if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0))
+        {
+			esBisiesto = true;
+		}
+		return esBisiesto;
+		
+	}
 }

@@ -2,7 +2,7 @@ package com.Adrian.tarea2;
 
 public class UtilidadesCadenasTexto
 {	
-	//1er metodo
+	//EsPalindromo
 	public static String esPalindromo(String texto)
 	{
 	        String alReves = "";
@@ -26,7 +26,7 @@ public class UtilidadesCadenasTexto
 			return respuesta;
 	}
 	
-	//2do metodo
+	//EsHeterograma
 	public static boolean esHeterograma(String texto)
 	{	
 		for (int i = 0; i < texto.length(); i++) 
@@ -43,7 +43,7 @@ public class UtilidadesCadenasTexto
         return true; // No se encontraron repeticiones, es un heterograma
 	}
 	
-	//3er metodo
+	//ConteoVocales
 	public static int conteoVocales(String texto)
 	{
 		int contadorVocal = 0;
@@ -75,6 +75,7 @@ public class UtilidadesCadenasTexto
 		return contadorVocal;	
 	}
 	
+	//ContarPalabras
 	public static int contarPalabras(String texto)
 	{
 		int contadorPalabra = 0;

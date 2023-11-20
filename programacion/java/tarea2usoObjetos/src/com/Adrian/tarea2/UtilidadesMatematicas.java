@@ -2,7 +2,7 @@ package com.Adrian.tarea2;
 
 public class UtilidadesMatematicas 
 {	
-	//1 ejercicio
+	//Potencia
 	public static long potencia(int base, int exp) 
 	{
 		/*
@@ -29,7 +29,7 @@ public class UtilidadesMatematicas
 		return result;
 	}
 	
-	//2 ejercicio
+	//EsPrimo
 	public static boolean esPrimo(long i) 
 	{
 		boolean esPrimo = true;
@@ -45,20 +45,21 @@ public class UtilidadesMatematicas
 		return esPrimo;
 	}
 	
-	//3 ejercicio
+	//Voltea
 	public static long voltea(long numero) 
 	{
-		long result = 0l;
-		long aux = numero;
-		while (aux != 0) 
-		{
-			result = (result * 10) + (aux % 10);
-			aux = aux / 10;
-		}
-		return result;
+		 long invertido = 0;
+		 int resto = 0;
+	     while(numero > 0) 
+	     {
+	            resto = (int) (numero % 10);
+	            invertido = invertido * 10 + resto;
+	            numero /= 10;
+	     }
+	     return invertido;
 	}
 	
-	//4 ejercicio
+	//Digitos
 	public static int digitos(long numero) 
 	{
 		int numDigitos = 0;
