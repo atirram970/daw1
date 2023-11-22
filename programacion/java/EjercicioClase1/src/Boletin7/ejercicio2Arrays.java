@@ -6,7 +6,7 @@ package Boletin7;
 /**
  * 
  */
-public class ejercicio4Arrays 
+public class ejercicio2Arrays 
 {
 	public static void main(String[] args) 
 	{
