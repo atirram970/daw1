@@ -31,6 +31,7 @@ public class ejercicio6Array
 		float[] temperaturas = new float[12];
 		for (int i = 0; i < meses.length; i++) 
 		{
+		formatoCorrecto = false;
 				while (!formatoCorrecto)
 				{
 					try 
@@ -49,12 +50,12 @@ public class ejercicio6Array
 		scan.close();
 		for (int m = 0; m < 12; m++) 
 		{
-			System.out.printf("%s:\t\t", meses[m]);
-			for (int t = 0; t < temperaturas[m]; t++) 
-			{	
-				System.out.printf("*");
-			}
-			System.out.println("\n");
+		    System.out.printf("%s:", meses[m]);
+		    for (int t = 0; t < temperaturas[m]; t++) 
+		    {   
+		        System.out.print("*");
+		    }
+		    System.out.println();
 		}
 	}
 }
