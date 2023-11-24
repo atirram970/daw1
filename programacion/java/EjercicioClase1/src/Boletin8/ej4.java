@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class ej4 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args) throws InterruptedException 
 	{
 		//Declara un array llamado "num" con dimensiones de 3 filas por 6 columnas, el cual 
 		//contendrá números enteros. Asigna los valores de acuerdo con la siguiente tabla y 
@@ -57,52 +57,25 @@ public class ej4
 			int sumaFila = 0;
 			for (int columna = 0; columna < 5; columna++) 
 			{
-				try 
-				{
-					Thread.sleep(1000);
-				} 
-				catch (InterruptedException e) 
-				{
-					e.printStackTrace();
-				}
 				System.out.print(tabla[fila][columna] + "\t");
 				sumaFila += tabla[fila][columna];
 				sumaColumnas[columna] += tabla[fila][columna];
 			}
 			sumaTotal += sumaFila;
-			try 
-			{
-				Thread.sleep(1000);
-			} 
-			catch (InterruptedException e) 
-			{
-				e.printStackTrace();
-			}
+			Thread.sleep(500);
 			System.out.println(sumaFila);
+			Thread.sleep(500);
 		}
 		
 		
 		for (int i : sumaColumnas) 
 		{
-			try 
-			{
-				Thread.sleep(1000);
-			} 
-			catch (InterruptedException e) 
-			{
-				e.printStackTrace();
-			}
+			Thread.sleep(500);
 			System.out.printf(i + "\t");
+			Thread.sleep(500);
 			sumaTotal += i;
 		}
-		try 
-		{
-			Thread.sleep(1000);
-		} 
-		catch (InterruptedException e) 
-		{
-			e.printStackTrace();
-		}
+		Thread.sleep(1500);
 		System.out.printf(sumaTotal + "\t");
 	}
 }
