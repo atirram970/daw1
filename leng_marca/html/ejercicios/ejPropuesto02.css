@@ -1,0 +1,27 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+div
+{
+    border: 1px solid black;
+}
+
+div#logo
+{
+    width: 15%;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+}
+
+div#titulo
+{
+    width: 85%;
+    float: left;
+    text-align: center;
+    
+}

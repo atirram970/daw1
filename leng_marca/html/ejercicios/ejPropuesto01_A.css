@@ -1,0 +1,60 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+div
+{
+    border: 1px solid black;
+}
+
+h1#bienvenida
+{
+    color: blue;
+    font-family: 'Times New Roman'; 
+    overflow: hidden;
+}
+
+div#lema
+{
+    width: 33%;
+    float: left;
+}
+
+div#enlaces
+{
+    width: 67%;
+    float: left;
+}
+
+div#publi1
+{
+    width: 25%;
+    float: left;
+}
+
+div#contenido
+{
+    width: 50%;
+    float: left;
+}
+
+div#publi2
+{
+    width: 25%;
+    float: left;
+}
+
+div#copyright
+{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.clear
+{
+    clear: both;
+}
