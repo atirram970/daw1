@@ -13,7 +13,7 @@ div
 div#logo
 {
     width: 15%;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
     float: left;
 }
@@ -21,7 +21,8 @@ div#logo
 div#titulo
 {
     width: 85%;
+    height: 220px;
     float: left;
     text-align: center;
-    
+    font-size: 80px;
 }
