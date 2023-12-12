@@ -43,11 +43,6 @@ public class ej7 {
 		System.out.println("esCapicua2: "+ funcionesMatematicas.esCapicua(88888l));
 		System.out.println("voltear2: "+ funcionesMatematicas.voltea(12300l));
 		//System.out.println("voltear2: "+ FuncionesMatematicas.voltear2(34258l));
-		try {
-			System.out.println("posicionDeDigito: "+ funcionesMatematicas.posicionDeDigito(1465697l, 7));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		
 		
 
