@@ -45,7 +45,7 @@ public class ejExtra01
         {
             System.out.print(numero[i][i] + "\t");
             
-          //guardar maximo y minimo
+            //guardar maximo y minimo
             if (numero[i][i] > maximo)
 			{
 				maximo = numero[i][i];

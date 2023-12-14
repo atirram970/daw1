@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
  * 
  */
-public class ejExtra2 
+public class ejExtra02 
 {
 	public static void main(String[] args)
 	{
