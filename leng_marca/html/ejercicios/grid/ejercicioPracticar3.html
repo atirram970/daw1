@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *
+        {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .grid-container 
+        {
+            padding: 50px;
+            background-color: salmon;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 2fr 5fr 3fr;
+            gap: 25px;
+            min-height: 100vh;
+
+            grid-template: 
+            "c1 c2 c3" 2fr
+            "c4 c5 c6" 2fr
+            "c4 c7 c8" 5fr
+            "c4 c9 c8" 1fr
+            "c4 c8 c10" 2fr
+            /2fr 3fr 4fr;
+        }
+
+        .grid-container div
+        {
+            background-color: lightblue;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .c1
+        {
+            grid-area: c1;
+        }
+
+        .c2
+        {
+            grid-area: c2;
+        }
+
+        .c3
+        {
+            grid-area: c3;
+        }
+
+        .c4
+        {
+            grid-area: c4;
+        }
+
+        .c5
+        {
+            grid-area: c5;
+        }
+
+        .c6
+        {
+            grid-area: c6;
+        }
+
+        .c7
+        {
+            grid-area: c7;
+        }
+
+        .c8
+        {
+            grid-area: c8;
+        }
+
+        .c9
+        {
+            grid-area: c9;
+        }
+
+        .c10
+        {
+            grid-area: c10;
+        }
+    </style>
+</head>
+<body>
+    <section class="grid-container">
+        <div class="c1">1</div>
+        <div class="c2">2</div>
+        <div class="c3">3</div>
+        <div class="c4">4</div>
+        <div class="c5">5</div>
+        <div class="c6">6</div>
+        <div class="c7">7</div>
+        <div class="c8">8</div>
+        <div class="c9">9</div>
+        <div class="c10">10</div>
+    </section>
+</body>
+</html>

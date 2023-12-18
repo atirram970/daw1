@@ -1,0 +1,53 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.body
+{
+    width: 70%;
+    margin: auto;
+    background-color: #4f4f4f;
+}
+
+.grid-container
+{
+    /*
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    Esto equivale a -->
+    */
+    /*
+    padding: 120px 60px 120px 60px;
+    */
+    padding: 120px 60px;
+    background-color: lightsalmon;
+    border-radius: 15x;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+.grid-container div
+{
+    background-color: lightblue;
+    border-radius: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 150px;
+}
+
+.grid-container div:first-child
+{
+    background-color: lightgreen;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 350px;
+}
