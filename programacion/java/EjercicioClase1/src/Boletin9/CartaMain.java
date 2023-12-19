@@ -1,32 +1,21 @@
-/**
- * 
- */
 package Boletin9;
 
-/**
- * 
- */
-public class CartaMain
+public class CartaMain 
 {
+
 	public static void main(String[] args) 
 	{
-		//crear la baraja completa de cartas y guardarlas en un array
-		Carta[] baraja = new Carta[48];
+
+		// Crear la baraja completa de cartas y guardarlas en un array
+		Baraja b = new Baraja("francesa");
 		
-		Baraja b = new Baraja("española");
-		
-		String[] palos = {"oros", "copas", "espadas", "bastos"};
-		int index = 0;
-		for (String palo : palos)
+		for (Carta carta : b.getBaraja()) 
 		{
-			for (int num = 1; num <= 12; num++)
-			{
-				Carta c = new Carta(palo, num);
-				baraja[index++] = c;
-			}
+			System.out.println(carta);
 		}
-		
-		for (Carta carta : b.getBaraja())
+		System.out.println("*******************MEZCLANDO**********************");
+		MetodoBaraja.mezclarBaraja(b);
+		for (Carta carta : b.getBaraja()) 
 		{
 			System.out.println(carta);
 		}
