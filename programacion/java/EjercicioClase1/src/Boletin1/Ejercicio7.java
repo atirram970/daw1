@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Boletin;
+package Boletin1;
 
 import java.util.Scanner;
 

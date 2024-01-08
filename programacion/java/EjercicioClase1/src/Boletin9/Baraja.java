@@ -1,5 +1,6 @@
 package Boletin9;
 
+import java.util.Iterator;
 import java.util.Random;
 
 public class Baraja 
@@ -41,6 +42,13 @@ public class Baraja
 			}
 		}
 	}
+	
+	public Baraja (Baraja baraja, int num)
+	{
+		this.tipo = baraja.getTipo();
+		this.baraja = new Carta[num];
+	}
+	
 	/**
 	 * @return the tipo
 	 */
@@ -86,8 +94,51 @@ public class Baraja
 		}
 	}
 	
-	public static void (Carta[] num)
+	public void mezclar()
 	{
+		Random rand = new Random();
+		Carta[] array = this.baraja();
+		for (int i = array.length - 1; i > 0; i--)
+		{
+			int j = rand.nextInt(i + 1);
+		}
 		
+		//intercambiar array[i] y array[j]
+		Carta temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
+	}
+	
+	public Baraja[] repartoMentiroso(int numJugadores)
+	{
+		Baraja[] manos = new Baraja[numJugadores];
+		//repartir las cartas a partes iguales entre las Barjas
+		int cartasReparto = 0;
+		if (this.baraja.length % numJugadores == 0)
+		{
+			cartasReparto = this.baraja.length / numJugadores;
+		}
+		else
+		{
+			cartasReparto = this.baraja.length / numJugadores +1;
+		}
+		
+		for (int i = 0; i < numJugadores; i++) 
+		{
+			 manos[i] = new Baraja(this, cartasReparto);
+		}
+		
+		int indexMano = 0;
+		int jugador = 0;
+		for (int indexCarta = 0; indexCarta < baraja.length; indexCarta++)
+		{
+			manos[jugador++].getBaraja()[indexMano] = this.baraja[indexCarta++];
+			if (jugador == numJugadores)
+			{
+				jugador = 0;
+			}
+			indexMano++;
+		}
+		return manos;
 	}
 }
