@@ -15,7 +15,6 @@ public class ej1 {
 	 */
 	public static void main(String[] args) {
 		//Ejercicio calcular salario semanal
-		
 		/*Declaracion de variables*/
 		int euros=12;
 		int eurosExtra=16;
