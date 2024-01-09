@@ -3,9 +3,12 @@ package com.Adrian.tarea3;
 import java.util.Scanner;
 import java.util.Random;
 
-public class RuletaSuerte {
-    public static void main(String[] args) {
-        String[] platos = {
+public class RuletaSuerte 
+{
+    public static void main(String[] args) 
+    {
+        String[] platos = 
+        {
             "Risotto con setas y parmesano",
             "Pollo al curry con arroz basmati",
             "Pescado en salsa de limón y alcaparras",
@@ -22,40 +25,55 @@ public class RuletaSuerte {
         Random random = new Random();
 
         boolean continuar = true;
-        while (continuar) {
+        while (continuar) 
+        {
             System.out.println("1.- Jugar");
             System.out.println("2.- Finalizar el juego");
 
             int opcion = scanner.nextInt();
 
-            if (opcion == 1) {
+            if (opcion == 1) 
+            {
                 String fraseElegida = platos[random.nextInt(platos.length)];
                 StringBuilder progresoFrase = new StringBuilder(fraseElegida.replaceAll("[a-zA-Zñóí]", "_"));
 
-                while (true) {
-                    System.out.println("Progreso: " + String.join(" ", progresoFrase.toString().split(" ")));
+                String opcionSubMenu = "";
+                boolean fraseEncontrada = false;
+                
+                while (!opcionSubMenu.equals("S") && !fraseEncontrada) 
+                {
+                    System.out.println("Progreso: " + progresoFrase);
                     System.out.println("C.- Comprar letra");
                     System.out.println("R.- Resolver frase");
                     System.out.println("S.- Salir");
 
-                    String opcionSubMenu = scanner.next().toUpperCase();
-                    switch (opcionSubMenu) {
+                    System.out.println(fraseElegida); //Para saber frase elegida
+                    
+                    opcionSubMenu = scanner.next().toUpperCase();
+                    switch (opcionSubMenu) 
+                    {
                         case "C":
                             System.out.print("Introduce una letra: ");
                             String letra = scanner.next().toUpperCase();
 
-                            if (letra.length() == 1 && Character.isLetter(letra.charAt(0))) {
+                            if (letra.length() == 1 && Character.isLetter(letra.charAt(0))) 
+                            {
                                 boolean letraEncontrada = false;
-                                for (int i = 0; i < fraseElegida.length(); i++) {
-                                    if (Character.toUpperCase(fraseElegida.charAt(i)) == letra.charAt(0)) {
+                                for (int i = 0; i < fraseElegida.length(); i++) 
+                                {
+                                    if (Character.toUpperCase(fraseElegida.charAt(i)) == letra.charAt(0)) 
+                                    {
                                         progresoFrase.setCharAt(i, fraseElegida.charAt(i));
                                         letraEncontrada = true;
                                     }
                                 }
-                                if (!letraEncontrada) {
+                                if (!letraEncontrada) 
+                                {
                                     System.out.println("La letra ingresada no está en la frase.");
                                 }
-                            } else {
+                            } 
+                            else 
+                            {
                                 System.out.println("Por favor, ingrese una letra válida.");
                             }
                             break;
@@ -64,28 +82,36 @@ public class RuletaSuerte {
                             scanner.nextLine(); // Limpiar el buffer del scanner
                             String fraseUsuario = scanner.nextLine().toUpperCase();
 
-                            if (fraseUsuario.equals(fraseElegida.toUpperCase())) {
+                            if (fraseUsuario.equals(fraseElegida.toUpperCase())) 
+                            {
                                 System.out.println("¡Enhorabuena! Has resuelto la frase.");
-                                continuar = false;
-                            } else {
+                                fraseEncontrada = true;
+                            } 
+                            else 
+                            {
                                 System.out.println("La frase ingresada no coincide con la frase a adivinar.");
                             }
                             break;
                         case "S":
-                            continuar = false;
+                            System.out.println("Has elegido salir de La ruleta");
                             break;
                         default:
                             System.out.println("Opción inválida");
                     }
 
-                    if (!continuar) {
+                    if (!continuar) 
+                    {
                         break;
                     }
                 }
-            } else if (opcion == 2) {
+            } 
+            else if (opcion == 2) 
+            {
                 System.out.println("¡Hasta luego!");
                 continuar = false;
-            } else {
+            } 
+            else 
+            {
                 System.out.println("Opción inválida");
             }
         }
