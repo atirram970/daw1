@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <libros xmlns:lib="http://wwww.ejemplo.com/libro"
+                xmlns:nom="http://wwww.ejemplo.com/nombre">
+            <lib:libro>
+                <lib:titulo>El Principito</lib:titulo>
+                <nom:autor>Antoine de Saint-Exupéry</nom:autor>
+                <lib:editorial>Gran Travesía</lib:editorial>
+                <lib:fech_publica>6/04/1943</lib:fech_publica>
+                <lib:isbn>9783140464079</lib:isbn>
+                <lib:precio moneda="euro">6.93</lib:precio>
+                <lib:num_pag>120</lib:num_pag>
+            </lib:libro>
+
+            <libro>
+                <titulo>El corazón de la piedra</titulo>
+                <autor>José María García López</autor>
+                <editorial>Nocturna</editorial>
+                <fech_publica>05/06/2013</fech_publica>
+                <isb>9788493975074</isb>
+                <precio moneda="euro">15</precio>
+                <num_pag>560</num_pag>
+            </libro>
+
+            <libro>
+                <titulo>La polifonía clásica</titulo>
+                <autor>Samuel Rubio</autor>
+                <editorial>La ciudad de dios</editorial>
+                <fech_publica>1983</fech_publica>
+                <isb>9788493975054</isb>
+                <precio moneda="euro">10</precio>
+                <num_pag>216</num_pag>
+            </libro>
+
+            <libro>
+                <titulo>Los ojos cerrados</titulo>
+                <autor>Edurne portela</autor>
+                <editorial>Galaxia Gutenberg</editorial>
+                <fech_publica>17/03/2021</fech_publica>
+                <isb>9788418526206</isb>
+                <precio moneda="euro">16.15</precio>
+                <num_pag>208</num_pag>
+            </libro>
+
+            <libro>
+                <titulo>Panza de burro</titulo>
+                <autor>Andrea Abreu</autor>
+                <editorial>Barrett</editorial>
+                <fech_publica>15/04/2020</fech_publica>
+                <isb>9788412135336</isb>
+                <precio moneda="euro">17.95</precio>
+                <num_pag>176</num_pag>
+            </libro>
+        </libros>

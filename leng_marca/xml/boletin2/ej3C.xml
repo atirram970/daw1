@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--original-->
+            <!-- 
+            <padre>
+            <hijo1>
+            <nombre>Juan<apellido>Pérez</apellido></nombre>
+            </hijo1>
+            <hijo2>
+            <nombre>Luis<apellido>García</nombre></apellido> fallo aqui
+            </hijo2>
+            </padre>
+            -->
+            <padre>
+                <hijo1>
+                    <nombre>Juan</nombre><apellido>Pérez</apellido>
+                </hijo1>
+                <hijo2>
+                    <nombre>Luis</nombre><apellido>García</apellido>
+                </hijo2>
+            </padre>

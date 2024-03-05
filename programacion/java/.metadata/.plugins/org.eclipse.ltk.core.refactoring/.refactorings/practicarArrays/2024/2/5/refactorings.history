@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;i&apos; in &apos;practicarArrays.bingo.main(...)&apos; to &apos;j&apos;&#x0D;&#x0A;- Original project: &apos;practicarArrays&apos;&#x0D;&#x0A;- Original element: &apos;practicarArrays.bingo.main(String[]).i&apos;&#x0D;&#x0A;- Renamed element: &apos;i&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;i&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;practicarArrays{bingo.java[bingo~main~\[QString;@i!397!405!401!401!I!0!false" name="j" references="true" stamp="1706827076910" version="1.0"/>
+</session>

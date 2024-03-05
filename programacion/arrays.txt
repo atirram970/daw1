@@ -1,0 +1,52 @@
+//regex
+	// validación de una IPv4
+	String ipv4 = "192.168.255.0";
+	String patronEj13 = "((\\d|[1-9]\\d|((1\\d\\d)|(2[0-4]\\d)|(25[0-5])))\\.){3}(\\d|[1-9]\\d|((1\\d\\d)|(2[0-4]\\d)|(25[0-5])))";
+	System.out.println("Ejemplo ipv4: " + ipv4 + " - Patrón: " + patronEj13 + " Resultado: " + ipv4.matches(patronEj13));
+
+	// validación de un número real con punto para los miles y coma para los decimales
+	// no puede haber ceros a la izquierda, ni ceros a la derecha después de la coma.
+	String numReal = "+9.007.966.644,7";
+	String patronEj16 = "^([+-]?[1-9]\\d{0,2}(\\.\\d{3})*(,\\d*[1-9])?)|(0|[+-]?0(,\\d*[1-9]))$";
+	System.out.println("Ejemplo número real: " + numReal + " - Patrón: " + patronEj16 + " Resultado: " + numReal.matches(patronEj16));
+
+//numero aleatorio
+int numAleatorio = (int) (Math.random() * (max - min + 1) + min);
+
+//excepciones y throw
+	//main de la excepcion
+	public class CartaException extends Exception 
+	{
+		private static final long serialVersionUID = 1L;
+		public CartaException(String message)
+		{
+		
+		}
+	}
+
+	//main del script
+	// Clase que representa una cuenta bancaria
+class CuentaBancaria {
+    private double saldo;
+
+    public CuentaBancaria(double saldoInicial) {
+        this.saldo = saldoInicial;
+    }	
+	
+	// Método para realizar retiros
+    	public void retirar(double cantidad) throws FondosInsuficientesException 
+	{
+        	if (cantidad > saldo) 
+		{
+            		// Lanzar la excepción si no hay suficientes fondos
+            		throw new FondosInsuficientesException("Fondos insuficientes para realizar el retiro");
+        	}	 
+		else 
+		{
+            		saldo -= cantidad;
+            		System.out.println("Retiro exitoso. Saldo restante: " + saldo);
+        	}
+    		}
+	}
+
+	

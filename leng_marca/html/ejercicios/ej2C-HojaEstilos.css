@@ -1,0 +1,28 @@
+body 
+{
+    background-color: white; 
+    size: 10px; 
+    text-align: center;
+}
+.azul
+{
+    color: blue; 
+    text-align: left;
+}
+.fondoNegro
+{
+    color: white; 
+    background-color: black; 
+    text-align: left; 
+    size: 15px;
+}
+.puntosPorAbajo
+{
+    text-align: left; 
+    border-bottom: 2px dotted black;
+}
+.rojo
+{
+    color: red; 
+    text-align: left;
+}

@@ -1,0 +1,156 @@
+package empresa;
+
+public class empresa {
+	//atributos
+	private String nombre;
+	private static String cif;
+	private int telefono;
+	private String direccion;
+	private String [] empleados;
+	
+	//constructor
+	/**
+	 * @param nombre
+	 * @param telefono
+	 * @param direccion
+	 * @param empleados
+	 */
+	public empresa(String nombre, int telefono, String direccion, String[] empleados) {
+		super();
+		this.nombre = nombre;
+		this.telefono = telefono;
+		this.direccion = direccion;
+		this.empleados = empleados;
+	}
+
+	//getters y setters
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	/**
+	 * @return the telefono
+	 */
+	public int getTelefono() {
+		return telefono;
+	}
+
+	/**
+	 * @param telefono the telefono to set
+	 */
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
+	}
+
+	/**
+	 * @return the direccion
+	 */
+	public String getDireccion() {
+		return direccion;
+	}
+
+	/**
+	 * @param direccion the direccion to set
+	 */
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	/**
+	 * @return the empleados
+	 */
+	public String[] getEmpleados() {
+		return empleados;
+	}
+
+	/**
+	 * @param empleados the empleados to set
+	 */
+	public void setEmpleados(String[] empleados) {
+		this.empleados = empleados;
+	}
+
+	/**
+	 * @return the cif
+	 */
+	public static String getCif() {
+		return cif;
+	}
+	
+	//metodos
+	public void agregarEmpleado(String dni, String nombre, String sueldoBruto) {
+        String[] nuevoEmpleado = new String[empleados.length + 1];
+        for (int i = 0; i < empleados.length; i++) {
+            nuevoEmpleado[i] = empleados[i];
+        }
+        nuevoEmpleado[empleados.length] = dni + ";" + nombre + ";" + sueldoBruto;
+        this.empleados = nuevoEmpleado;
+    }
+
+    public void eliminarEmpleado(String dni) {
+        String[] nuevoEmpleado = new String[empleados.length - 1];
+        int i = 0;
+        for (String empleado : empleados) {
+            if (!empleado.split(";")[0].equals(dni)) {
+                nuevoEmpleado[i] = empleado;
+                i++;
+            }
+        }
+        this.empleados = nuevoEmpleado;
+    }
+
+    public void mostrarInformacionEmpleados() {
+        for (String empleado : empleados) {
+            String[] datosEmpleado = empleado.split(";");
+            System.out.println("DNI: " + datosEmpleado[0] + ", Nombre: " + datosEmpleado[1] + ", Sueldo Bruto: " + datosEmpleado[2]);
+        }
+    }
+
+    public void mostrarSueldosEmpleados() {
+        double sueldoBrutoTotal = 0;
+        double sueldoNetoTotal = 0;
+        for (String empleado : empleados) {
+            String[] datosEmpleado = empleado.split(";");
+            double sueldoBruto = Double.parseDouble(datosEmpleado[2]);
+            double sueldoNeto = sueldoBruto - (sueldoBruto * 0.2);
+            sueldoBrutoTotal += sueldoBruto;
+            sueldoNetoTotal += sueldoNeto;
+            System.out.println("DNI: " + datosEmpleado[0] + ", Sueldo Bruto: " + sueldoBruto + ", Sueldo Neto: " + sueldoNeto);
+        }
+        System.out.println("Suma de sueldos brutos: " + sueldoBrutoTotal);
+        System.out.println("Suma de sueldos netos: " + sueldoNetoTotal);
+    }
+
+    public double calcularSueldoBrutoTotal() {
+        double sueldoBrutoTotal = 0;
+        for (String empleado : empleados) {
+            String[] datosEmpleado = empleado.split(";");
+            double sueldoBruto = Double.parseDouble(datosEmpleado[2]);
+            sueldoBrutoTotal += sueldoBruto;
+        }
+        return sueldoBrutoTotal;
+    }
+
+    public double calcularSueldoNetoTotal() {
+        double sueldoNetoTotal = 0;
+        for (String empleado : empleados) {
+            String[] datosEmpleado = empleado.split(";");
+            double sueldoBruto = Double.parseDouble(datosEmpleado[2]);
+            double sueldoNeto = sueldoBruto - (sueldoBruto * 0.2);
+            sueldoNetoTotal += sueldoNeto;
+        }
+        return sueldoNetoTotal;
+    }
+    
+    
+}

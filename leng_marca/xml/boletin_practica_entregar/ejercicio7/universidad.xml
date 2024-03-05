@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE universidad SYSTEM "universidad.dtd">
+<universidad>
+    <alumnos>
+        <alumno>
+            <dni>12345678A</dni>
+            <nombre>María</nombre>
+            <apellido1>García</apellido1>
+            <apellido2>Pérez</apellido2>
+            <fecha_nacimiento>1995-05-12</fecha_nacimiento>
+            <contacto>
+                <direccion>Calle Mayor, 1</direccion>
+                <telefono>123456789</telefono>
+                <correo>maria.garcia@example.com</correo>
+            </contacto>
+            <asignaturas>
+                <asignatura codigo="MAT101">
+                    <nota>MH</nota>
+                    <creditos>6</creditos>
+                    <carrera>Matemáticas</carrera>
+                    <curso>1</curso>
+                    <tipo>
+                        <obligatoria/>
+                    </tipo>
+                </asignatura>
+                <asignatura codigo="FIS101">
+                    <nota>SB</nota>
+                    <creditos>6</creditos>
+                    <carrera>Física</carrera>
+                    <curso>1</curso>
+                    <tipo>
+                        <obligatoria/>
+                    </tipo>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+    </alumnos>
+    <profesores>
+        <profesor>
+            <pasaporte pais="españa">12345678B</pasaporte>
+            <nombre>Juan</nombre>
+            <apellido>Pérez</apellido>
+            <fecha_nacimiento>1970-01-01</fecha_nacimiento>
+            <contacto>
+                <direccion>Calle Mayor, 2</direccion>
+                <telefono>987654321</telefono>
+                <correo>juan.perez@example.com</correo>
+            </contacto>
+            <despacho>123</despacho>
+            <tutorias>Lunes de 10 a 12, Miércoles de 16 a 18</tutorias>
+            <asignaturas>
+                <asignatura codigo="MAT101">
+                    <creditos>6</creditos>
+                    <carrera>Matemáticas</carrera>
+                    <curso>2</curso>
+                    <tipo>
+                        <obligatoria/>
+                    </tipo>
+                </asignatura>
+                <asignatura codigo="FIS101">
+                    <creditos>5</creditos>
+                    <carrera>Física</carrera>
+                    <curso>2</curso>
+                    <tipo>
+                        <optativa/>
+                    </tipo>
+                </asignatura>
+            </asignaturas>
+        </profesor>
+    </profesores>
+    <asignaturas>
+        <asignatura codigo="MAT101">
+            <creditos>3</creditos>
+            <carrera>Matemáticas</carrera>
+            <curso>1</curso>
+            <tipo>
+                <obligatoria/>
+            </tipo>
+        </asignatura>
+        <asignatura codigo="FIS101">
+            <creditos>1</creditos>
+            <carrera>Física</carrera>
+            <curso>3</curso>
+            <tipo>
+                <obligatoria/>
+            </tipo>
+        </asignatura>
+    </asignaturas>
+</universidad>

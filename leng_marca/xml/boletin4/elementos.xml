@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    **Enunciado**
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE elementos [
+ <!ELEMENT elementos (pcdata*, any+, vacio)>
+ <!ELEMENT pcdata (#PCDATA)>
+ <!ELEMENT any (ANY)>
+ <!ELEMENT vacío (EMPTY)>
+]>
+<elementos>
+ <any/>
+ <vacio/>
+</elementos>
+-->
+
+<!DOCTYPE elementos [
+ <!ELEMENT elementos (pcdata*,any+, vacio)>
+ <!ELEMENT pcdata (#PCDATA)>
+ <!ELEMENT any (EMPTY)>
+ <!ELEMENT vacio (EMPTY)>
+]>
+<elementos>
+ <any/>
+ <vacio/>
+</elementos>

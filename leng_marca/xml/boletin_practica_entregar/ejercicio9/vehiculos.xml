@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehiculos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vehiculos.xsd">
+    <vehiculo>
+        <marca>Ford</marca>
+        <modelo>Mustang</modelo>
+        <f_fabricacion dia="09" mes="03" anio="2020"/>
+        <lugar_fabricacion pais="EE">
+            <localidad>EEUU</localidad>
+        </lugar_fabricacion>
+        <unidades>325</unidades>
+    </vehiculo>
+    <vehiculo>
+        <marca>Toyota</marca>
+        <modelo>Corola</modelo>
+        <f_fabricacion dia="05" mes="08" anio="2015"/>
+        <lugar_fabricacion pais="AS">
+            <localidad>Asia</localidad>
+        </lugar_fabricacion>
+        <unidades>513</unidades>
+    </vehiculo>
+</vehiculos>

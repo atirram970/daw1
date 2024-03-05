@@ -1,0 +1,68 @@
+package examen;
+import java.util.*;
+
+public class Plantilla implements Imprimible{
+	// código de la clase Plantilla
+	private String empleados[] = new String[100];
+	
+	//constructor
+	public Plantilla() {
+		
+	}
+	
+	public void contratarEmpleado(Empleado empleado){
+		Scanner scan = new Scanner(System.in);
+		boolean hueco = false;
+		int indice = 0;
+		
+		while (!hueco && indice < empleados.length) {
+			if(null != empleados[indice]){
+				hueco = true;
+				System.out.println("Se ha encontrado hueco");
+				
+				try {
+					System.out.println("Dame el nombre del empleado: ");
+					String nombre = scan.next();
+
+					System.out.println("Dame los apellidos del empleado: ");
+					String apellidos = scan.next();
+					
+					System.out.println("Dame el dni del empleado: ");
+					String dni = scan.next();
+				}
+				catch (InputMismatchException e) {
+					System.out.println("No has introducido un valor correcto, intentalo de nuevo");
+				}
+			}
+			else if(indice == empleados.length && hueco == false) {
+				System.out.println("No se ha encontrado ningún hueco para contratar otro empleado");
+			}
+			else {
+				indice++;
+			}
+		}
+	}
+	
+	public void getEmpleadosPorNombre(String empleado) {
+		boolean encontrado = false;
+		int indice = 0;
+		
+		while (!encontrado || indice<empleados.length) {
+			if(empleado.equals(empleados[indice])){
+				encontrado = true;
+				System.out.println(empleados[indice]);
+			}
+			else if (indice==empleados.length && encontrado == false) {
+				System.out.println("No se ha encontrado al empleado");
+			}
+			else {
+				indice++;
+			}
+		}
+	}
+
+	@Override
+	public void mostrarDatos() {
+		//usar el string builder del Imprimible y hacerle un append de las cosas que cambian resprecto a Empleado
+	}
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horario</title>
+    <style type="text/css">
+    table 
+    {
+        width: 50%;
+        border-collapse: collapse;
+    }
+    table, th, td 
+    {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 15px;
+        text-align: center;
+    }
+    th
+    {
+        background-color: lightgrey;
+    }
+    /*Bordes de tablas*/
+    .bordeArriba
+    {
+        border-top: 3px solid black;    
+    }
+    .bordeAbajo
+    {
+        border-bottom: 3px solid black;    
+    }
+    .bordeIzquierda
+    {
+        border-left: 3px solid black;    
+    }
+    .bordeDerecha
+    {
+        border-right: 3px solid black;    
+    }
+    .bordeAbajoyArriba
+    {
+        border-top: 3px solid black;  
+        border-bottom: 3px solid black;
+    }
+    .bordeIzquierdayDerecha
+    {
+        border-left: 3px solid black;  
+        border-right: 3px solid black;
+    }
+    .bordeArribaIzquierda
+    {
+        border-top: 3px solid black;  
+        border-left: 3px solid black;
+    }
+    .bordeArribaDerecha
+    {
+        border-top: 3px solid black;  
+        border-right: 3px solid black;
+    }
+    .bordeAbajoIzquierda
+    {
+        border-bottom: 3px solid black;  
+        border-left: 3px solid black;
+    }
+    .bordeAbajoDerecha
+    {
+        border-bottom: 3px solid black;  
+        border-right: 3px solid black;
+    }
+    .bordeIzquierdaDerechayAbajo
+    {
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+    }
+    .bordeArribaAbajoyDerecha
+    {
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        border-right: 3px solid black;
+    }
+    .bordes
+    {
+        border: 3px solid black;
+    }
+    /*Color de Fondo*/
+    #fondoNaranja
+    {
+        background-color: #ffffec;
+        border: 3px solid black;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <caption><h2>Horario 1º DAW 2023-2024</h2></caption>
+        <tr>
+            <th class="bordeArribaIzquierda">Hora</th>
+            <th class="bordeAbajoyArriba">Lunes</th>
+            <th class="bordeAbajoyArriba">Martes</th>
+            <th class="bordeAbajoyArriba">Miércoles</th>
+            <th class="bordeAbajoyArriba">Jueves</th>
+            <th class="bordeArribaAbajoyDerecha">Viernes</th>
+        </tr>
+        <tr>
+            <th class="bordeIzquierdayDerecha">15:30 - 16:30</th>
+            <td rowspan="2">Lenguajes de marcas y sistemas de gestión de información</td>
+            <td rowspan="2">Programación</td>
+            <td rowspan="2">Programación</td>
+            <td rowspan="2">Bases de Datos</td>
+            <td rowspan="2" class="bordeDerecha">Programación</td>
+        </tr>
+        <tr>
+            <th class="bordeIzquierdayDerecha">16:30 - 17:30</th>
+        </tr>
+        <tr>
+            <th class="bordeIzquierdayDerecha">17:30 - 18:30</th>
+            <td>Bases de Datos</td>
+            <td>Formación y Orientación Laboral</td>
+            <td>Entornos de Desarrollo</td>
+            <td>Formación y Orientación Laboral</td>
+            <td class="bordeDerecha">Sistemas Informáticos</td>
+        </tr>
+        <tr>
+            <th class="bordeIzquierdayDerecha">18:30 - 18:45</th>
+            <th colspan="5" id="fondoNaranja"><h3>Recreo</h3></th>
+        </tr>
+        <tr>
+            <th class="bordeIzquierdayDerecha">18:45 - 19:45</th>
+            <td>Bases de Datos</td>
+            <td>Formación y Orientación Laboral</td>
+            <td>Entornos de Desarrollo</td>
+            <td>Formación y Orientación Laboral</td>
+            <td class="bordeDerecha">Sistemas informáticos</td>
+        </tr>
+        <tr>
+            <th class="bordeIzquierdayDerecha" class="bordeAbajo">19:45 - 20:45</th>
+            <td rowspan="2" class="bordeAbajo">Sistemas informáticos</td>
+            <td rowspan="2" class="bordeAbajo">Bases de Datos</td>
+            <td rowspan="2" class="bordeAbajo">Sistemas informáticos</td>
+            <td rowspan="2" class="bordeAbajo">Programación</td>
+            <td rowspan="2" class="bordeAbajoDerecha">Lenguajes de marcas y sistemas de gestión de información</td>
+        </tr>
+        <tr>
+            <th class="bordeIzquierdaDerechayAbajo">20:45 - 21:45</th>
+        </tr>
+    </table>
+</body>
+</html>

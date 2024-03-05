@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;banco.imprimible&apos; to &apos;Imprimible&apos;&#x0D;&#x0A;- Original project: &apos;banco&apos;&#x0D;&#x0A;- Original element: &apos;banco.imprimible&apos;&#x0D;&#x0A;- Renamed element: &apos;banco.Imprimible&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;imprimible&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;banco{imprimible.java[imprimible" matchStrategy="1" name="Imprimible" qualified="false" references="true" similarDeclarations="false" stamp="1707146941133" textual="false" version="1.0"/>
+</session>

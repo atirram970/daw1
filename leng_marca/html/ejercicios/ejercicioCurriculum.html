@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    <style>
+        table, th, td
+        {
+            border: 2px solid black;
+        }
+        
+        table
+        {
+            border-collapse: separate;
+            border: 3px solid black;
+            vertical-align: center;
+            padding: 10px;
+            margin: auto;
+        }
+        
+        table#arriba
+        {
+            background-color: aqua;
+            text-align: left;
+            width: 80%;
+        }
+
+        table#abajo
+        {
+            border: 1px solid red;
+            background-color: rgb(200, 40, 70);
+            text-align: center;
+            width: 35%;
+        }
+
+        th
+        {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function validarFormulario()
+        {
+            alert("Ahora valido el formulario");
+            let correcto = false;
+            let checkboxes = document.getElementsByClassName("cb_obligatorio");
+            for (let i = 0; i < checkboxes.length; i++)
+            {
+                if (checkboxes[i].checked)
+                {
+                    correcto = true;
+                }
+            }
+            alert("El resultado del validamiento es: " + correcto);
+        }
+    </script>
+</head>
+<body>
+    <form method="get">
+
+            <table id="arriba">
+                <tr>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="DNI" size="15" max="9" placeholder="12345678A" required/></td>
+                    <td><input type="text" name="Nombre" size="30" placeholder="Fulano"/></td>
+                    <td><input type="text" name="Dirección" size="40" placeholder="Calle Madrid nº2"/></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Estado Civil</th>
+                    <th>Experiencia laboral</th>
+                    <th>Idiomas</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="Estado Civil" value="soltero"/><checkbox>Soltero</checkbox>
+                        <br>
+                        <input type="radio" name="Estado Civil" value="casado"/><checkbox>Casado</checkbox>
+                        <br>
+                        <input type="radio" name="Estado Civil" value="viudo"/><checkbox>Viudo</checkbox>
+                        <br>
+                        <input type="radio" name="Estado Civil" value="divorciado"/><checkbox>Divorciado</checkbox>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="Experiencia laboral" class="cb_obligatorio" value="construccion"/><checkbox>Construcción</checkbox>
+                        <br>
+                        <input type="checkbox" name="Experiencia laboral" class="cb_obligatorio" value="administracion"/><checkbox>Administración</checkbox>
+                        <br>
+                        <input type="checkbox" name="Experiencia laboral" class="cb_obligatorio" value="hosteleria"/><checkbox>Hostelería</checkbox>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="Idiomas" value="ingles" checked/><checkbox>Inglés</checkbox>
+                        <br>
+                        <input type="checkbox" name="Idiomas" value="frances"/><checkbox>Francés</checkbox>
+                        <br>
+                        <input type="checkbox" name="Idiomas" value="aleman"/><checkbox>Alemán</checkbox>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+
+            <br>
+
+            <table id="abajo">
+                <tr>
+                    <td>
+                        <input type="submit" name="Aceptar" value="Aceptar" onsubmit="validarFormulario"/>
+                    </td>
+                    <td>
+                        <input type="reset" name="Cancelar" value="cancelar"/>
+                    </td>
+                </tr>
+            </table>
+
+    </form>
+</body>
+</html>

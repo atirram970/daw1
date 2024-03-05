@@ -1,0 +1,131 @@
+package empresa;
+
+import java.util.Iterator;
+
+public class Empresa {
+
+	private String nombre;
+	private String cif;
+	private String telefono;
+	private String direccion;
+	private Empleado[] empleados;
+	
+	//Constructores
+	public Empresa(String nombre, int i, String cif) {
+		this.nombre = nombre;
+		this.cif = cif;
+		this.telefono = "";
+		this.direccion = "";
+		this.empleados = new Empleado[100];
+	}
+	
+	public Empresa(String nombre, String cif, String telefono, String direccion, Empleado[] empleados) {
+		this.nombre = nombre;
+		this.cif = cif;
+		this.telefono = telefono;
+		this.direccion = direccion;
+		this.empleados = empleados;
+	}
+
+	//Getters y Setters
+	/**
+	 * @return the telefono
+	 */
+	public String getTelefono() {
+		return telefono;
+	}
+
+	/**
+	 * @param telefono the telefono to set
+	 */
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	/**
+	 * @return the direccion
+	 */
+	public String getDireccion() {
+		return direccion;
+	}
+
+	/**
+	 * @param direccion the direccion to set
+	 */
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	/**
+	 * @return the empleados
+	 */
+	public Empleado[] getEmpleados() {
+		return empleados;
+	}
+
+	/**
+	 * @param empleados the empleados to set
+	 */
+	public void setEmpleados(Empleado[] empleados) {
+		this.empleados = empleados;
+	}
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @return the cif
+	 */
+	public String getCif() {
+		return cif;
+	}
+	
+	// Métodos
+	
+	public void agregarEmpleado(Empleado empleado) throws EmpresaException {
+		boolean introducido= false;
+		int i = 0;
+		while(!introducido && i< this.empleados.length) {
+			if(null == this.empleados[i]) {
+				this.empleados[i]= empleado;
+				introducido= true;
+			} 
+			i++;
+			
+		}
+		if(!introducido) {
+			throw new EmpresaException ("La empresa no puede agregar más empleados");
+		}
+		
+		
+	}
+	
+	public void eliminarEmpleado(Empleado empleado) throws EmpresaException {
+		boolean eliminado= false;
+		int i = 0;
+		while(!eliminado && i< this.empleados.length) {
+			if(this.empleados[i].equals(empleado)) {
+				this.empleados[i]= null;
+				eliminado= true;
+			} 
+			i++;	
+		}		
+	}
+	
+	public void mostrarEmpleados() {
+		System.out.println("Empresa: " + this.nombre );
+		System.out.println("Lista de empleados: ");
+		int index = 1;
+		for (Empleado empleado : this.empleados) {
+			if(null != empleado) {
+				System.out.println(index++ + "--------------------------");
+				System.out.println(empleado.devolverInfoString());
+			}
+		}
+	}
+	
+}

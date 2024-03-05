@@ -1,0 +1,71 @@
+1er Método sort(): Este método ordena la matriz especificada en orden ascendente según el orden natural de sus elementos.
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array = {5, 2, 8, 1, 7};
+Arrays.sort(array);
+// Después de la ejecución, array contendrá {1, 2, 5, 7, 8}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+2do Método binarySearch(): Este método realiza una búsqueda binaria en la matriz especificada para encontrar la posición del elemento dado. Devuelve un índice negativo si el elemento no está presente.
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array = {1, 2, 5, 7, 8};
+int index = Arrays.binarySearch(array, 5);
+// Después de la ejecución, index será 2 (posición del elemento 5)
+----------------------------------------------------------------------------------------------------------------------------------------
+
+3ro Método equals(): Compara dos matrices para verificar si son iguales en términos de longitud y elementos.
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array1 = {1, 2, 3};
+Integer[] array2 = {1, 2, 3};
+boolean areEqual = Arrays.equals(array1, array2);
+// Después de la ejecución, areEqual será true
+----------------------------------------------------------------------------------------------------------------------------------------
+
+4to Método fill():  Este método asigna el valor especificado a cada elemento de la matriz.
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array = new Integer[5];
+Arrays.fill(array, 10);
+// Después de la ejecución, array contendrá {10, 10, 10, 10, 10}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+5to Método copyOf(): Crea una nueva matriz con la longitud especificada y copia los elementos de la matriz original. Si la nueva longitud es mayor, los elementos adicionales se llenan con valores predeterminados.
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array = {1, 2, 3};
+Integer[] newArray = Arrays.copyOf(array, 5);
+// newArray contendrá {1, 2, 3, null, null}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+6to Método toString():
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array = {1, 2, 3};
+String arrayString = Arrays.toString(array);
+// Después de la ejecución, arrayString será "[1, 2, 3]"
+----------------------------------------------------------------------------------------------------------------------------------------
+
+7mo Método asList(): Convierte una matriz en una lista. La lista devuelta es de tamaño fijo y refleja cualquier cambio realizado en la matriz.
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array = {1, 2, 3};
+List<Integer> list = Arrays.asList(array);
+// list contendrá [1, 2, 3]
+----------------------------------------------------------------------------------------------------------------------------------------
+
+8vo Método hashCode(): Retorna el código hash basado en los elementos de la matriz. Es útil para comparar rápidamente matrices.
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array = {1, 2, 3};
+int hashCode = Arrays.hashCode(array);
+// hashCode contendrá un valor basado en los elementos de la matriz
+----------------------------------------------------------------------------------------------------------------------------------------
+
+9no Método stream(): Convierte la matriz en un flujo (stream) de elementos, lo que permite operaciones funcionales en los elementos de la matriz
+----------------------------------------------------------------------------------------------------------------------------------------
+Integer[] array = {1, 2, 3, 4, 5};
+int sum = Arrays.stream(array).sum();
+// Después de la ejecución, sum será 15 (suma de los elementos)
+----------------------------------------------------------------------------------------------------------------------------------------
+
+10mo Método deepEquals(): Compara profundamente dos matrices de objetos para verificar si son iguales en términos de contenido. A diferencia de equals, este método realiza una comparación recursiva si los elementos son matrices u objetos.
+----------------------------------------------------------------------------------------------------------------------------------------
+Object[] array1 = {1, 2, new int[]{3, 4}};
+Object[] array2 = {1, 2, new int[]{3, 4}};
+boolean areDeepEqual = Arrays.deepEquals(array1, array2);
+// Después de la ejecución, areDeepEqual será true
+----------------------------------------------------------------------------------------------------------------------------------------

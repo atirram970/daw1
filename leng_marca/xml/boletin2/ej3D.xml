@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--original-->
+            <!-- 
+            Fallo Aqui! no tiene nodo padre
+            <hijo1>
+            <nombre>Juan</nombre>
+            <apellido>Pérez</apellido>
+            </hijo1>
+            <hijo2>
+            <nombre>Luis</nombre>
+            <apellido>García</apellido>
+            </hijo2>
+            -->
+            <padre>
+                <hijo1>
+                    <nombre>Juan</nombre>
+                    <apellido>Pérez</apellido>
+                </hijo1>
+                <hijo2>
+                    <nombre>Luis</nombre>
+                    <apellido>García</apellido>
+                </hijo2>
+            </padre>
