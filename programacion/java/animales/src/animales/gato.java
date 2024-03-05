@@ -29,6 +29,11 @@ public class gato extends mamifero
 		this.fechaNac = new Date();
 	}
 	
+	private void setNombre(String nombre2) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	@Override
 	public void come(String comida) 
 	{

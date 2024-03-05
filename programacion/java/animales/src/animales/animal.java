@@ -10,6 +10,6 @@ import java.util.Date;
  */
 public abstract class animal 
 {
-	private Date fechaNac;
+	protected Date fechaNac;
 	public abstract void come(String comida);
 }
