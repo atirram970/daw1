@@ -1,5 +1,0 @@
-1708345318826	Rename field 'codigo'
-1708345340677	Rename method 'calcularDigitoControl'
-1708346788977	Rename field 'codigoCompleto'
-1708368568077	Rename method 'procesarOpcion'
-1708382098727	Encapsulate field 'codigoCiudad'

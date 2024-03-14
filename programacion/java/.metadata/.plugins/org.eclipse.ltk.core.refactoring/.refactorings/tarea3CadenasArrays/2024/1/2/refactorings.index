@@ -1,8 +1,0 @@
-1704839115014	Rename local variable 'opcion'
-1704839726227	Rename local variable 'continuar'
-1704885665330	Copy compilation unit
-1704885853242	Rename local variable 'inputString'
-1704885869878	Rename local variable 'vowelsBuilder'
-1704885878217	Rename local variable 'consonantsBuilder'
-1704885894885	Rename method 'isVowel'
-1704885935855	Rename local variable 'currentChar'

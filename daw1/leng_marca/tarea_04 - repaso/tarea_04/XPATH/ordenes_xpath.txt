@@ -1,0 +1,57 @@
+Escribir las expresiones XPath necesarias para obtener exactamente los siguientes resultados:
+
+a. Nombre del instituto.--> IES Trafalgar
+/ies/nombre
+
+b. Página web. --> http://www.iestrafalgar.es
+/ies/web
+
+c. Nombre de los ciclos formativos con su modalidad -->
+Administración de Sistemas Informáticos en Red
+Presencial
+Desarrollo de Aplicaciones Web
+Dual
+Sistemas Microinformáticos y Redes
+Presencial
+//ciclos/ciclo/nombre | //ciclos/ciclo/modalidad
+
+d.Siglas que identifican a los ciclos formativos junto a sus nombres de la siguiente forma -->
+ASIR
+Administración de Sistemas Informáticos en Red
+DAW
+Desarrollo de Aplicaciones Web
+SMR
+Sistemas Microinformáticos y Redes
+//ciclos/ciclo/@id | //ciclos/ciclo/nombre
+
+e. Años en los que se publicaron los decretos de título de los ciclos formativos indicado como sigue -->
+ASIR
+2009
+DAW
+2010
+SMR
+2008
+//ciclos/ciclo/@id | //ciclos/cilo/decretotitulo/@año
+
+f. Elemento <ciclo> de los ciclos formativos de grado medio (en este caso solo uno) -->
+<ciclo id="SMR">
+ <nombre>Sistemas Microinformáticos y Redes</nombre>
+ <grado>Medio</grado>
+ <decretotitulo año="2008"/>
+</ciclo>
+//ciclos/ciclo[grado="Medio"]
+
+g. Elemento <nombre> de los ciclos formativos de grado superior -->
+<nombre>Administración de Sistemas Informáticos en Red</nombre>
+<nombre>Desarrollo de Aplicaciones Web</nombre>
+//ciclos/ciclo[grado="superior"]/nombre
+
+h. Nombre de los ciclos formativos anteriores a 2010 -->
+Administración de Sistemas Informáticos en Red
+Sistemas Microinformáticos y Redes
+//ciclos/ciclo[decretotitulo/@año < 2010]/nombre
+
+i. Nombre de los ciclos formativos de 2008 o 2010 -->
+Desarrollo de Aplicaciones Web
+Sistemas Microinformáticos y Redes
+//ciclos/ciclo[decretotitulo/@año = 2008 or decretotitulo/@año = 2010]/nombre
