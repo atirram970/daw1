@@ -77,5 +77,54 @@ public class main {
 			}
 			return null;
 			}
+		
+		public static int[][] suavizar(int[][] arrayImagen) {
+			boolean recorrido = false;
+			int suma = 0;
+			
+			System.out.println("Imagen Suavizada");
+			
+			do {
+				//primera fila
+				for (int i = 0; i < arrayImagen.length; i++) {
+					arrayImagen[i][0] = -127;
+				}
+				
+				//ultima fila
+				for (int i = 0; i < arrayImagen.length; i++) {
+					arrayImagen[i][4] = -127;
+				}
+				
+				//columna izquierda menos el primer y ultimo valor
+				for (int j = 1; j < arrayImagen[0].length-1; j++) {
+					arrayImagen[0][j] = -127;
+				}
+				
+				//columna izquierda menos el primer y ultimo valor
+				for (int j = 1; j < arrayImagen[0].length-1; j++) {
+					arrayImagen[4][j] = -127;
+				}
+				recorrido = true;
+			} while (!recorrido);
+				
+			for (int i = 1; i < arrayImagen.length-1; i++) {
+				for (int j = 1; j < arrayImagen.length-1; j++) {
+					suma += arrayImagen[i][j];
+				}
+			}
+			
+			int media = suma / 9;
+			
+			arrayImagen[1][1] = media;
+			
+			for (int i = 0; i < arrayImagen.length; i++) {
+				System.out.print("\n");
+				for (int j = 0; j < arrayImagen.length; j++) {
+					System.out.print(arrayImagen[i][j] + "\t");
+				}
+			}
+			
+			return arrayImagen;
+		}
 			
 }
