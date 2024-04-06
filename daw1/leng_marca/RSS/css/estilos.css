@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    /* Gris muy claro */
+    color: #333;
+    /* Color de texto predeterminado */
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #000080;
+    /* Azul oscuro */
+    padding: 10px;
+    text-align: center;
+    margin-top: 60px;
+    /* Agrega un margen en la parte superior del encabezado */
+}
+
+section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Ahora se mostrarán máximo 4 noticias por fila */
+    grid-gap: 20px;
+}
+
+footer {
+    background-color: #000080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+    box-sizing: border-box;
+    /* Incluir el padding y el borde en el ancho */
+    left: 0;
+    /* Alinear el footer a la izquierda */
+}
+
+
+#navbar {
+    overflow: hidden;
+    background-color: #000080;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Asegura que la barra de navegación esté por encima de otros elementos */
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+.noticia {
+    background-color: rgb(182, 181, 181);
+    /* Gris muy claro */
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.noticia div:first-child {
+    width: 70%;
+}
+
+.noticia div:last-child {
+    width: 30%;
+}
+
+h2 {
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.rss,
+.atom {
+    color: #ffff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.rss {
+    background-color: #ffd166;
+}
+
+.atom {
+    background-color: #89e186;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <!-- Se define el canal -->
+    <channel>
+        <title>Semana Santa en Barbate</title>
+        <link>http//000webhost.atirram970.com/fichero.rss</link>
+        <description>Información sobre las actividades de Semana Santa en Barbate y las hermandades participantes.</description>
+        <language>es</language>
+        <!-- Se definen los distintos items del canal-->
+        <item>
+            <title>Lunes Santo</title>
+            <link></link>
+            <description></description>
+        </item>
+    </channel>
+</rss>
