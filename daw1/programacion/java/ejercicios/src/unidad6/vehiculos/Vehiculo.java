@@ -3,7 +3,7 @@ package unidad6.vehiculos;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Vehiculo {
+public class Vehiculo implements Comparable<Vehiculo> {
 
     private String marca;
     private String matricula;
@@ -24,6 +24,8 @@ public class Vehiculo {
         this.nombrePropietario = nombrePropietario;
         this.dniPropietario = dniPropietario;
     }
+
+    // Getters y Setters
 
     public String getMarca() {
         return marca;
@@ -90,19 +92,32 @@ public class Vehiculo {
     }
     
     public int get_Anios(){
-        
         LocalDate f1 = this.fechaMatriculacion;
         LocalDate f2 = LocalDate.now();
-        
         Period p = Period.between(f1, f2);
-        
         return p.getYears();
-        
     }
 
     @Override
     public String toString() {
         return "Vehiculo{" + "marca=" + marca + ", matricula=" + matricula + ", numKM=" + numKM + ", descripcion=" + descripcion + ", precio=" + precio;
     }
-    
+
+    @Override
+    public int compareTo(Vehiculo otroVehiculo) {
+        return this.matricula.compareTo(otroVehiculo.matricula);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Vehiculo vehiculo = (Vehiculo) obj;
+        return matricula.equals(vehiculo.matricula);
+    }
+
+    @Override
+    public int hashCode() {
+        return matricula.hashCode();
+    }
 }

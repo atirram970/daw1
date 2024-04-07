@@ -1,64 +1,46 @@
 package unidad6.vehiculos;
 
+import java.util.TreeSet;
+
 public class Concesionario {
- 
-    private Vehiculo[] vehiculos;
-    private int numVehiculos;
-    
-    public Concesionario(){
-        this.numVehiculos = 0;
-        this.vehiculos = new Vehiculo[50];
+
+	//CAMBIO-002
+    private TreeSet<Vehiculo> vehiculos;
+
+    public Concesionario() {
+        this.vehiculos = new TreeSet<>();
     }
-    
-    public Vehiculo buscaVehiculo(String matricula){
-        
-        for (int i = 0; i < numVehiculos; i++) {
-            Vehiculo v = this.vehiculos[i];
-            
-            if(v.getMatricula().equals(matricula)){
+
+    public Vehiculo buscaVehiculo(String matricula) {
+        for (Vehiculo v : vehiculos) {
+            if (v.getMatricula().equals(matricula)) {
                 return v;
             }
         }
         return null;
     }
-    
-    public int insertarVehiculo(Vehiculo v){
-        
-        if(this.numVehiculos == this.vehiculos.length){
-            return -1;
+
+    public int insertarVehiculo(Vehiculo v) {
+        if (this.buscaVehiculo(v.getMatricula()) != null) {
+            return -2; // El vehiculo existe
+        } else {
+            vehiculos.add(v);
+            return 0; // Vehiculo insertado correctamente
         }
-        
-        if(this.buscaVehiculo(v.getMatricula()) != null){
-            return -2;
-        }else{
-            
-            this.vehiculos[this.numVehiculos] = v;
-            this.numVehiculos++;
-            return 0;
-        }
-        
-        
     }
-    
-    public void listarVehiculos(){
-        for (int i = 0; i < numVehiculos; i++) {
-            Vehiculo v = this.vehiculos[i];
+
+    public void listarVehiculos() {
+        for (Vehiculo v : vehiculos) {
             System.out.println(v.toString());
         }
     }
-    
-    public boolean actualizaKms(String matricula, int kms){
-            
-        for (int i = 0; i < numVehiculos; i++) {
-            Vehiculo v = this.vehiculos[i];
-            
-            if(v.getMatricula().equals(matricula)){
-                v.setNumKM(kms);
-                return true;
-            }
+
+    public boolean actualizaKms(String matricula, int kms) {
+        Vehiculo vehiculo = buscaVehiculo(matricula);
+        if (vehiculo != null) {
+            vehiculo.setNumKM(kms);
+            return true; // Los kms se han actualizado correctamente
         }
-        return false;
-        
+        return false; // No existe el vehiculo con la matricula introducida
     }
-    
 }

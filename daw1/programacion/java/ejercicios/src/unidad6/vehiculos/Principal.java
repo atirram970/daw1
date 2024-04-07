@@ -14,6 +14,9 @@ public class Principal {
         boolean salir = false;
 
         Concesionario concesionario = new Concesionario();
+        
+        //CAMBIO-001
+        //Se inicializan todas las variables
         Vehiculo v;
         String marca = "";
         String matricula = "";
@@ -79,12 +82,10 @@ public class Principal {
                     System.out.println("Introduce la descripcion");
                     descripcion = scan.nextLine();
 
-                    System.out.println("Introduce el nombre del propietario");
-                    nombreProp = scan.nextLine();
-                    while (!Validacion.validarNombre(nombreProp)) {
-                        System.out.println("Nombre inválido. Inténtalo de nuevo:");
+                    do {
+                    	System.out.println("Introduce el nombre del propietario");
                         nombreProp = scan.nextLine();
-                    }
+					} while (!Validacion.validarNombre(nombreProp));
 
                     do {
                         System.out.println("Introduce el dni del propietario");
