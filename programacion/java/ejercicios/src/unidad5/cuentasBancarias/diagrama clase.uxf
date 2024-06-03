@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>369</x>
+      <y>180</y>
+      <w>177</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>/unidad5.cuentasBancarias::CuentaBancaria/
+--
+-titular: Persona
+-saldo: double
+-iban: String
+--
++CuentaBancaria(String nombre, String apellidos, String dni, double saldo, String iban): ctor
+-comprobarIban(String iban): String
++devolverInfoString(): String
++getTitular(): Persona
++setTitular(Persona titular): void
++getSaldo(): double
++setSaldo(double saldo): void
++getIban(): String
++setIban(String iban): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>177</x>
+      <y>183</y>
+      <w>114</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>unidad5.cuentasBancarias::Persona
+--
+-nombre: String
+-apellidos: String
+-dni: String
+--
++Persona(String nombre, String apellidos, String dni): ctor
++getNombre(): String
++setNombre(String nombre): void
++getDni(): String
+-compruebaDni(String dni): String
++toString(): String
++devolverInfoString(): String
++equals(Persona p): boolean
++hashCode(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>237</x>
+      <y>360</y>
+      <w>372</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>unidad5.cuentasBancarias::CuentaCorrienteEmpresa
+--
+-tipoInteresDescubierto: double
+-maxDescubierto: double
+-comisionFija: double
+--
++CuentaCorrienteEmpresa(String nombre, String apellidos, String dni, double saldo, String iban, String[] entidades, double tipoInteresDescubierto, double maxDescubierto, double comisionFija): ctor
++getTipoInteresDescubierto(): double
++setTipoInteresDescubierto(double tipoInteresDescubierto): void
++getMaxDescubierto(): double
++setMaxDescubierto(double maxDescubierto): void
++getComisionFija(): double
++setComisionFija(double comisionFija): void
++devolverInfoString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>291</x>
+      <y>288</y>
+      <w>219</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>unidad5.cuentasBancarias::CuentaAhorro
+--
+-tipoInteresAnual: double
+--
++CuentaAhorro(String nombre, String apellidos, String dni, double saldo, String iban, double tipoInteresAnual): ctor
++getTipoInteresAnual(): double
++setTipoInteresAnual(double tipoInteresAnual): void
++devolverInfoString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>543</x>
+      <y>288</y>
+      <w>213</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>/unidad5.cuentasBancarias::CuentaCorriente/
+--
+-entidades: String[]
+--
++CuentaCorriente(String nombre, String apellidos, String dni, double saldo, String iban, String[] entidades): ctor
++getEntidades(): String[]
++setEntidades(String[] entidades): void
++devolverInfoString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>642</x>
+      <y>357</y>
+      <w>288</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>unidad5.cuentasBancarias::CuentaCorrientePersonal
+--
+-comisionMantenimiento: double
+--
++CuentaCorrientePersonal(String nombre, String apellidos, String dni, double saldo, String iban, String[] entidades, double comisionMantenimiento): ctor
++getComisionMantenimiento(): double
++setComisionMantenimiento(double comisionMantenimiento): void
++devolverInfoString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>180</y>
+      <w>93</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>unidad5.cuentasBancarias::Banco
+--
+-cuentas: CuentaBancaria[]
+--
++Banco(): ctor
++listadoCuentas(): CuentaBancaria[]
++abrirCuenta(CuentaBancaria cuenta): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>225</y>
+      <w>138</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>unidad5.cuentasBancarias::CuentaBancariaDatosIncorrectosException
+--
+-serialVersionUID = -4502683347007825322L: long
+--
++CuentaBancariaDatosIncorrectosException(String message): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>15</x>
+      <y>207</y>
+      <w>123</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>unidad5.cuentasBancarias::DatosIncorrectosPersonaException
+--
+-serialVersionUID = -7227567072998985072L: long
+--
++DatosIncorrectosPersonaException(String message): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>291</x>
+      <y>135</y>
+      <w>78</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+unidad5.cuentasBancarias::Imprimible
+--
+--
++devolverInfoString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>135</x>
+      <y>216</y>
+      <w>48</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>159</y>
+      <w>105</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>330.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>327</x>
+      <y>159</y>
+      <w>150</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;480.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>543</x>
+      <y>195</y>
+      <w>30</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>543</x>
+      <y>219</y>
+      <w>30</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>399</x>
+      <y>255</y>
+      <w>69</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>465</x>
+      <y>255</y>
+      <w>201</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;650.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>327</y>
+      <w>231</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>750.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>645</x>
+      <y>327</y>
+      <w>150</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;480.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>291</x>
+      <y>216</y>
+      <w>81</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

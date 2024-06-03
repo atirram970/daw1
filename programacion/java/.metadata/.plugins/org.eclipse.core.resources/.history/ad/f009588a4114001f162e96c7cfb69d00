@@ -1,0 +1,72 @@
+package RepasoExamenUD6y7.ud6.gestisimal;
+
+import java.util.Scanner;
+
+import org.apache.commons.lang3.StringUtils;
+
+public class PrincipalGestisimal {
+	static Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		Almacen alm = new Almacen();
+		Articulo art1 = new Articulo("986438", "articulo prueba 1", 34, 40, 2);
+		alm.darAlta(art1);
+		
+		boolean salir = false;
+		int opc = 0;
+		do {
+			System.out.println("MENÚ");
+			System.out.println("1. Listado");
+			System.out.println("2. Alta");
+			System.out.println("3. Baja");
+			System.out.println("4. Modificación");
+			System.out.println("5. Entrada de mercancía por fichero");
+			System.out.println("6. Salir");
+			System.out.println("Introduce la opción deseada y pulsa enter");
+			opc = scan.nextInt();
+			scan.nextLine();
+			
+			switch (opc) {
+			case 1:
+				//Listar articulos
+				System.out.println("Artículos:");
+				alm.listarArticulos();
+				break;
+			case 2:
+				//Añadir articulo
+				System.out.print("Dame el codigo del articulo: ");
+				String codigo = scan.nextLine();
+				if(Almacen.existeArticulo(codigo)) {
+					Articulo.aumentarStock();
+				} else {
+					String descripcion
+					float precioCompra
+					float precioVenta
+					int stock
+				}
+				break;
+			case 3:
+				//Eliminar articulo
+				break;
+			case 4:
+				//Modificar Articulo
+				break;
+			case 5:
+				//Cargar fichero
+				System.out.print("Dame la ruta del fichero: ");
+				String ruta = scan.nextLine();
+				
+				break;
+			case 6:
+				//salir
+				System.out.println("Hasta luego");
+				salir = true;
+				break;
+			default:
+				//opcion incorrecta
+				System.out.println("Opción incorrecta");
+				break;
+			}
+		} while (!salir);
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--original-->
+            <!--
+                <agenda>
+            <entrada>
+            <nombre-completo>Marta Elena Tablada            fallo aqui
+            </entrada>
+            </agenda>
+            -->
+
+            <agenda>
+                <entrada>
+                    <nombre-completo>Marta Elena Tablada</nombre-completo>
+                </entrada>
+            </agenda>

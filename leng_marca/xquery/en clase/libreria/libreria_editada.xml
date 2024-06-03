@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+    <libro categoria="COCINA">
+        <titulo>Everyday Italian</titulo>
+        <autor>Giada De Laurentiis</autor>
+        <anio>2005</anio>
+        <precio>49.99</precio>
+    </libro>
+    <libro categoria="WEB" agotado="true">
+        <titulo idioma="en">XQuery Kick Start</titulo>
+        <autor>James McGovern</autor>
+        <anio>2001</anio>
+        <precio>30.00</precio>
+    </libro>
+    <libro categoria="COCINA" agotado="true">
+        <titulo idioma="en">Learning Cake</titulo>
+        <autor>Erik T. Ray</autor>
+        <anio>2003</anio>
+        <precio>39.95</precio>
+        <elibro formato="epub"/>
+    </libro>
+    <libro categoria="COCINA" agotado="true">
+        <titulo idioma="es">Cocina Mediterránea</titulo>
+        <autor>María del Carmen Martínez</autor>
+        <anio>2010</anio>
+        <precio>29.99</precio>
+    </libro>
+    <libro categoria="CIENCIA FICCIÓN">
+        <titulo idioma="es">El fin de la Eternidad</titulo>
+        <autor>Isaac Asimov</autor>
+        <anio>1955</anio>
+        <precio>25.55</precio>
+        <elibro formato="epub"/>
+    </libro>
+    <libro categoria="HISTORIA">
+        <titulo idioma="es">Sapiens: De animales a dioses</titulo>
+        <autor>Yuval Noah Harari</autor>
+        <anio>2014</anio>
+        <precio>34.95</precio>
+        <elibro formato="epub"/>
+    </libro>
+    <oferta ident="v00001">
+        <reflibro>Learning Cake</reflibro>
+        <fecha_inicio>2024-11-30</fecha_inicio>
+        <fecha_fin>2024-12-31</fecha_fin>
+    </oferta>
+    <oferta ident="v00002">
+        <reflibro>XQuery Kick Start</reflibro>
+        <fecha_inicio>2023-01-07</fecha_inicio>
+        <fecha_fin>2023-03-15</fecha_fin>
+    </oferta>
+</libreria>

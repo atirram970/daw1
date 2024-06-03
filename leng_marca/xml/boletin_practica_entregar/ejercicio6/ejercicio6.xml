@@ -1,0 +1,45 @@
+<?xml version ="1.0" encoding ="UTF 8" standalone="yes"?>
+<!DOCTYPE examen [
+<!ELEMENT examen (general, tema+)>
+<!ELEMENT general (titulo, autor, email)>
+<!ATTLIST general fecha CDATA #REQUIRED>
+<!ATTLIST general version CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT tema (pregunta+)>
+<!ATTLIST tema num CDATA #REQUIRED>
+<!ELEMENT pregunta (texto, respuesta)>
+<!ATTLIST pregunta id CDATA #REQUIRED>
+<!ELEMENT texto (#PCDATA)>
+<!ELEMENT respuesta (#PCDATA)>
+]>
+<examen>
+    <general fecha="10/03/2022" version="1.0">
+        <titulo>Examen</titulo>
+        <autor>Adrián Tirado</autor>
+        <email>atirram970@g.educaand.es</email>
+    </general>
+    <tema num="1">
+        <pregunta id="1">
+            <texto>Pregunta 1: ¿Qué significa xml?</texto>
+            <respuesta>Extensible Markup Language</respuesta>
+        </pregunta>
+        <pregunta id="2">
+            <texto>Pregunta 2: ¿Qué significa dtd?</texto>
+            <respuesta>Document Type Definition</respuesta>
+        </pregunta>
+    </tema>
+    <tema num="2">
+        <pregunta id="3">
+            <texto>Pregunta 3: ¿Qué significa xsd?</texto>
+            <respuesta>XML Schema</respuesta>
+        </pregunta>
+        <pregunta id="4">
+            <texto>Pregunta 4: ¿Qué significa elemento?</texto>
+            <respuesta>bloques de construcción de un XML Los elementos pueden 
+            comportarse como contenedores para texto, elementos, atributos, objetos de 
+            soporte o de todas ellas</respuesta>
+        </pregunta>
+    </tema>
+</examen>

@@ -1,0 +1,24 @@
+package examenArray;
+
+import java.util.Iterator;
+
+public class Imagen {
+
+	public static void main(String[] args) {
+		generarImagen(5, 5);
+	}
+
+	private static int generarImagen(int filas, int columnas) {
+		int min = -127;
+		int max = 128;
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnas; j++) {
+				array_type array_element = array[j];
+				
+			}
+		}
+		int numAleatorio = (int) (Math.random() * (max - min + 1) + min);
+		return numAleatorio;
+	}
+
+}

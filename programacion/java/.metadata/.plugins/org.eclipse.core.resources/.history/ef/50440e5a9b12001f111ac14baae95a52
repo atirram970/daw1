@@ -1,0 +1,38 @@
+package unidad6;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+
+public class ejRepaso1 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		HashSet<String> personas = new HashSet<>();
+		String nombre ="";
+		boolean fin = false;
+		do {
+			System.out.println("Dame un nombre: ");
+			nombre = scan.nextLine();
+			if (nombre.equals("fin")) {
+				fin = true;
+			} else {
+				personas.add(nombre);
+			}
+		}while (!fin);
+		System.out.println("Nombres sin ordenar");
+		System.out.println("Personas: " + personas);
+		scan.close();
+		mostrarNombresOrdenados(personas);
+    }
+
+	public static void mostrarNombresOrdenados(HashSet<String> personas) {
+        System.out.println("Todos los nombres ordenados alfabéticamente:");
+        List<String> nombresOrdenados = new ArrayList<>(personas);
+        Collections.sort(nombresOrdenados);
+        for (String nombre : nombresOrdenados) {
+            System.out.println(nombre);
+        }
+    }
+}

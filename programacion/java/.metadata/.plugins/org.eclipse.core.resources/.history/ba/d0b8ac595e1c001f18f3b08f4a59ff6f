@@ -1,0 +1,45 @@
+package tareaUD8;
+
+import java.util.Set;
+
+public class Concesionario {
+    private VehiculosDAO vehiculosDAO;
+
+    public Concesionario() {
+        this.vehiculosDAO = new VehiculosDAO();
+    }
+
+    public int insertarVehiculo(Vehiculo v) {
+        return vehiculosDAO.insertarVehiculo(v);
+    }
+
+    public void listarVehiculos() {
+        Set<Vehiculo> vehiculos = vehiculosDAO.listarVehiculos();
+        for (Vehiculo v : vehiculos) {
+            System.out.println(v);
+        }
+    }
+
+    public Vehiculo buscaVehiculo(String matricula) {
+    	return vehiculosDAO.buscarVehiculo(matricula);
+    }
+
+    public boolean actualizaKms(String matricula, int kms) {
+        return vehiculosDAO.actualizarKilometraje(matricula, kms);
+    }
+
+    public boolean eliminarVehiculo(String matricula) {
+        return vehiculosDAO.eliminarVehiculo(matricula);
+    }
+
+    public boolean actualizarKilometraje(String matricula, int numKM) {
+        Vehiculo vehiculo = buscarVehiculo(matricula);
+        if (vehiculo != null) {
+            vehiculo.setNumKM(numKM);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+}

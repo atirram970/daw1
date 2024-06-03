@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!--original-->
+<!-- 
+<nombre-completo>Marta Elena Tablada</nombre-completo>
+<direccion>
+<calle> Avda Los Castros</calle>
+<ciudad>Santander</ciudad>
+<codigo-postal>39005</codigo-postal>
+<region>Cantabria</region>
+<pais>España</pais>
+</direccion>                                    fallo aqui
+<tel preferente="true">942201262</tel>
+<correo-e href="tabladam@unican.es"></correo-e>
+</direccion>
+-->
+<datos>
+    <nombre-completo>Marta Elena Tablada</nombre-completo>
+    <direccion>
+        <calle> Avda Los Castros</calle>
+        <ciudad>Santander</ciudad>
+        <codigo-postal>39005</codigo-postal>
+        <region>Cantabria</region>
+        <pais>España</pais>
+    <tel preferente="true">942201262</tel>
+    <correo-e href="tabladam@unican.es"></correo-e>
+    </direccion>
+</datos>

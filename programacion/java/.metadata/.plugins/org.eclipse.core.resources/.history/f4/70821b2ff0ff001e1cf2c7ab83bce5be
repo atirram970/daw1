@@ -1,0 +1,87 @@
+package unidad6.edificio;
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Edificio edificio1 = new Edificio();
+        
+        // Agregar personas al edificio
+        Persona persona1 = new Persona("12345678A", "Juan", "García");
+        Persona persona2 = new Persona("87654321B", "María", "López");
+        
+        edificio1.personaEntraEdificio(persona1);
+        edificio1.personaEntraEdificio(persona2);
+        
+        Scanner scan = new Scanner(System.in);
+        boolean fin = false;
+        int opcion;
+
+        do {
+            System.out.println("1. Persona accede al edificio");
+            System.out.println("2. Persona abandona el edificio");
+            System.out.println("3. Persona accede a zona privada");
+            System.out.println("4. Persona abandona zona privada");
+            System.out.println("5. Registro de persona con acceso a zona privada");
+            System.out.println("6. Mostrar personas en el edificio");
+            System.out.println("7. Mostrar personas en la zona privada");
+            System.out.println("8. Salir");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcion) {
+                case 1:
+                    System.out.print("Introduzca el DNI de la persona que entra al edificio: ");
+                    String dniEntrada = scanner.nextLine();
+                    System.out.print("Nombre de la persona que entra al edificio: ");
+                    String nombreEntrada = scanner.nextLine();
+                    System.out.print("Apellidos de la persona que entra al edificio: ");
+                    String apellidosEntrada = scanner.nextLine();
+                    Persona personaEntrada = new Persona(dniEntrada, nombreEntrada, apellidosEntrada);
+                    edificio1.personaEntraEdificio(personaEntrada);
+                    break;
+                case 2:
+                    System.out.print("Introduzca el DNI de la persona que sale del edificio: ");
+                    String dniSalida = scanner.nextLine();
+                    edificio1.personaSaleEdificio(dniSalida);
+                    break;
+                case 3:
+                    System.out.print("Introduzca el DNI de la persona que entra a la zona privada: ");
+                    String dniEntradaPrivada = scanner.nextLine();
+                    Persona personaEntradaPrivada = edificio1.buscarPersonaPorDni(dniEntradaPrivada);
+                    edificio1.personaEntraZonaPrivada(personaEntradaPrivada);
+                    break;
+                case 4:
+                    System.out.print("Introduzca el DNI de la persona que sale de la zona privada: ");
+                    String dniSalidaPrivada = scanner.nextLine();
+                    edificio1.personaSaleZonaPrivada(dniSalidaPrivada);
+                    break;
+                case 5:
+                    System.out.println("Introduzca los datos de la persona con acceso a zona privada:");
+                    System.out.print("DNI: ");
+                    String dni = scanner.nextLine();
+                    System.out.print("Nombre: ");
+                    String nombre = scanner.nextLine();
+                    System.out.print("Apellidos: ");
+                    String apellidos = scanner.nextLine();
+                    Persona nuevaPersona = new Persona(dni, nombre, apellidos);
+                    edificio1.registrarPersonaZonaPrivada(nuevaPersona);
+                    break;
+                case 6:
+                    edificio1.mostrarPersonasEnEdificio();
+                    break;
+                case 7:
+                    edificio1.mostrarPersonasEnZonaPrivada();
+                    break;
+                case 8:
+                    System.out.println("Saliendo del programa...");
+                    fin = true;
+                    break;
+                default:
+                    System.out.println("Opción no válida. Inténtelo de nuevo.");
+            }
+        } while (!fin);
+    scan.close();
+    }
+}

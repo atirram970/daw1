@@ -1,0 +1,21 @@
+package ejerciciosClase.unidad8.gestisimal;
+
+import java.util.Scanner;
+import java.util.Set;
+
+public class PrincipalGestisimal2 {
+
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		Almacen almacen = new Almacen();
+		Set<Articulo> alm = almacen.getAlmacen();
+		if (alm.size() != 0) {
+			for (Articulo articulo : alm) {
+				System.out.println(articulo);
+			}
+		}else {
+			System.out.println("No existen artículos en el almacen");
+		}
+	}
+}

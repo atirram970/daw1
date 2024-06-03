@@ -1,0 +1,11 @@
+package unidad6;
+
+public class ejRepaso1 {
+	public static void main(String[] args) {
+		boolean fin = false;
+		do {
+			System.out.println("Dame un nombre: ");
+			nombre.scan;
+		}while (!fin);
+    }
+}

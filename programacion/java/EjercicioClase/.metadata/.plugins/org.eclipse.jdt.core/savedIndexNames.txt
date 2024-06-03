@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+C:\Users\Adrián\Desktop\modulo\daw1\programacion\java\EjercicioClase1\.metadata\.plugins\org.eclipse.jdt.core

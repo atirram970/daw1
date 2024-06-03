@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    **Enunciado**
+    <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE articulos [
+ <!ELEMENT articulos (articulo)+>
+ <!ELEMENT articulo (#PCDATA)>
+ <!ATTLIST articulo color CDATA #FIXED "rojo">
+]>
+<articulos>
+ <articulo nombre="bolígrafo" color="rojo"/>
+ <articulo nombre="cuaderno"/>
+ <articulo nombre="rotulador" color="amarillo"/>
+</articulos>
+
+-->
+<!DOCTYPE articulos [
+ <!ELEMENT articulos (articulo)+>
+ <!ELEMENT articulo (#PCDATA)>
+ <!ATTLIST articulo color CDATA #FIXED "rojo">
+]>
+<articulos>
+    <articulo color="rojo">cuaderno</articulo>
+    <articulo color="rojo"/>
+</articulos>

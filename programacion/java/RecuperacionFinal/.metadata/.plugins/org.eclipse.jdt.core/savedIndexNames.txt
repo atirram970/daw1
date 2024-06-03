@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\Users\adrit\Desktop\modulo\daw1\programacion\java\RecuperacionFinal\.metadata\.plugins\org.eclipse.jdt.core
+2671770293.index
+217865657.index
+1865797976.index
+2470608727.index
+1651846927.index

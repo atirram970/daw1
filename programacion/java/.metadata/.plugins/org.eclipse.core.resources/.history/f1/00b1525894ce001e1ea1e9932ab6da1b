@@ -1,0 +1,92 @@
+package tiendaDeportes;
+
+public abstract class ArticuloDeportivo {
+    // Atributos
+    protected int codigoCiudad;
+    protected int codigoTienda;
+    protected int codigoTipo;
+    protected int codigoArticulo;
+    protected int codigoControl;
+    protected String nombre;
+    protected String descripcion;
+    protected int unidades;
+
+    // Constructores
+    // Constructor por defecto
+    public ArticuloDeportivo() {
+        this.codigoCiudad = 0;
+        this.codigoTienda = 0;
+        this.codigoTipo = 0;
+        this.codigoArticulo = 0;
+        this.codigoControl = 0;
+        this.nombre = "";
+        this.descripcion = "";
+        this.unidades = 0;
+    }
+
+    // Constructor con parámetros
+    public ArticuloDeportivo(int codigoCiudad, int codigoTienda, int codigoTipo, int codigoArticulo, String nombre, String descripcion, int unidades) {
+        this.codigoCiudad = codigoCiudad;
+        this.codigoTienda = codigoTienda;
+        this.codigoTipo = codigoTipo;
+        this.codigoArticulo = codigoArticulo;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.unidades = unidades;
+        this.codigoControl = calcularDigitoControl();
+    }
+
+    // Constructor copia a partir de otro objeto artículo
+    public ArticuloDeportivo(ArticuloDeportivo articulo) {
+        this.codigoCiudad = articulo.codigoCiudad;
+        this.codigoTienda = articulo.codigoTienda;
+        this.codigoTipo = articulo.codigoTipo;
+        this.codigoArticulo = articulo.codigoArticulo;
+        this.nombre = articulo.nombre;
+        this.descripcion = articulo.descripcion;
+        this.unidades = articulo.unidades;
+        this.codigoControl = articulo.codigoControl;
+    }
+
+    // Método para calcular el dígito de control
+    private int calcularDigitoControl() {
+        return (codigoCiudad + codigoTienda + codigoArticulo) % 99;
+    }
+
+    // Getters y setters
+    // Añade los getters y setters necesarios
+
+    // Método para incrementar las unidades del artículo
+    public void incrementarUnidades(int cantidad) {
+        this.unidades += cantidad;
+    }
+
+    // Método para decrementar las unidades del artículo
+    public void decrementarUnidades(int cantidad) {
+        if (this.unidades >= cantidad) {
+            this.unidades -= cantidad;
+        } else {
+            System.out.println("No hay suficientes unidades disponibles.");
+        }
+    }
+
+    // Método para consultar las unidades del artículo
+    public int consultarUnidades() {
+        return this.unidades;
+    }
+
+    // Método toString para imprimir la información del artículo
+    @Override
+    public String toString() {
+        return "ArticuloDeportivo{" +
+                "codigoCiudad=" + codigoCiudad +
+                ", codigoTienda=" + codigoTienda +
+                ", codigoTipo=" + codigoTipo +
+                ", codigoArticulo=" + codigoArticulo +
+                ", codigoControl=" + codigoControl +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", unidades=" + unidades +
+                '}';
+    }
+}

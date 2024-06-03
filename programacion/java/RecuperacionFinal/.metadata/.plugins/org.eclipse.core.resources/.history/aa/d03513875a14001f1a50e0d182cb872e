@@ -1,0 +1,11 @@
+package examenUD6_7;
+
+public class Articulo {
+	//Atributos
+	private String codigo;
+	private String descripcion;
+	private double precioCompra;
+	private double precioVenta;
+	
+
+}

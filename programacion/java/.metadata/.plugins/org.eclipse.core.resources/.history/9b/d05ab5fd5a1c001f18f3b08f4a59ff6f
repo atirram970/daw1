@@ -1,0 +1,74 @@
+package tareaUD8;
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Concesionario {
+
+    private Set<Vehiculo> vehiculos;
+    private int numVehiculos;
+    private final int CAPACIDAD_MAX = 500;
+
+    public Concesionario() {
+        this.numVehiculos = 0;
+        this.vehiculos = new TreeSet<Vehiculo>();
+    }
+
+    public Vehiculo buscaVehiculo(String matricula) {
+        Vehiculo vehiculo = null;
+        boolean encontrado = false;
+        Iterator<Vehiculo> it = vehiculos.iterator();
+        while (!encontrado && it.hasNext()) {
+            Vehiculo v = it.next();
+            if (null != matricula && matricula.equals(v.getMatricula())) {
+                vehiculo = v;
+                encontrado = true;
+            }
+        }
+        return vehiculo;
+    }
+
+    public int insertarVehiculo(Vehiculo v) {
+        int codReturn = -2;
+        if (numVehiculos >= CAPACIDAD_MAX) {
+            codReturn = -1;
+        } else if (vehiculos.add(v)) {
+            numVehiculos++;
+            codReturn = 0;
+        }
+        return codReturn;
+    }
+
+    public void listarVehiculos() {
+        if (this.vehiculos.size() > 0) {
+            System.out.println("El concesionario tiene los siguientes vehículos:");
+            for (Vehiculo v : this.vehiculos) {
+                System.out.println(v);
+            }
+            System.out.println("___________________________");
+        } else {
+            System.out.println("El concesionario está vacío");
+            System.out.println("___________________________");
+        }
+    }
+
+    public boolean actualizaKms(String matricula, int kms) {
+        boolean kmsActualizado = false;
+        Vehiculo v = this.buscaVehiculo(matricula);
+        if (null != v && null != matricula && matricula.equals(v.getMatricula())) {
+            v.setNumKM(kms);
+            kmsActualizado = true;
+        }
+        return kmsActualizado;
+    }
+
+    public boolean eliminarVehiculo(String matricula) {
+        boolean eliminado = false;
+        Vehiculo v = this.buscaVehiculo(matricula);
+        if (v != null) {
+            eliminado = this.vehiculos.remove(v);
+        }
+        return eliminado;
+    }
+}

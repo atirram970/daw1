@@ -1,0 +1,9 @@
+package examenFicheros;
+
+public class SuperEcoMercado {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

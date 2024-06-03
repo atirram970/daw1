@@ -1,0 +1,18 @@
+Crea el programa GESTISIMAL (GESTIón SIMplificada de Almacén) para llevar el
+control de los artículos de un almacén. De cada artículo se debe saber el código,
+la descripción, el precio de compra, el precio de venta y el stock (número de
+unidades). El menú del programa debe tener, al menos, las siguientes opciones:
+1. Listado
+2. Alta
+3. Baja
+4. Modificación
+5. Entrada de mercancía por fichero
+6. Salir
+
+
+1. Mostrará todos los artículos con su información correspondiente que haya en el almacén.
+2. Se añadirá un nuevo artículo al almacen o en caso de que el prodcuto exista, se aumentará su stock.
+3. Se eliminará dicho artículo del almacén
+4. Se modificarán los datos de un artículo, el programa preguntará qué campo se quiere modificar.
+5. La entrada de mercancía supone el incremento de stock de un determinado artículo.
+6. Saldrá del programa

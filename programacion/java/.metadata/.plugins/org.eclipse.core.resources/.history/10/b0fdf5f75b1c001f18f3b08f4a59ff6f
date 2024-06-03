@@ -1,0 +1,76 @@
+package tareaUD8;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+
+public class VehiculosDAO {
+    private ConcesionarioDB concesionarioDB;
+    private Set<Vehiculo> vehiculos;
+    private int numVehiculos;
+    private final int CAPACIDAD_MAX = 500;
+
+    public VehiculosDAO() {
+        this.numVehiculos = 0;
+        this.vehiculos = new HashSet<>();
+        this.concesionarioDB = new ConcesionarioDB();
+    }
+
+    public int insertarVehiculo(Vehiculo v) {
+        int codReturn = -2;
+        if (numVehiculos >= CAPACIDAD_MAX) {
+            codReturn = -1;
+        } else {
+            try {
+                if (concesionarioDB.insertarVehiculo(v)) {
+                    vehiculos.add(v);
+                    numVehiculos++;
+                    codReturn = 0;
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return codReturn;
+    }
+
+    public Set<Vehiculo> listarVehiculos() {
+        try {
+            vehiculos = concesionarioDB.listarVehiculos();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return vehiculos;
+    }
+
+    public Vehiculo buscarVehiculo(String matricula) {
+        try {
+            return concesionarioDB.buscarVehiculo(matricula);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public boolean actualizarKilometraje(String matricula, int kms) {
+        try {
+            return concesionarioDB.actualizarKilometraje(matricula, kms);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean eliminarVehiculo(String matricula) {
+        try {
+            return concesionarioDB.eliminarVehiculo(matricula);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+}

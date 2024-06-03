@@ -1,0 +1,123 @@
+package tareaUD8;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+
+public class VehiculosDAO {
+    private Set<Vehiculo> vehiculos;
+    private int numVehiculos;
+    private final int CAPACIDAD_MAX = 500;
+
+    public VehiculosDAO() {
+        this.numVehiculos = 0;
+        this.vehiculos = new HashSet<>();
+    }
+
+    public int insertarVehiculo(Vehiculo v) {
+        int codReturn = -2;
+        if (numVehiculos >= CAPACIDAD_MAX) {
+            codReturn = -1;
+        } else {
+            try {
+                Connection connection = DatabaseManager.getConnection();
+                String query = "INSERT INTO vehiculos (marca, matricula, numKM, fechaMatriculacion, descripcion, precio, nombrePropietario, dniPropietario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, v.getMarca());
+                preparedStatement.setString(2, v.getMatricula());
+                preparedStatement.setInt(3, v.getNumKM());
+                preparedStatement.setDate(4, java.sql.Date.valueOf(v.getFechaMatriculacion()));
+                preparedStatement.setString(5, v.getDescripcion());
+                preparedStatement.setDouble(6, v.getPrecio());
+                preparedStatement.setString(7, v.getNombrePropietario());
+                preparedStatement.setString(8, v.getDniPropietario());
+                int rowsAffected = preparedStatement.executeUpdate();
+                if (rowsAffected > 0) {
+                    vehiculos.add(v);
+                    numVehiculos++;
+                    codReturn = 0;
+                }
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return codReturn;
+    }
+
+    public Set<Vehiculo> listarVehiculos() {
+        for (Vehiculo v : vehiculos) {
+            System.out.println(v);
+        }
+    }
+
+    public Vehiculo buscarVehiculo(String matricula) {
+        for (Vehiculo v : vehiculos) {
+            if (v.getMatricula().equals(matricula)) {
+                return v;
+            }
+        }
+        return null;
+    }
+
+    public boolean actualizarVehiculo(String matricula, String campo, Object nuevoValor) {
+        boolean actualizado = false;
+        String query = "UPDATE vehiculos SET " + campo + " = ? WHERE matricula = ?";
+
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+            if (nuevoValor instanceof String) {
+                preparedStatement.setString(1, (String) nuevoValor);
+            } else if (nuevoValor instanceof Integer) {
+                preparedStatement.setInt(1, (Integer) nuevoValor);
+            } else if (nuevoValor instanceof Double) {
+                preparedStatement.setDouble(1, (Double) nuevoValor);
+            } else if (nuevoValor instanceof LocalDate) {
+                preparedStatement.setDate(1, java.sql.Date.valueOf((LocalDate) nuevoValor));
+            }
+
+            preparedStatement.setString(2, matricula);
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                actualizado = true;
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return actualizado;
+    }
+
+    public boolean eliminarVehiculo(String matricula) {
+        boolean eliminado = false;
+
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            String query = "DELETE FROM vehiculos WHERE matricula = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, matricula);
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                Vehiculo v = buscarVehiculo(matricula);
+                if (v != null) {
+                    vehiculos.remove(v);
+                    numVehiculos--;
+                    eliminado = true;
+                }
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return eliminado;
+    }
+}

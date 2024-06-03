@@ -1,0 +1,67 @@
+package conectarABD.gestisimal;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Almacen {
+	//PRESCINDIMOS DEL MAP PORQUE OBTENDREMOS LOS ARTICULOS DE DB
+	//private Map<String, Articulo> almacen;
+	private ArticuloDAO dao;
+	public Almacen() {
+		this.dao = new ArticuloDAO();
+	}
+	/**
+	 * Devuelve un conjunto con todos los artículos del almacen
+	 * @return alm
+	 */
+	public Set<Articulo> getAlmacen() {
+		Set<Articulo> alm = new HashSet<Articulo>();
+		alm = dao.obtenerArticulos();
+		return alm;
+	}
+/*
+	public void imprimirListadoAlmacen() {
+		int index = 1;
+		for (Articulo articulo : this.almacen.values()) {
+			System.out.println(index++ + ".-" + articulo);
+			System.out.println("---------------------------------");
+		}
+	}
+
+	public void altaArticulo(Articulo articulo) {
+		if (!this.almacen.containsKey(articulo.getCodigo())) {
+			this.almacen.put(articulo.getCodigo(), articulo);
+		} else {
+			Articulo act = this.almacen.get(articulo.getCodigo());
+			act.setStock(act.getStock() + articulo.getStock());
+		}
+		System.out.println("Artículo añadido con éxito");
+	}
+
+	
+	public Articulo getArticuloPorCodigo(String codigo) throws ArticuloNotFoundException {
+		Articulo art = null;
+		if (this.almacen.containsKey(codigo)) {
+			art = this.almacen.get(codigo);
+		} else {
+			throw new ArticuloNotFoundException();
+		}
+		return art;
+	}
+
+	public void modificarCodigo(String codigoNuevo, String codigoAnterior) {
+		if (this.almacen.containsKey(codigoAnterior) && !this.almacen.containsKey(codigoNuevo)) {
+			Articulo art = this.almacen.get(codigoAnterior);
+			art.setCodigo(codigoNuevo);
+			this.almacen.put(codigoNuevo, art);
+			this.almacen.remove(codigoAnterior);
+			System.out.println("Artículo modificado con éxito");
+		}
+	}
+
+	public void bajaArticulo(Articulo articulo) {
+		this.almacen.remove(articulo.getCodigo());
+		System.out.println("Artículo eliminado con éxito");
+	}
+	*/
+}

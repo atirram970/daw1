@@ -1,0 +1,174 @@
+package tareaUD8;
+
+import java.time.LocalDate;
+import java.util.Objects;
+
+public class Vehiculo implements Comparable<Vehiculo> {
+
+    private String marca;
+    private String matricula;
+    private int numKM;
+    private LocalDate fechaMatriculacion;
+    private String descripcion;
+    private double precio;
+    private String nombrePropietario;
+    private String dniPropietario;
+
+    public Vehiculo(String marca, String matricula, int numKM, LocalDate fechaMatriculacion, String descripcion,
+                    double precio, String nombrePropietario, String dniPropietario) {
+        this.marca = marca;
+        this.matricula = matricula;
+        this.numKM = numKM;
+        this.fechaMatriculacion = fechaMatriculacion;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.nombrePropietario = nombrePropietario;
+        this.dniPropietario = dniPropietario;
+    }
+
+    // Getters y setters
+    /**
+	 * @return the marca
+	 */
+	public String getMarca() {
+		return marca;
+	}
+
+	/**
+	 * @param marca the marca to set
+	 */
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	/**
+	 * @return the matricula
+	 */
+	public String getMatricula() {
+		return matricula;
+	}
+
+	/**
+	 * @param matricula the matricula to set
+	 */
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	/**
+	 * @return the numKM
+	 */
+	public int getNumKM() {
+		return numKM;
+	}
+
+	/**
+	 * @param numKM the numKM to set
+	 */
+	public void setNumKM(int numKM) {
+		this.numKM = numKM;
+	}
+
+	/**
+	 * @return the fechaMatriculacion
+	 */
+	public LocalDate getFechaMatriculacion() {
+		return fechaMatriculacion;
+	}
+
+	/**
+	 * @param fechaMatriculacion the fechaMatriculacion to set
+	 */
+	public void setFechaMatriculacion(LocalDate fechaMatriculacion) {
+		this.fechaMatriculacion = fechaMatriculacion;
+	}
+
+	/**
+	 * @return the descripcion
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * @param descripcion the descripcion to set
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	/**
+	 * @return the precio
+	 */
+	public double getPrecio() {
+		return precio;
+	}
+
+	/**
+	 * @param precio the precio to set
+	 */
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	/**
+	 * @return the nombrePropietario
+	 */
+	public String getNombrePropietario() {
+		return nombrePropietario;
+	}
+
+	/**
+	 * @param nombrePropietario the nombrePropietario to set
+	 */
+	public void setNombrePropietario(String nombrePropietario) {
+		this.nombrePropietario = nombrePropietario;
+	}
+
+	/**
+	 * @return the dniPropietario
+	 */
+	public String getDniPropietario() {
+		return dniPropietario;
+	}
+
+	/**
+	 * @param dniPropietario the dniPropietario to set
+	 */
+	public void setDniPropietario(String dniPropietario) {
+		this.dniPropietario = dniPropietario;
+	}
+
+	//Métodos
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehiculo vehiculo = (Vehiculo) o;
+        return Objects.equals(matricula, vehiculo.matricula);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(matricula);
+    }
+
+    @Override
+    public int compareTo(Vehiculo o) {
+        return matricula.compareTo(o.matricula);
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "marca='" + marca + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", numKM=" + numKM +
+                ", fechaMatriculacion=" + fechaMatriculacion +
+                ", descripcion='" + descripcion + '\'' +
+                ", precio=" + precio +
+                ", nombrePropietario='" + nombrePropietario + '\'' +
+                ", dniPropietario='" + dniPropietario + '\'' +
+                '}';
+    }
+}

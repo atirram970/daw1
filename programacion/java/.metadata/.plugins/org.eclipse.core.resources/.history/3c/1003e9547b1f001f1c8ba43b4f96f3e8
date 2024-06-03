@@ -1,0 +1,61 @@
+package examenFicheros;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+import org.apache.commons.lang3.StringUtils;
+
+public class SuperEcoMercado {
+	private static Map<String, Float> productos = new HashMap<>();
+	private static Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		while (true) {
+			try {
+				System.out.print("INPUT: ");
+				String input = scanner.nextLine();
+				String[] linea = new String[2];
+				linea = StringUtils.split(input);
+				if (linea[0].equals("UPDATE")) {
+					System.out.println("updateando");
+				} else if (!esNumeroEntero(input) == false && null != linea) {
+					System.out.println("num entero");
+				} else if (esNumeroEntero(input) == false && null != linea) {
+					//System.out.println("numero float");
+				} else {
+					
+				}
+			} catch (Exception e) {
+			}
+		}
+	}
+
+	// TODO: implementa tus métodos auxiliares aquí
+	/**
+	 * Devuelve true si la cadena str guarda el valor de un número entero
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static boolean esNumeroEntero(String str) {
+		if (str == null || str.isEmpty()) {
+			return false;
+		}
+		try {
+			Integer.parseInt(str);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
+	}
+	
+	/**
+	 * Devuelve una cadena de texto con el número con dos decimales
+	 * @param numero
+	 * @return
+	 */
+	public static String formateaFloat(float numero) {
+		return String.format("%.2f", numero);
+	}
+}

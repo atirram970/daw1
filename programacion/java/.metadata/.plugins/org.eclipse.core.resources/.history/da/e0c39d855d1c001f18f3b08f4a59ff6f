@@ -1,0 +1,47 @@
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Principal {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        boolean salir = false;
+        boolean correcto = false;
+        int opcion;
+
+        Concesionario concesionario = new Concesionario();
+        Vehiculo v;
+        String marca, matricula, descripcion, nombreProp, DNIProp;
+        int kms = 0, dia, mes, anio;
+        double precio = 0;
+        LocalDate fechaMatriculacion = null;
+        boolean primeraVez = true;
+
+        while (!salir) {
+            if (primeraVez) {
+                primeraVez = false;
+                System.out.println("Conexión establecida con éxito.");
+            }
+            System.out.println("1. Nuevo vehículo");
+            System.out.println("2. Listar vehículos");
+            System.out.println("3. Buscar vehículo");
+            System.out.println("4. Modificar kms vehículo");
+            System.out.println("5. Eliminar vehículo");
+            System.out.println("6. Salir");
+            System.out.println("Elige una opcion");
+            opcion = scan.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Introduce la marca");
+                    scan.nextLine();
+                    marca = scan.nextLine();
+
+                    do {
+                        System.out.println("Introduce la matricula");
+                        matricula = scan.nextLine();
+                    } while (!Validacion.validarMatricula

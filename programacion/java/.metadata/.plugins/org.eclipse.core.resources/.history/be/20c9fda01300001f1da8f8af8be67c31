@@ -1,0 +1,29 @@
+package unidad6.edificio;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Edificio {
+    // Atributos
+    private Map<String, Persona> personasEnEdificio = new HashMap<>();
+    private List<Persona> personasZonaPrivada = new ArrayList<>();
+
+    // Constructor
+    public Edificio() {
+    }
+
+    // Métodos
+    public Persona buscarPersonaPorDni(String dni) {
+        if (dni == null || dni.trim().isEmpty()) {
+            return null;
+        }
+
+        for (Persona persona : personasEnEdificio.values()) {
+            if (dni.equals(persona.getDni())) {
+                return persona;
+            }
+        }
+        return null;
+    }

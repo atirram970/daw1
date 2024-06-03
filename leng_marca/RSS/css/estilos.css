@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #000080; /* Azul oscuro */
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+}
+
+section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ahora se mostrarán máximo 4 noticias por fila */
+    grid-gap: 20px;
+}
+
+footer {
+    background-color: #000080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+    box-sizing: border-box; /* Incluir el padding y el borde en el ancho */
+    left: 0; /* Alinear el footer a la izquierda */
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #fff;
+    height: 30px; /* Reducir la altura del navbar */
+    display: flex; /* Usar flexbox para alinear verticalmente */
+    align-items: center; /* Alinear verticalmente al centro */
+    position: fixed; /* Cambiar de posición relativa a fija */
+    top: 0; /* Alinear el navbar en la parte superior */
+    width: 100%; /* Asegurar que el navbar ocupe todo el ancho */
+    z-index: 1001; /* Establecer un índice Z más alto */
+}
+
+#navbar a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 0 16px; /* Ajustar el padding horizontal */
+    text-decoration: none;
+    font-size: 14px; /* Reducir el tamaño del texto */
+    height: 100%; /* Utilizar toda la altura disponible */
+    display: flex; /* Usar flexbox para alinear verticalmente */
+    align-items: center; /* Alinear verticalmente al centro */
+}
+
+
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.noticia {
+    background-color: rgb(182, 181, 181);
+    /* Gris muy claro */
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.noticia div:first-child {
+    width: 70%;
+}
+
+.noticia div:last-child {
+    width: 30%;
+}
+
+.noticia h2 {
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.noticia p {
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.noticia .rss,
+.noticia .atom {
+    color: #ffff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.noticia .rss {
+    background-color: #ffd166;
+}
+
+.noticia .atom {
+    background-color: #89e186;
+}
+
+.espacios {
+    margin-bottom: 100px;
+}
+
+.imgSemanaSanta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.imgSemanaSanta img {
+    width: 100%;
+    height: 550px;
+}
+
+.noticias_rss, .noticias_atom {
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    grid-column: span 2;
+}
+
+.noticias_rss{
+    background-color: #FFA500;
+}
+
+.noticias_atom{
+    background-color: #008000;
+}
+
+.noticias_rss:last-child, .noticias_atom:last-child {
+    margin-bottom: 55px;    
+}
+
+.noticias_rss img,
+.noticias_atom img {
+    margin: auto;
+    max-width: 100%; /* La imagen ocupa todo el ancho disponible */
+    max-height: 600px; /* Altura máxima ajustada */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

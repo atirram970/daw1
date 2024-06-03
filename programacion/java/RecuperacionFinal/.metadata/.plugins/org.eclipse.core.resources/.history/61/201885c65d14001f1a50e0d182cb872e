@@ -1,0 +1,8 @@
+package examenUD6_7;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Almacen {
+	private Map<String, Articulo> almacen = new HashMap<String, Articulo>();
+}

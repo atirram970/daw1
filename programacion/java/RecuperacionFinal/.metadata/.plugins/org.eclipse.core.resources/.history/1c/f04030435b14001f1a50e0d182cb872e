@@ -1,0 +1,8 @@
+package examenUD6_7;
+
+public class PrincipalGestisimal {
+ public static void main(String[] args) {
+     Gestisimal g = new Gestisimal();
+     g.mostrarMenu();
+ }
+}

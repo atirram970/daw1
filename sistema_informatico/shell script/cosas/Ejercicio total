@@ -1,0 +1,11 @@
+Dado un fichero de datos con el siguiente contenido de ejemplo (digamos datos.txt):
+
+Pepe 02:30:44
+Marcos 23:56:33
+Pepe 10:33:01
+Marta 05:47:44
+Pepe 12:22:33
+José 11:55:00
+
+
+Haced un Script Linux que devuelva un listado ordenado por tiempos (de uso de máquina por ejemplo) de forma ascendente. Teniendo en cuenta que si algún usuario se repite, solo produzca una línea de salida y sume los tiempos.

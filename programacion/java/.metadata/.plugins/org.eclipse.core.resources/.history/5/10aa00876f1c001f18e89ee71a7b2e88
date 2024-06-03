@@ -1,0 +1,110 @@
+package tareaUD8;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.Set;
+
+public class Concesionario {
+    private VehiculosDAO vehiculosDAO;
+
+    public Concesionario() {
+        this.vehiculosDAO = new VehiculosDAO();
+    }
+
+    public int insertarVehiculo(Vehiculo v) {
+        return vehiculosDAO.insertarVehiculo(v);
+    }
+
+    public void listarVehiculos() {
+        Set<Vehiculo> vehiculos = vehiculosDAO.listarVehiculos();
+        for (Vehiculo v : vehiculos) {
+            System.out.println(v);
+        }
+    }
+
+    public Vehiculo buscaVehiculo(String matricula) {
+    	return vehiculosDAO.buscarVehiculo(matricula);
+    }
+
+    public boolean eliminarVehiculo(String matricula) {
+        return vehiculosDAO.eliminarVehiculo(matricula);
+    }
+
+    public boolean actualizarKilometraje(String matricula, int numKM) {
+        boolean actualizado = false;
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            String query = "UPDATE vehiculos SET numKM = ? WHERE matricula = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, numKM);
+            preparedStatement.setString(2, matricula);
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                actualizado = true;
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return actualizado;
+    }
+    
+    public boolean actualizarVehiculo(String matricula, Object nuevoValor, String nuevoDNIPropietario) {
+        boolean actualizado = false;
+        String query = null;
+
+        if (nuevoValor instanceof String) {
+            // Determinar qué campo es basándonos en la longitud y patrón del valor de entrada
+            String nuevoValorString = (String) nuevoValor;
+            if (nuevoValorString.matches("[A-Za-z]{2,}")) { // Por ejemplo, si contiene solo letras, es nombre o marca
+                if (nuevoValorString.length() > 10) {
+                    query = "UPDATE vehiculos SET nombrePropietario = ? WHERE matricula = ?";
+                } else {
+                    query = "UPDATE vehiculos SET marca = ? WHERE matricula = ?";
+                }
+            } else if (nuevoValorString.matches("[0-9]{8}[A-Z]")) { // DNI pattern
+                query = "UPDATE vehiculos SET dniPropietario = ? WHERE matricula = ?";
+            } else {
+                query = "UPDATE vehiculos SET descripcion = ? WHERE matricula = ?";
+            }
+        } else if (nuevoValor instanceof Integer) {
+            query = "UPDATE vehiculos SET numKM = ? WHERE matricula = ?";
+        } else if (nuevoValor instanceof Double) {
+            query = "UPDATE vehiculos SET precio = ? WHERE matricula = ?";
+        } else if (nuevoValor instanceof LocalDate) {
+            query = "UPDATE vehiculos SET fechaMatriculacion = ? WHERE matricula = ?";
+        }
+
+        if (query != null) {
+            try {
+                Connection connection = DatabaseManager.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+                if (nuevoValor instanceof String) {
+                    preparedStatement.setString(1, (String) nuevoValor);
+                } else if (nuevoValor instanceof Integer) {
+                    preparedStatement.setInt(1, (Integer) nuevoValor);
+                } else if (nuevoValor instanceof Double) {
+                    preparedStatement.setDouble(1, (Double) nuevoValor);
+                } else if (nuevoValor instanceof LocalDate) {
+                    preparedStatement.setDate(1, java.sql.Date.valueOf((LocalDate) nuevoValor));
+                }
+
+                preparedStatement.setString(2, matricula);
+                int rowsAffected = preparedStatement.executeUpdate();
+                if (rowsAffected > 0) {
+                    actualizado = true;
+                }
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return actualizado;
+    }
+
+}

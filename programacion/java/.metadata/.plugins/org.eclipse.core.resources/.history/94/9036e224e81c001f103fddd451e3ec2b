@@ -1,0 +1,119 @@
+package tareaUD8;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * La clase VehiculosDAO proporciona métodos para interactuar con la base de datos de vehículos.
+ */
+public class VehiculosDAO {
+
+    /**
+     * Inserta un nuevo vehículo en la base de datos.
+     * 
+     * @param v El vehículo a insertar.
+     * @return El número de filas afectadas por la inserción (1 si se insertó correctamente, 0 si falló).
+     */
+    public int insertarVehiculo(Vehiculo v) {
+        int resultado = 0;
+        String query = "INSERT INTO vehiculos (marca, matricula, numKM, fechaMatriculacion, descripcion, precio, nombrePropietario, dniPropietario) "
+                     + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, v.getMarca());
+            preparedStatement.setString(2, v.getMatricula());
+            preparedStatement.setInt(3, v.getNumKM());
+            preparedStatement.setDate(4, java.sql.Date.valueOf(v.getFechaMatriculacion()));
+            preparedStatement.setString(5, v.getDescripcion());
+            preparedStatement.setDouble(6, v.getPrecio());
+            preparedStatement.setString(7, v.getNombrePropietario());
+            preparedStatement.setString(8, v.getDniPropietario());
+            resultado = preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return resultado;
+    }
+
+    /**
+     * Lista todos los vehículos almacenados en la base de datos.
+     * 
+     * @return Un conjunto de vehículos.
+     */
+    public Set<Vehiculo> listarVehiculos() {
+        Set<Vehiculo> vehiculos = new HashSet<>();
+        String query = "SELECT * FROM vehiculos";
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String marca = resultSet.getString("marca");
+                String matricula = resultSet.getString("matricula");
+                int numKM = resultSet.getInt("numKM");
+                LocalDate fechaMatriculacion = resultSet.getDate("fechaMatriculacion").toLocalDate();
+                String descripcion = resultSet.getString("descripcion");
+                double precio = resultSet.getDouble("precio");
+                String nombrePropietario = resultSet.getString("nombrePropietario");
+                String dniPropietario = resultSet.getString("dniPropietario");
+                Vehiculo vehiculo = new Vehiculo(marca, matricula, numKM, fechaMatriculacion, descripcion, precio, nombrePropietario, dniPropietario);
+                vehiculo.setId(id);
+                vehiculos.add(vehiculo);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return vehiculos;
+    }
+
+    /**
+     * Busca un vehículo por su matrícula en la base de datos.
+     * 
+     * @param matricula La matrícula del vehículo a buscar.
+     * @return El vehículo encontrado o null si no se encontró ningún vehículo con esa matrícula.
+     */
+    public Vehiculo buscarVehiculo(String matricula) {
+        Vehiculo vehiculo = null;
+        String query = "SELECT * FROM vehiculos WHERE matricula = ?";
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, matricula);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String marca = resultSet.getString("marca");
+                String matriculaDB = resultSet.getString("matricula");
+                int numKM = resultSet.getInt("numKM");
+                LocalDate fechaMatriculacion = resultSet.getDate("fechaMatriculacion").toLocalDate();
+                String descripcion = resultSet.getString("descripcion");
+                double precio = resultSet.getDouble("precio");
+                String nombrePropietario = resultSet.getString("nombrePropietario");
+                String dniPropietario = resultSet.getString("dniPropietario");
+                vehiculo = new Vehiculo(marca, matriculaDB, numKM, fechaMatriculacion, descripcion, precio, nombrePropietario, dniPropietario);
+                vehiculo.setId(id);
+                
+                // Imprimir el resultado del método toString() del objeto Vehiculo
+                System.out.println(vehiculo);
+            } else {
+            	System.out.println("No existe ningún vehículo con la matricula proporcionada.");
+            	resultSet.close();
+            	preparedStatement.close();
+            	connection.close();
+            	} catch (SQLException e) {
+            	e.printStackTrace();
+            	}
+            	return vehiculo;
+            	}

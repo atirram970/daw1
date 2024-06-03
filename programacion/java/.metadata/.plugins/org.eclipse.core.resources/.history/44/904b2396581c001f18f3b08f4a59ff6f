@@ -1,0 +1,122 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class VehiculosDAO {
+    private Set<Vehiculo> vehiculos;
+    private int numVehiculos;
+    private final int CAPACIDAD_MAX = 500;
+
+    public VehiculosDAO() {
+        this.numVehiculos = 0;
+        this.vehiculos = new HashSet<>();
+    }
+
+    public int insertarVehiculo(Vehiculo v) {
+        int codReturn = -2;
+        if (numVehiculos >= CAPACIDAD_MAX) {
+            codReturn = -1;
+        } else {
+            try {
+                Connection connection = DatabaseManager.getConnection();
+                String query = "INSERT INTO vehiculos (marca, matricula, num_km, fecha_matriculacion, descripcion, precio, nombre_propietario, dni_propietario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, v.getMarca());
+                preparedStatement.setString(2, v.getMatricula());
+                preparedStatement.setInt(3, v.getNumKM());
+                preparedStatement.setDate(4, java.sql.Date.valueOf(v.getFechaMatriculacion()));
+                preparedStatement.setString(5, v.getDescripcion());
+                preparedStatement.setDouble(6, v.getPrecio());
+                preparedStatement.setString(7, v.getNombrePropietario());
+                preparedStatement.setString(8, v.getDniPropietario());
+                int rowsAffected = preparedStatement.executeUpdate();
+                if (rowsAffected > 0) {
+                    vehiculos.add(v);
+                    numVehiculos++;
+                    codReturn = 0;
+                }
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return codReturn;
+    }
+
+    public Set<Vehiculo> listarVehiculos() {
+        Set<Vehiculo> listaVehiculos = new HashSet<>();
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            String query = "SELECT * FROM vehiculos";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                String marca = resultSet.getString("marca");
+                String matricula = resultSet.getString("matricula");
+                int numKM = resultSet.getInt("num_km");
+                java.sql.Date fechaMatriculacionSQL = resultSet.getDate("fecha_matriculacion");
+                LocalDate fechaMatriculacion = fechaMatriculacionSQL.toLocalDate();
+                String descripcion = resultSet.getString("descripcion");
+                double precio = resultSet.getDouble("precio");
+                String nombrePropietario = resultSet.getString("nombre_propietario");
+                String dniPropietario = resultSet.getString("dni_propietario");
+                Vehiculo vehiculo = new Vehiculo(marca, matricula, numKM, fechaMatriculacion, descripcion, precio, nombrePropietario, dniPropietario);
+                listaVehiculos.add(vehiculo);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listaVehiculos;
+    }
+
+    public Vehiculo buscarVehiculo(String matricula) {
+        Vehiculo vehiculo = null;
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            String query = "SELECT * FROM vehiculos WHERE matricula = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, matricula);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                String marca = resultSet.getString("marca");
+                int numKM = resultSet.getInt("num_km");
+                java.sql.Date fechaMatriculacionSQL = resultSet.getDate("fecha_matriculacion");
+                LocalDate fechaMatriculacion = fechaMatriculacionSQL.toLocalDate();
+                String descripcion = resultSet.getString("descripcion");
+                double precio = resultSet.getDouble("precio");
+                String nombrePropietario = resultSet.getString("nombre_propietario");
+                String dniPropietario = resultSet.getString("dni_propietario");
+                vehiculo = new Vehiculo(marca, matricula, numKM, fechaMatriculacion, descripcion, precio, nombrePropietario, dniPropietario);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return vehiculo;
+    }
+
+    public boolean actualizarKilometraje(String matricula, int kms) {
+        boolean actualizado = false;
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            String query = "UPDATE vehiculos SET num_km = ? WHERE matricula = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, kms);
+            preparedStatement.setString(2, matricula);
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                actualizado = true;
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException

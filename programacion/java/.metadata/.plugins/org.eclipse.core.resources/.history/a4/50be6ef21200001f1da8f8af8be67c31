@@ -1,0 +1,117 @@
+package unidad6.edificio;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Edificio {
+    // Atributos
+    private Map<String, Persona> personasEnEdificio = new HashMap<>();
+    private List<Persona> personasZonaPrivada = new ArrayList<>();
+
+    // Constructor
+    public Edificio() {
+    }
+
+    // Métodos
+    public Persona buscarPersonaPorDni(String dni) {
+        if (dni == null || dni.trim().isEmpty()) {
+            return null;
+        }
+
+        for (Persona persona : personasEnEdificio.values()) {
+            if (dni.equals(persona.getDni())) {
+                return persona;
+            }
+        }
+        return null;
+    }
+
+    public Persona buscarPersonaEnZonaPrivada(String dni) {
+        if (dni == null || dni.trim().isEmpty()) {
+            return null;
+        }
+
+        for (Persona persona : personasZonaPrivada) {
+            if (dni.equals(persona.getDni())) {
+                return persona;
+            }
+        }
+        return null;
+    }
+
+    public void personaEntraEdificio(Persona persona) {
+        if (persona == null || persona.getDni() == null || persona.getNombre() == null || persona.getApellidos() == null) {
+            System.out.println("Error: Datos de persona inválidos.");
+            return;
+        }
+
+        if (buscarPersonaPorDni(persona.getDni()) != null) {
+            System.out.println("La persona ya está en el edificio.");
+            return;
+        }
+
+        if (persona.getNombre().trim().isEmpty() || persona.getApellidos().trim().isEmpty()) {
+            System.out.println("Error: Nombre y apellidos no pueden estar vacíos.");
+            return;
+        }
+
+        personasEnEdificio.put(persona.getDni(), persona);
+    }
+
+    public void personaSaleEdificio(String dni) {
+        if (dni == null || dni.trim().isEmpty()) {
+            System.out.println("Error: DNI inválido.");
+            return;
+        }
+        personasEnEdificio.remove(dni);
+    }
+
+    public void personaEntraZonaPrivada(Persona persona) {
+        if (persona == null || persona.getDni() == null || persona.getNombre() == null || persona.getApellidos() == null) {
+            System.out.println("Error: Datos de persona inválidos.");
+            return;
+        }
+
+        // Verificar si la persona está en el edificio
+        Persona personaEnEdificio = buscarPersonaPorDni(persona.getDni());
+        if (personaEnEdificio == null) {
+            System.out.println("La persona no está en el edificio.");
+            return;
+        }
+
+        if (persona.getNombre().trim().isEmpty() || persona.getApellidos().trim().isEmpty()) {
+            System.out.println("Error: Nombre y apellidos no pueden estar vacíos.");
+            return;
+        }
+
+        personasZonaPrivada.add(persona);
+    }
+
+    public void personaSaleZonaPrivada(String dni) {
+        if (dni == null || dni.trim().isEmpty()) {
+            System.out.println("Error: DNI inválido.");
+            return;
+        }
+        personasZonaPrivada.removeIf(persona -> persona.getDni().equals(dni));
+    }
+
+    public void registrarPersonaZonaPrivada(Persona persona) {
+        if (persona == null || persona.getDni() == null || persona.getNombre() == null || persona.getApellidos() == null) {
+            System.out.println("Error: Datos de persona inválidos.");
+            return;
+        }
+
+        // Buscar persona en el edificio y en la zona privada
+        Persona personaEnEdificio = buscarPersonaPorDni(persona.getDni());
+        Persona personaEnZonaPrivada = buscarPersonaEnZonaPrivada(persona.getDni());
+
+        // Verificar si la persona está en el edificio
+        if (personaEnEdificio == null) {
+            System.out.println("La persona no está en el edificio.");
+            return;
+        }
+
+        // Verificar si la persona ya está registrada para la zona privada
+        if (personaEnZonaPrivada !=

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videojuegos>
+    <videojuego id="10013">
+        <titulo>Hogwarts Legacy</titulo>
+        <desarrollador> Avalanche Software</desarrollador>
+        <lanzamiento>10/02/2023</lanzamiento>
+    </videojuego>
+    <videojuego id="20208">
+        <titulo>the last of us remaster</titulo>
+        <desarrollador>Naughty Dog</desarrollador>
+        <lanzamiento>29/07/2014</lanzamiento>
+    </videojuego>
+    <videojuego id="50013">
+        <titulo>Phasmophobia</titulo>
+        <desarrollador>Kinetic Games</desarrollador>
+        <lanzamiento>18/9/2020</lanzamiento>
+    </videojuego>
+</videojuegos>

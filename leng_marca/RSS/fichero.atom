@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Feed del Recorrido de Semana Santa en Barbate</title>
+    <link href="https://atirram970.000webhostapp.com" rel="alternate" />
+    <subtitle>2024</subtitle>
+    <id>https://atirram970.000webhostapp.com</id>
+    <link rel="self" href="https://atirram970.000webhostapp.com/fichero.atom" />
+
+    <!-- Artículo 1 -->
+    <entry>
+        <title>Lunes Santo</title>
+        <link href="https://atirram970.000webhostapp.com#L2024ATOM" />
+        <id>https://atirram970.000webhostapp.com#L2024ATOM</id>
+        <content type="html">
+            <![CDATA[
+                <div class="centrado"><img src="https://atirram970.000webhostapp.com/img/lunes.jpg" alt="imagen de Lunes Santo"/></div>
+                <p>Hermandad contratadora: Hermandad de la Palma.</p>
+                <p>Hora de salida: 18:30, Hora de recogida: 01:30.</p>
+            ]]>
+        </content>
+    </entry>
+
+    <!-- Artículo 2 -->
+    <entry>
+        <title>Martes Santo</title>
+        <link href="https://atirram970.000webhostapp.com#M2024ATOM" />
+        <id>https://atirram970.000webhostapp.com#M2024ATOM</id>
+        <content type="html">
+            <![CDATA[
+                <div class="centrado"><img src="https://atirram970.000webhostapp.com/img/martes.jpg" alt="imagen de Martes Santo"/></div>
+                <p>Hermandad contratadora: Hermandad de los Dolores.</p>
+                <p>Hora de salida: 19:00, Hora de recogida: 02:00.</p>
+            ]]>
+        </content>
+    </entry>
+
+    <!-- Artículo 3 -->
+    <entry>
+        <title>Miércoles Santo</title>
+        <link href="https://atirram970.000webhostapp.com#X2024ATOM" />
+        <id>https://atirram970.000webhostapp.com#X2024ATOM</id>
+        <content type="html">
+            <![CDATA[
+                <div class="centrado"><img src="https://atirram970.000webhostapp.com/img/miercoles.jpg" alt="imagen de Miércoles Santo"/></div>
+                <p>Hermandad contratadora: Hermandad de la Soledad.</p>
+                <p>Hora de salida: 20:00, Hora de recogida: 02:30.</p>
+            ]]>
+        </content>
+    </entry>
+
+    <!-- Artículo 4 -->
+    <entry>
+        <title>Jueves Santo</title>
+        <link href="https://atirram970.000webhostapp.com#J2024ATOM" />
+        <id>https://atirram970.000webhostapp.com#J2024ATOM</id>
+        <content type="html">
+            <![CDATA[
+                <div class="centrado"><img src="https://atirram970.000webhostapp.com/img/jueves.jpg" alt="imagen de Jueves Santo"/></div>
+                <p>Hermandad contratadora: Hermandad del Nazareno.</p>
+                <p>Hora de salida: 21:30, Hora de recogida: 03:00.</p>
+            ]]>
+        </content>
+    </entry>
+
+    <!-- Artículo 5 -->
+    <entry>
+        <title>Viernes Santo</title>
+        <link href="https://atirram970.000webhostapp.com#V2024ATOM" />
+        <id>https://atirram970.000webhostapp.com#V2024ATOM</id>
+        <content type="html">
+            <![CDATA[
+                <div class="centrado"><img src="https://atirram970.000webhostapp.com/img/viernes.jpg" alt="imagen de Viernes Santo"/></div>
+                <p>Hermandad contratadora: Hermandad del Carmen.</p>
+                <p>Hora de salida: 20:00, Hora de recogida: 02:30.</p>
+            ]]>
+        </content>
+    </entry>
+
+    <!-- Artículo 6 -->
+    <entry>
+        <title>Sábado Santo</title>
+        <link href="https://atirram970.000webhostapp.com#S2024ATOM" />
+        <id>https://atirram970.000webhostapp.com#S2024ATOM</id>
+        <content type="html">
+            <![CDATA[
+                <div class="centrado"><img src="https://atirram970.000webhostapp.com/img/sabado.jpg" alt="imagen de Sábado Santo"/></div>
+                <p>Hermandad contratadora: Hermandad de la Misericordia.</p>
+                <p>Hora de salida: 22:00, Hora de recogida: 05:00.</p>
+            ]]>
+        </content>
+    </entry>
+
+    <!-- Artículo 7 -->
+    <entry>
+        <title>Domingo Santo</title>
+        <link href="https://atirram970.000webhostapp.com#D2024ATOM" />
+        <id>https://atirram970.000webhostapp.com#D2024ATOM</id>
+        <content type="html">
+            <![CDATA[
+                <div class="centrado"><img src="https://atirram970.000webhostapp.com/img/domingo.jpg" alt="imagen de Domingo Santo"/></div>
+                <p>Hermandad contratadora: Hermandad de la Humildad.</p>
+                <p>Hora de salida: 19:00, Hora de recogida: 01:30.</p>
+            ]]>
+        </content>
+    </entry>
+</feed>

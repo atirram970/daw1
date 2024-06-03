@@ -1,0 +1,36 @@
+package empresa;
+import banco.Imprimible;
+
+public class persona implements Imprimible{
+	//atributos
+	private String nombre;
+	private int apellidos;
+	private String dni;
+	
+	//constructores
+	/**
+	 * @param nombre
+	 * @param apellidos
+	 * @param dni
+	 */
+	public persona(String nombre, int apellidos, String dni) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.dni = dni;
+	}
+
+	@Override
+	public String devolverInfoString() {
+		String nom = "nombre: " + this.nombre + " " + this.apellidos;
+		String DNI = "dni: " + this.dni;
+		
+		return nom + DNI;
+	}
+	
+	//getters y setters
+	
+	
+	
+	
+}

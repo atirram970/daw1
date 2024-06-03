@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Semana Santa 2024</title>
+        <link>https://atirram970.000webhostapp.com</link>
+        <description>Feed de noticias sobre la Semana Santa 2024</description>
+        <language>es</language>
+        
+        <!-- Artículo 1 -->
+        <item>
+            <title>Lunes Santo</title>
+            <link>https://atirram970.000webhostapp.com#L2024RSS</link>
+            <description><![CDATA[
+                <p>La banda se dirige a Rota.</p>
+                <p>Hermandad contratadora: Hermandad de la Amargura.</p>
+                <p>Hora de salida: 18:00, Hora de recogida: 02:00.</p>
+                <img src="https://atirram970.000webhostapp.com/img/rota.jpeg" alt="imagen de Rota"/>
+            ]]></description>
+        </item>
+
+        <!-- Artículo 2 -->
+        <item>
+            <title>Martes Santo</title>
+            <link>https://atirram970.000webhostapp.com#M2024RSS</link>
+            <description><![CDATA[
+                <p>La banda se dirige a Cádiz.</p>
+                <p>Hermandad contratadora: Hermandad del Perdón.</p>
+                <p>Hora de salida: 20:00, Hora de recogida: 03:00.</p>
+                <img src="https://atirram970.000webhostapp.com/img/cadiz.jpeg" alt="imagen de Cádiz"/>
+            ]]></description>
+        </item>
+        
+        <!-- Artículo 3 -->
+        <item>
+            <title>Miércoles Santo</title>
+            <link>https://atirram970.000webhostapp.com#X2024RSS</link>
+            <description><![CDATA[
+                <p>La banda se dirige a Chiclana.</p>
+                <p>Hermandad contratadora: Hermandad de la Soledad.</p>
+                <p>Hora de salida: 19:30, Hora de recogida: 01:00.</p>
+                <img src="https://atirram970.000webhostapp.com/img/chiclana.jpeg" alt="imagen de Chiclana"/>
+            ]]></description>
+        </item>
+
+        <!-- Artículo 4 -->
+        <item>
+            <title>Jueves Santo</title>
+            <link>https://atirram970.000webhostapp.com#J2024RSS</link>
+            <description><![CDATA[
+                <p>La banda se dirige a Conil.</p>
+                <p>Hermandad contratadora: Hermandad de la Humildad.</p>
+                <p>Hora de salida: 21:00, Hora de recogida: 04:00.</p>
+                <img src="https://atirram970.000webhostapp.com/img/conil.jpeg" alt="imagen de Conil"/>
+            ]]></description>
+        </item>
+
+        <!-- Artículo 5 -->
+        <item>
+            <title>Viernes Santo</title>
+            <link>https://atirram970.000webhostapp.com#V2024RSS</link>
+            <description><![CDATA[
+                <p>La banda se dirige a San Fernando.</p>
+                <p>Hermandad contratadora: Hermandad de la Vera-Cruz.</p>
+                <p>Hora de salida: 20:30, Hora de recogida: 03:30.</p>
+                <img src="https://atirram970.000webhostapp.com/img/san fernando.jpeg" alt="imagen de San Fernando"/>
+            ]]></description>
+        </item>
+
+        <!-- Artículo 6 -->
+        <item>
+            <title>Sábado Santo</title>
+            <link>https://atirram970.000webhostapp.com#S2024RSS</link>
+            <description><![CDATA[
+                <p>La banda se dirige a El Puerto de Santa María.</p>
+                <p>Hermandad contratadora: Hermandad de la Misericordia.</p>
+                <p>Hora de salida: 22:00, Hora de recogida: 05:00.</p>
+                <img src="https://atirram970.000webhostapp.com/img/puerto santa maria.jpeg" alt="imagen de Puerto Santa María"/>
+            ]]></description>
+        </item>
+
+
+        <!-- Artículo 7 -->
+        <item>
+            <title>Domingo Santo</title>
+            <link>https://atirram970.000webhostapp.com#D2024RSS</link>
+            <description><![CDATA[
+                <p>La banda se dirige a Vejer de la Frontera.</p>
+                <p>Hermandad contratadora: Hermandad del Nazareno.</p>
+                <p>Hora de salida: 19:00, Hora de recogida: 02:30.</p>
+                <img src="https://atirram970.000webhostapp.com/img/vejer.jpeg" alt="imagen de Vejer de la Frontera"/>
+            ]]></description>
+        </item>
+    </channel>
+</rss>

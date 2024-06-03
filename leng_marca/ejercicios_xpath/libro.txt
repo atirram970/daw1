@@ -1,0 +1,7 @@
+Consultas XPath para libro.xml
+Obtener los párrafos de los capítulos
+/libro/capitulo/parrafo
+Obtener el título del libro
+/libro/titulo
+Obtener los números de los capítulos
+/libro/capitulo/@num

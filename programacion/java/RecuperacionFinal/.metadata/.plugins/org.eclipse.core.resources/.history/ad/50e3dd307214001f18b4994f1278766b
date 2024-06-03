@@ -1,0 +1,141 @@
+package examenUD6_7;
+
+import java.util.Objects;
+
+import org.apache.commons.lang3.StringUtils;
+
+public class Articulo {
+	//Atributos
+	private String codigo;
+	private String descripcion;
+	private double precioCompra;
+	private double precioVenta;
+	private int stock;
+	
+	//Constructor
+	/**
+	 * @param codigo
+	 * @param descripcion
+	 * @param precioCompra
+	 * @param precioVenta
+	 * @param stock
+	 */
+	public Articulo(String codigo, String descripcion, double precioCompra, double precioVenta, int stock) {
+		this.codigo = codigo;
+		this.descripcion = descripcion;
+		this.precioCompra = precioCompra;
+		this.precioVenta = precioVenta;
+		this.stock = stock;
+	}
+
+	public Articulo(String archivoCSV) {
+		String[] valores = archivoCSV.split(",");
+		String codigo = valores[0];
+		String descripcion = valores[1];
+		double precioCompra = Float.parseFloat(StringUtils.replace(valores[2], ",", "."));
+		double precioVenta = Float.parseFloat(StringUtils.replace(valores[3], ",", "."));
+		int stock = Integer.parseInt(valores[4]);
+		this.codigo = codigo;
+		this.descripcion = descripcion;
+		this.precioCompra = precioCompra;
+		this.precioVenta = precioVenta;
+		this.stock = stock;
+	}
+	
+	//Getters y setters
+	/**
+	 * @return the codigo
+	 */
+	public String getCodigo() {
+		return codigo;
+	}
+
+	/**
+	 * @param codigo the codigo to set
+	 */
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	/**
+	 * @return the descripcion
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * @param descripcion the descripcion to set
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	/**
+	 * @return the precioCompra
+	 */
+	public double getPrecioCompra() {
+		return precioCompra;
+	}
+
+	/**
+	 * @param precioCompra the precioCompra to set
+	 */
+	public void setPrecioCompra(double precioCompra) {
+		this.precioCompra = precioCompra;
+	}
+
+	/**
+	 * @return the precioVenta
+	 */
+	public double getPrecioVenta() {
+		return precioVenta;
+	}
+
+	/**
+	 * @param precioVenta the precioVenta to set
+	 */
+	public void setPrecioVenta(double precioVenta) {
+		this.precioVenta = precioVenta;
+	}
+
+	/**
+	 * @return the stock
+	 */
+	public int getStock() {
+		return stock;
+	}
+
+	/**
+	 * @param stock the stock to set
+	 */
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+	//Métodos
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Articulo other = (Articulo) obj;
+		return Objects.equals(codigo, other.codigo);
+	}
+
+	@Override
+	public String toString() {
+		return "Articulo=" + codigo + ", descripcion=" + descripcion + ", precioCompra=" + precioCompra
+				+ ", precioVenta=" + precioVenta + ", stock=" + stock + "]";
+	}
+	
+	
+}

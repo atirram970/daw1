@@ -1,0 +1,52 @@
+package examenUD6_7;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class Almacen {
+	private Map<String, Articulo> almacen = new HashMap<String, Articulo>();
+	
+	public Set<Articulo> getAlmacen() {
+		Set<Articulo> alm = new HashSet<Articulo>();
+		alm.addAll(this.almacen.values());
+		return alm;
+	}
+	
+	public void imprimirListadoAlmacen() {
+		int index = 1;
+		for (Articulo art : this.almacen.values()) {
+            System.out.println(index + ".-" + art.toString());
+            index++;
+        }
+	}
+	
+	public void altaArticulo(Articulo articulo) {
+		if(this.almacen.containsKey(articulo.getCodigo())) {
+			this.almacen.put(articulo.getCodigo(), articulo);	
+		} else {
+			Articulo art = this.almacen.get(articulo.getCodigo());
+			art.setStock(art.getStock() + articulo.getStock());
+		}
+	}
+	
+	public Articulo getArticuloPorCodigo(String codigo) throws ArticuloNotFoundException{
+		Articulo art = null;
+		if(this.almacen.containsKey(codigo)) {
+			art = this.almacen.get(codigo);
+		} else {
+			throw new ArticuloNotFoundException();
+		}
+		return null;
+	}
+	
+	public void modificarCodigo(String codigoNuevo, String codigoAnterior) {
+		if(this.almacen.containsKey(codigoAnterior) && !this.almacen.containsKey(codigoNuevo)) {
+            Articulo art = this.almacen.get(codigoAnterior);
+			art.setCodigo(codigoNuevo);
+			this.almacen.put(codigoNuevo, art);
+            this.almacen.remove(codigoAntiguo)
+        }	
+	}
+}

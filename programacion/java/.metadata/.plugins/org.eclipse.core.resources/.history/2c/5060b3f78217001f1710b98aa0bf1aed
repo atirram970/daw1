@@ -1,0 +1,10 @@
+package conectarABD;
+
+public class TestDatabaseConnection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

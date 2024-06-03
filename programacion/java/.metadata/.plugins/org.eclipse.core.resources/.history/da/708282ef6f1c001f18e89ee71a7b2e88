@@ -1,0 +1,59 @@
+package tareaUD8;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.time.LocalDate;
+
+public class VehiculosDAO {
+    // Rest of the class
+
+    public boolean actualizarVehiculo(String matricula, String campo, String nuevoValor) {
+        return actualizarVehiculoEnBD(matricula, campo, nuevoValor);
+    }
+
+    public boolean actualizarVehiculo(String matricula, String campo, int nuevoValor) {
+        return actualizarVehiculoEnBD(matricula, campo, nuevoValor);
+    }
+
+    public boolean actualizarVehiculo(String matricula, String campo, double nuevoValor) {
+        return actualizarVehiculoEnBD(matricula, campo, nuevoValor);
+    }
+
+    public boolean actualizarVehiculo(String matricula, String campo, LocalDate nuevoValor) {
+        return actualizarVehiculoEnBD(matricula, campo, java.sql.Date.valueOf(nuevoValor));
+    }
+
+    private boolean actualizarVehiculoEnBD(String matricula, String campo, Object nuevoValor) {
+        boolean actualizado = false;
+        String query = "UPDATE vehiculos SET " + campo + " = ? WHERE matricula = ?";
+
+        try {
+            Connection connection = DatabaseManager.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+            if (nuevoValor instanceof String) {
+                preparedStatement.setString(1, (String) nuevoValor);
+            } else if (nuevoValor instanceof Integer) {
+                preparedStatement.setInt(1, (Integer) nuevoValor);
+            } else if (nuevoValor instanceof Double) {
+                preparedStatement.setDouble(1, (Double) nuevoValor);
+            } else if (nuevoValor instanceof java.sql.Date) {
+                preparedStatement.setDate(1, (java.sql.Date) nuevoValor);
+            }
+
+            preparedStatement.setString(2, matricula);
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                actualizado = true;
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return actualizado;
+    }
+
+    // Other methods...
+}

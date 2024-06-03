@@ -1,0 +1,7 @@
+package examenUD6_7;
+
+public class Articulo {
+	//Atributos
+	private String codigo;
+
+}

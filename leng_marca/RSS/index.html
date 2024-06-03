@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed de Noticias</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="alternate" type="application/rss+xml" title="Enlace RSS" href="https://atirram970.000webhostapp.com/fichero.rss" />
+    <link rel="alternate" type="application/atom+xml" title="Enlace atom" href="https://atirram970.000webhostapp.com/fichero.atom" />
+</head>
+
+<body>
+    <div id="navbar" class="sticky">
+        <a class="active" href="#inicio"><img src="./img/casa.svg" height="15px" width="auto-fit"/></a>
+    </div>
+
+    <header id="inicio">
+        <h1><u>Semana santa 2024</u></h1> <!-- Texto blanco -->
+    </header>
+
+    <div class="imgSemanaSanta">
+        <img src="./img/semana santa.jpg" width="100%" height="550px" alt="Imagen Semana Santa"/>
+    </div>
+
+    <section>
+        <article class="noticia">
+            <div>
+                <h2>Banda Municipal de Barbate</h2>
+                <p>Suscribete a las novedades de la banda municipal de barbate, para ver los destinos a los que se dirigirán proximamente</p>
+            </div>
+            <div>
+                <a href="https://feedly.com/i/subscription/feed/https://atirram970.000webhostapp.com/fichero.rss" class="rss" target="_blank"><img src="./img/rss.svg" width="30px" height="auto-fit" alt="Suscribirse RSS" /></a>
+            </div>
+        </article>
+
+        <article class="noticia">
+            <div>
+                <h2>Hermandades de Barbate</h2>
+                <p>Suscribete a este feed para saber cuales hermandades y cuando salen en semana santa</p>
+            </div>
+            <div>
+                <a href="https://feedly.com/i/subscription/feed/https://atirram970.000webhostapp.com/fichero.atom" class="atom" target="_blank"><img src="./img/atom.svg" width="30px" height="auto-fit" alt="Suscribirse RSS" /></a>
+            </div>
+        </article>
+
+        <div class="espacios"></div>
+
+        <!--***         RSS         -->
+        <article class="noticias_rss" id="L2024RSS">
+            <h2>Lunes Santo</h2>
+            <div class="centrado"><img src="./img/rota.jpeg" alt="imagen de Rota"/></div>
+            <p>La banda se dirige a Rota.</p>
+            <p>Hermandad contratadora: Hermandad de la Amargura.</p>
+            <p>Hora de salida: 18:00, Hora de recogida: 02:00.</p>
+        </article>
+        
+        <article class="noticias_rss" id="M2024RSS">
+            <h2>Martes Santo</h2>
+            <div class="centrado"><img src="./img/cadiz.jpeg" alt="imagen de Cádiz"/></div>
+            <p>La banda se dirige a Cádiz.</p>
+            <p>Hermandad contratadora: Hermandad del Perdón.</p>
+            <p>Hora de salida: 20:00, Hora de recogida: 03:00.</p>
+        </article>
+        
+        <article class="noticias_rss" id="X2024RSS">
+            <h2>Miércoles Santo</h2>
+            <div class="centrado"><img src="./img/chiclana.jpeg" alt="imagen de Chiclana"/></div>
+            <p>La banda se dirige a Chiclana.</p>
+            <p>Hermandad contratadora: Hermandad de la Soledad.</p>
+            <p>Hora de salida: 19:30, Hora de recogida: 01:00.</p>
+        </article>
+        
+        <article class="noticias_rss" id="J2024RSS">
+            <h2>Jueves Santo</h2>
+            <div class="centrado"><img src="./img/conil.jpeg" alt="imagen de Conil"/></div>
+            <p>La banda se dirige a Conil.</p>
+            <p>Hermandad contratadora: Hermandad de la Humildad.</p>
+            <p>Hora de salida: 21:00, Hora de recogida: 04:00.</p>
+        </article>
+        
+        <article class="noticias_rss" id="V2024RSS">
+            <h2>Viernes Santo</h2>
+            <div class="centrado"><img src="./img/san fernando.jpeg" alt="imagen de San Fernando"/></div>
+            <p>La banda se dirige a San Fernando.</p>
+            <p>Hermandad contratadora: Hermandad de la Vera-Cruz.</p>
+            <p>Hora de salida: 20:30, Hora de recogida: 03:30.</p>
+        </article>
+        
+        <article class="noticias_rss" id="S2024RSS">
+            <h2>Sábado Santo</h2>
+            <div class="centrado"><img src="./img/puerto santa maria.jpeg" alt="imagen de Puerto Santa Maria"/></div>
+            <p>La banda se dirige a El Puerto de Santa María.</p>
+            <p>Hermandad contratadora: Hermandad de la Misericordia.</p>
+            <p>Hora de salida: 22:00, Hora de recogida: 05:00.</p>
+        </article>
+        
+        <article class="noticias_rss" id="D2024RSS">
+            <h2>Domingo Santo</h2>
+            <div class="centrado"><img src="./img/vejer.jpeg" alt="imagen de Vejer de la Frontera"/></div>
+            <p>La banda se dirige a Vejer de la Frontera.</p>
+            <p>Hermandad contratadora: Hermandad del Nazareno.</p>
+            <p>Hora de salida: 19:00, Hora de recogida: 02:30.</p>
+        </article>
+        
+        <!--***         ATOM         -->
+        <article class="noticias_atom" id="L2024ATOM">
+            <h2>Lunes Santo</h2>
+            <div class="centrado"><img src="./img/lunes.jpg" alt="imagen de Lunes Santo"/></div>
+            <p>Hermandad contratadora: Hermandad de la Palma.</p>
+            <p>Hora de salida: 18:30, Hora de recogida: 01:30.</p>
+        </article>
+        
+        <article class="noticias_atom" id="M2024ATOM">
+            <h2>Martes Santo</h2>
+            <div class="centrado"><img src="./img/martes.jpg" alt="imagen de Martes Santo"/></div>
+            <p>Hermandad contratadora: Hermandad de los Dolores.</p>
+            <p>Hora de salida: 19:00, Hora de recogida: 02:00.</p>
+        </article>
+        
+        <article class="noticias_atom" id="X2024ATOM">
+            <h2>Miércoles Santo</h2>
+            <div class="centrado"><img src="./img/miercoles.jpg" alt="imagen de Miércoles Santo"/></div>
+            <p>Hermandad contratadora: Hermandad de la Soledad.</p>
+            <p>Hora de salida: 20:00, Hora de recogida: 02:30.</p>
+        </article>
+        
+        <article class="noticias_atom" id="J2024ATOM">
+            <h2>Jueves Santo</h2>
+            <div class="centrado"><img src="./img/jueves.jpg" alt="imagen de Jueves Santo"/></div>
+            <p>Hermandad contratadora: Hermandad del Nazareno.</p>
+            <p>Hora de salida: 21:30, Hora de recogida: 03:00.</p>
+        </article>
+        
+        <article class="noticias_atom" id="V2024ATOM">
+            <h2>Viernes Santo</h2>
+            <div class="centrado"><img src="./img/viernes.jpg" alt="imagen de Viernes Santo"/></div>
+            <p>Hermandad contratadora: Hermandad del Carmen.</p>
+            <p>Hora de salida: 20:00, Hora de recogida: 02:30.</p>
+        </article>
+        
+        <article class="noticias_atom" id="D2024ATOM">
+            <h2>Domingo Santo</h2>
+            <div class="centrado"><img src="./img/domingo.jpg" alt="imagen de Domingo Santo"/></div>
+            <p>Hermandad contratadora: Hermandad de la Humildad.</p>
+            <p>Hora de salida: 19:00, Hora de recogida: 01:30.</p>
+        </article>
+
+        <!-- Más articulos AQUI-->
+    </section>
+    <footer>
+        <p>©2024 Feed de Noticias de atirram970. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

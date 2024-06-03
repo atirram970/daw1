@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articulos>
+    <articulo nombre="Asus TUF gaming" categoria="portatil" edicion="2023">
+        <descripcion>portátil de grandes prestaciones para todo tipo de tareas o incluso para jugar videojuegos</descripcion>
+        <precio>750€</precio>
+        <caracteristicas>
+            <procesador>i5-11400H</procesador>
+            <targeta_grafica>gtx-3050-4GB</targeta_grafica>
+            <memoria_ram>16GB RAM</memoria_ram>
+            <disco_duro>512GB SSD</disco_duro>
+            <dimensiones>35.9 x 25.6 x 2.28 ~ 2.43cm</dimensiones>
+        </caracteristicas>
+        
+    </articulo>
+    <articulo nombre="xiaomi redmi note 12" categoria="telefono_movil" edicion="2022">
+        <descripcion>teléfono móvil empresa china xiaomi con buenas prestaciones calidad/precio</descripcion>
+        <precio>250€</precio>
+        <caracteristicas>
+            <procesador>Snapdragon 4 Gen 1</procesador>
+            <memoria_ram>6</memoria_ram>
+            <disco_duro>256GB</disco_duro>
+            <camara>48 MP + 8 MP + 2 MP</camara>
+        </caracteristicas>
+        
+    </articulo>
+    <articulo nombre="cable rj45 cat5e" categoria="cableado" edicion="2020">
+        <descripcion>cable ethernet para conectar un equipo a el router o para comunicar 2 equipos</descripcion>
+        <precio>50€</precio>
+        <caracteristicas>
+            <longitud>100 metros</longitud>
+            <dimensiones>32 cm de diámetro y 10 cm de altura</dimensiones>
+            <categoria>5e</categoria>
+            <tipo>UDP</tipo>
+            <velocidad>125MB/s</velocidad>
+        </caracteristicas>
+    </articulo>
+</articulos>

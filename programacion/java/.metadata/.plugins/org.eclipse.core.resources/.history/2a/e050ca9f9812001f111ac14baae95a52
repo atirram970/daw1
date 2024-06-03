@@ -1,0 +1,15 @@
+package unidad6;
+
+import java.util.Scanner;
+
+public class ejRepaso1 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String nombre ="";
+		boolean fin = false;
+		do {
+			System.out.println("Dame un nombre: ");
+			nombre = scan.nextLine();
+		}while (!fin);
+    }
+}

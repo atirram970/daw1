@@ -1,0 +1,9 @@
+package conectarABD;
+
+public class TestDatabaseConnection {
+
+	public static void main(String[] args) {
+		Connection con = DatabaseManager.getConnection();
+	}
+
+}

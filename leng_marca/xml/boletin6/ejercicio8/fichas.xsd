@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<element name="fichas">
+		<complexType>
+			<sequence>
+				<element name="ficha" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="nombre" type="xs:string"/>
+							<element name="iniciales">
+								<simpleType>
+									<restriction base="xs:string">
+										<pattern value="[A-Z][A-Z][A-Z]"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="edad" type="xs:integer"/>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

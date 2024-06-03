@@ -1,0 +1,45 @@
+package unidad6;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.apache.commons.lang3.StringUtils;
+
+public class ej10 {
+
+	public static void main(String[] args) {
+		 //Escribe un programa capaz de quitar los comentarios de un programa de Java.
+		 //Se utilizaría por consola de la siguiente manera:
+		 //no_comments PROGRAMA_ORIGINAL PROGRAMA_LIMPIO
+		 //Debes controlar los comentarios de los 3 tipos.
+		 //- Comentarios de una línea //
+		 //- Comentarios de bloque /* … */
+		 //- Comentarios javadoc /** … */
+		
+		
+		try {
+			String rutaOrigen= "ficheros/ClaseComentada.java";
+			String rutaDestino = "ficheros/ClaseSinComentarios.java";
+			File programaComentado = new File(rutaOrigen);
+			File programaSinComentarios = new File(rutaDestino);
+			FileReader fr = new FileReader(programaComentado);
+			BufferedReader br = new BufferedReader(fr);
+			String line = br.readLine();
+			while (line!= null) {
+				if(StringUtils.contains(line, "//")) {
+					System.out.println("Comentario de una linea encontrado");
+				}
+				int posicionComentario = StringUtils.indexOf(line,"//");
+				String previoComentario = StringUtils.substring(line, 0, posicionComentario);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

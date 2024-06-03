@@ -1,0 +1,101 @@
+package unidad6.edificio;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Edificio {
+    // Atributos
+    private Map<String, Persona> personasEnEdificio;
+    private List<Persona> personasZonaPrivada;
+
+    // Constructor
+    public Edificio() {
+        personasEnEdificio = new HashMap<>();
+        personasZonaPrivada = new ArrayList<>();
+    }
+
+    // Métodos
+    public Persona buscarPersonaPorDni(String dni) {
+        for (Persona persona : personasEnEdificio.values()) {
+            if (persona.getDni().equals(dni)) {
+                return persona;
+            }
+        }
+        for (Persona persona : personasZonaPrivada) {
+            if (persona.getDni().equals(dni)) {
+                return persona;
+            }
+        }
+        return null;
+    }
+
+    public void personaEntraEdificio(Persona persona) {
+        if (buscarPersonaPorDni(persona.getDni()) != null) {
+            System.out.println("La persona ya está en el edificio.");
+            return;
+        }
+        
+        for (Persona p : personasEnEdificio.values()) {
+            if (p.getNombre().equals(persona.getNombre()) && p.getApellidos().equals(persona.getApellidos())) {
+                System.out.println("Ya hay una persona en el edificio con el mismo nombre y apellidos.");
+                return;
+            }
+        }
+        
+        personasEnEdificio.put(persona.getDni(), persona);
+    }
+
+    public void personaSaleEdificio(String dni) {
+        personasEnEdificio.remove(dni);
+    }
+
+    public void personaEntraZonaPrivada(Persona persona) {
+        if (buscarPersonaPorDni(persona.getDni()) != null) {
+            System.out.println("La persona ya está en el edificio.");
+            return;
+        }
+        
+        for (Persona p : personasEnEdificio.values()) {
+            if (p.getNombre().equals(persona.getNombre()) && p.getApellidos().equals(persona.getApellidos())) {
+                System.out.println("Ya hay una persona en el edificio con el mismo nombre y apellidos.");
+                return;
+            }
+        }
+        
+        personasZonaPrivada.add(persona);
+    }
+
+    public void personaSaleZonaPrivada(String dni) {
+        personasZonaPrivada.removeIf(persona -> persona.getDni().equals(dni));
+    }
+
+    public void registrarPersonaZonaPrivada(Persona persona) {
+        if (buscarPersonaPorDni(persona.getDni()) != null) {
+            System.out.println("La persona ya está en el edificio.");
+            return;
+        }
+        
+        for (Persona p : personasEnEdificio.values()) {
+            if (p.getNombre().equals(persona.getNombre()) && p.getApellidos().equals(persona.getApellidos())) {
+                System.out.println("Ya hay una persona en el edificio con el mismo nombre y apellidos.");
+                return;
+            }
+        }
+        
+        personasZonaPrivada.add(persona);
+    }
+
+    public void mostrarPersonasEnEdificio() {
+        for (Persona persona : personasEnEdificio.values()) {
+            System.out.println(persona.getNombre() + " " + persona.getApellidos());
+        }
+    }
+
+    public void mostrarPersonasEnZonaPrivada() {
+        for (Persona persona : personasZonaPrivada) {
+            System.out.println(persona.getNombre() + " " + persona.getApellidos());
+        }
+    }
+}

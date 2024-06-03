@@ -1,0 +1,47 @@
+package unidad6.listas;
+
+import java.util.ArrayList;
+
+public class Coleccion {
+
+	//Creación Productos por defecto
+	Producto producto1 = new Producto(1, "Camiseta", "Ropa", 15.99, 50);
+    Producto producto2 = new Producto(2, "Pantalón", "Ropa", 29.99, 30);
+    Producto producto3 = new Producto(3, "Zapatillas", "Calzado", 39.99, 20);
+	
+	private ArrayList<Producto> lista = new ArrayList<Producto>();
+
+	//Devuelve el tamaño de la lista
+    public int tamaño(){
+    	return lista.size();
+    }
+
+    //Añade un elemento tipo Producto en la lista
+    public void adicionar(Producto e){
+    	Producto p = new Producto(123456, "Saco de Papas", "Comestible", 2.5d, 50);
+    }
+    
+    //Borra un elemento indicando la posición
+    public void eliminar(int pos){			
+
+    }
+    
+    //Devuelve el elemento de una posición
+    public Producto obtener(int pos){
+
+    }
+    
+	//Recorre la lista y busca si el código del producto
+	// si coincide con cod devuelve el producto 
+	//y si no está el la lista devuelve null
+    public Producto buscar(int cod){
+    	           
+    }  
+
+//Más tarde se añadirán los métodos 
+            		
+//public void mostrar_todo()
+//public void aumentoPrecio()
+
+ 
+}

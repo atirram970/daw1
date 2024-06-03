@@ -1,0 +1,13 @@
+package examenArray;
+
+public class Imagen {
+
+	public static void main(String[] args) {
+		generarImagen();
+	}
+
+	private static void generarImagen(-127, 128) {
+		int numAleatorio = (int) (Math.random() * (max - min + 1) + min);
+	}
+
+}

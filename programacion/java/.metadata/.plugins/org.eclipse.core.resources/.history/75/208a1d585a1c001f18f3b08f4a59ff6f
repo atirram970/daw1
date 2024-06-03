@@ -1,0 +1,41 @@
+// VehiculosDAO.java
+package tareaUD8;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+
+public class VehiculosDAO {
+    private Set<Vehiculo> vehiculos;
+    private int numVehiculos;
+    private final int CAPACIDAD_MAX = 500;
+
+    public VehiculosDAO() {
+        this.numVehiculos = 0;
+        this.vehiculos = new HashSet<>();
+    }
+
+    public int insertarVehiculo(Vehiculo v) {
+        // Método insertarVehiculo
+    }
+
+    public Set<Vehiculo> listarVehiculos() {
+        // Método listarVehiculos
+    }
+
+    public Vehiculo buscarVehiculo(String matricula) {
+        // Método buscarVehiculo
+    }
+
+    public boolean actualizarKilometraje(String matricula, int kms) {
+        // Método actualizarKilometraje
+    }
+
+    public boolean eliminarVehiculo(String matricula) {
+        // Método eliminarVehiculo
+    }
+}

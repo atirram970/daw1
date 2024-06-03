@@ -1,0 +1,30 @@
+1er Método isEmpty(): Este método verifica si una cadena está vacía (“”) o es nula. Devuelve true si la cadena es nula o tiene longitud cero
+----------------------------------------------------------------------------------------------------------------------------------------
+String cadena = "";
+boolean resultado = StringUtils.isEmpty(cadena); // Devuelve true
+----------------------------------------------------------------------------------------------------------------------------------------
+
+2do Método isBlank(): Este método verifica si una cadena está vacía (“”), es nula o solo contiene espacios en blanco
+----------------------------------------------------------------------------------------------------------------------------------------
+String cadena = "   ";
+boolean resultado = StringUtils.isBlank(cadena); // Devuelve true
+----------------------------------------------------------------------------------------------------------------------------------------
+
+3er Método equals(): Este método compara dos cadenas, teniendo en cuenta que pueden ser nulas. Devuelve true si las cadenas son iguales, false en caso contrario
+----------------------------------------------------------------------------------------------------------------------------------------
+String cadena1 = "hola";
+String cadena2 = "hola";
+boolean resultado = StringUtils.equals(cadena1, cadena2); // Devuelve true
+----------------------------------------------------------------------------------------------------------------------------------------
+
+4to Método substring(): Este método extrae una subcadena de una cadena dada, de manera segura para valores nulos
+----------------------------------------------------------------------------------------------------------------------------------------
+String cadena = "hola mundo";
+String resultado = StringUtils.substring(cadena, 0, 4); // Devuelve "hola"
+----------------------------------------------------------------------------------------------------------------------------------------
+
+5to Método countMatches(): Este método cuenta el número de apariciones de una subcadena dentro de una cadena
+----------------------------------------------------------------------------------------------------------------------------------------
+String cadena = "hola mundo hola";
+int resultado = StringUtils.countMatches(cadena, "hola"); // Devuelve 2
+----------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,64 @@
+package tareaUD8;
+
+import java.time.LocalDate;
+import java.util.Objects;
+
+public class Vehiculo implements Comparable<Vehiculo> {
+
+    private String marca;
+    private String matricula;
+    private int numKM;
+    private LocalDate fechaMatriculacion;
+    private String descripcion;
+    private double precio;
+    private String nombrePropietario;
+    private String dniPropietario;
+
+    public Vehiculo(String marca, String matricula, int numKM, LocalDate fechaMatriculacion, String descripcion,
+                    double precio, String nombrePropietario, String dniPropietario) {
+        this.marca = marca;
+        this.matricula = matricula;
+        this.numKM = numKM;
+        this.fechaMatriculacion = fechaMatriculacion;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.nombrePropietario = nombrePropietario;
+        this.dniPropietario = dniPropietario;
+    }
+
+    // Getters y setters
+
+    
+    //Métodos
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehiculo vehiculo = (Vehiculo) o;
+        return Objects.equals(matricula, vehiculo.matricula);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(matricula);
+    }
+
+    @Override
+    public int compareTo(Vehiculo o) {
+        return matricula.compareTo(o.matricula);
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "marca='" + marca + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", numKM=" + numKM +
+                ", fechaMatriculacion=" + fechaMatriculacion +
+                ", descripcion='" + descripcion + '\'' +
+                ", precio=" + precio +
+                ", nombrePropietario='" + nombrePropietario + '\'' +
+                ", dniPropietario='" + dniPropietario + '\'' +
+                '}';
+    }
+}

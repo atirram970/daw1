@@ -1,0 +1,21 @@
+package unidad6;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class ej2 {
+
+    public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Introduce el nombre del primer fichero: ");
+    String fileA = scan.nextLine();
+    String rutaA = "ficheros/" + fileA;
+    System.out.print("Introduce el nombre del segundo fichero: ");
+    String fileB = scan.nextLine();
+    String rutaB = "ficheros/" + fileB;
+    System.out.print("Introduce la ruta de destino: ");
+    String fileDestino = scan.nextLine();
+    String rutaDestino = "ficheros/" + fileDestino + "/";
+    String extArray[] = rutaA.split("\\.");
+    }
+}

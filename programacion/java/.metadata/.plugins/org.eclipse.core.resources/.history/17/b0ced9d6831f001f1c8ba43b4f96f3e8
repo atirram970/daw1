@@ -1,0 +1,46 @@
+package examenArray;
+
+import java.util.Iterator;
+
+public class Imagen {
+
+	public static void main(String[] args) {
+		generarImagen(5, 5);
+		contrasteImagen(imagen, )
+	}
+
+	/**
+	 * Método para mostrar la imagen
+	 * @param imagen
+	 */
+	private static void mostrarImagen(int imagen[][]) {
+		for (int i = 0; i < imagen.length; i++) {
+            for (int j = 0; j < imagen[i].length; j++) {
+                System.out.print(imagen[i][j] + " ");
+            }
+            System.out.println();
+        }
+	}
+	
+	/**
+     * Método para generar la imagen
+     * @param filas
+     * @param columnas
+     */
+	private static void generarImagen(int filas, int columnas) {
+		int min = -127;
+		int max = 128;
+		int[][] imagen = new int[filas][columnas];
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnas; j++) {
+				int numAleatorio = (int) (Math.random() * (max - min + 1) + min);
+				imagen[i][j] = numAleatorio;
+			}
+		}
+		System.out.println("Imagen Original");
+		mostrarImagen(imagen);
+	}
+	
+	
+
+}

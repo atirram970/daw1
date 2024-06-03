@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <libros>
+            <libro isbn="">
+                <titulo></titulo>
+                <autor></autor>
+                <editorial></editorial>
+                <fech_publica></fech_publica>
+                <precio></precio>
+                <num_pag></num_pag>
+            </libro>
+        </libros>

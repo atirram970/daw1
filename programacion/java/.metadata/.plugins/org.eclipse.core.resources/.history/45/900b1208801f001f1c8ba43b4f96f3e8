@@ -1,0 +1,100 @@
+package examenFicheros;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+import org.apache.commons.lang3.StringUtils;
+
+public class SuperEcoMercado {
+	private static Map<String, Float> productos = new HashMap<>();
+	private static Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		boolean compraIniciada = false;
+		while (true) {
+			try {
+				System.out.print("INPUT: ");
+				String input = scanner.nextLine();
+				String[] linea = input.split(" ");
+				String archivo = linea[1];
+				actualizarProductos(archivo);
+				if (linea[0].equals("0")) {
+					mostrarCompra();
+				} else if (linea[0].equals("UPDATE") && compraIniciada) {
+					System.out.println("updateando");
+					actualizarProductos(input);
+				} else if (!esNumeroEntero(input) == false && null != linea) {
+					System.out.println("num entero");
+					compraIniciada = true;
+				} else if (null != linea){
+					
+				}
+			} catch (Exception e) {
+			}
+		}
+	}
+	private static void mostrarCompra() {
+		System.out.println("\nProducto\tPrecio\tCantidad\tSubtotal");
+		System.out.println("------------------------------------------------------------------");
+		for (Map.Entry<String, Float> entry : productos.entrySet()) {
+            System.out.println(entry.getKey() + "\t\t" + formateaFloat(entry.getValue()) + "\t\t1\t\t" + formateaFloat(entry.getValue()));
+        }
+		System.out.println("------------------------------------------------------------------");
+		//System.out.println("Total: " + total + " €");
+		//System.out.println("\n");
+	}
+	/**
+	 * Devuelve true si la cadena str guarda el valor de un número entero
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static boolean esNumeroEntero(String str) {
+		if (str == null || str.isEmpty()) {
+			return false;
+		}
+		try {
+			Integer.parseInt(str);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
+	}
+	
+	/**
+	 * Devuelve una cadena de texto con el número con dos decimales
+	 * @param numero
+	 * @return
+	 */
+	public static String formateaFloat(float numero) {
+		return String.format("%.2f", numero);
+	}
+	
+	public static void actualizarProductos(String fileName) {
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("ficheros/" + fileName));
+			String line = br.readLine();
+			while (null != line) {
+				String[] partes = line.split(";");
+				if (partes.length == 2) {
+					String producto = partes[0].trim().toUpperCase();
+					float precio = Float.parseFloat(partes[1].trim());
+					if (precio > 0) {
+						productos.put(producto, precio);
+					} else if (precio <= 0) {
+						productos.remove(producto);
+					}
+				}
+				line = br.readLine();
+			}
+			System.out.println("PRODUCTOS ACTUALIZADOS CON ÉXITO");
+			br.close();
+		} catch (IOException e) {
+			System.out.println("Error al leer el archivo: " + e.getMessage());
+		}
+	}
+}

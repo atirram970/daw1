@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            <!--original-->
+            <!--
+            No tiene nodo padre, esta desordenado y tiene espacioes en autor
+            <pelicula>
+                <titulo>Con faldas y a lo loco</titulo>
+                <director>Billy Wilder</director>
+            </pelicula>
+            <pelicula>
+            <director>Leo McCarey</director>
+            <titulo>Sopa de Ganso</titulo>
+            </pelicula>
+            <autor  />barto</autor>
+            -->
+            <peliculas>
+                <pelicula>
+                    <titulo>Con faldas y a lo loco</titulo>
+                    <director>Billy Wilder</director>
+                </pelicula>
+                <pelicula>
+                <director>Leo McCarey</director>
+                <titulo>Sopa de Ganso</titulo>
+                <autor>barto</autor>
+                </pelicula>
+            </peliculas>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    **Enunciado**
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE perro [
+ <!ELEMENT perro (edad, nombre)>
+ <!ELEMENT edad (#PCDATA)>
+ <!ELEMENT nombre (#PCDATA)>
+]>
+<perro>
+ <nombre>Pancho</nombre>
+ <edad>8</edad>
+</perro>
+-->
+<!DOCTYPE perro [
+ <!ELEMENT perro (edad, nombre)>
+ <!ELEMENT edad (#PCDATA)>
+ <!ELEMENT nombre (#PCDATA)>
+]>
+<perro>
+    <edad>8</edad>
+    <nombre>Pancho</nombre>
+</perro>

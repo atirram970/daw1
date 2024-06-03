@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE biblioteca SYSTEM "ejemplo.dtd">
+<biblioteca>
+    <libro>
+        <id>1</id>
+        <nombre>Pinocho</nombre>
+        <isbn>9876543210</isbn>
+        <autor>Fulano</autor>
+        <fec_creac>20/05/2003</fec_creac>
+        <fec_prest>30/08/2012</fec_prest>
+        <fec_devol>15/09/2012</fec_devol>
+    </libro>
+</biblioteca>

@@ -1,0 +1,21 @@
+-- Para pasar a trabajar con sql en mysql shell
+\sql
+-- Para conectar con mysql shell
+\connect root@localhost
+-- Para crear una nueva base de datos
+CREATE DATABASE nombre_de_tu_base_de_datos;
+-- Para crear un usuario con permisos de lectura y modificación
+CREATE USER 'atirram970'@'localhost' IDENTIFIED BY '2104';
+GRANT ALL PRIVILEGES ON nombre_de_tu_base_de_datos.* TO 'tu_usuario'@'localhost';
+FLUSH PRIVILEGES;
+-- Para usar la base de datos que necesites
+USE nombre_de_tu_base_de_datos;
+
+--Para crear una tabla, en este caso concreto la del programa gestisimal
+CREATE TABLE articulos (
+  codigo VARCHAR(6) PRIMARY KEY,
+  descr VARCHAR(50),
+  pre_compra DECIMAL(3,2),
+  pre_venta DECIMAL(3,2),
+  stock INT
+);

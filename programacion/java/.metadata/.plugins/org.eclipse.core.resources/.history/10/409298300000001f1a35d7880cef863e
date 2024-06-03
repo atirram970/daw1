@@ -1,0 +1,81 @@
+// Clase Persona
+package unidad6.edificio;
+
+import java.util.Map;
+import java.util.HashMap;
+
+public class Persona implements Comparable<Persona> {
+    // Atributos
+    private String dni;
+    private String nombre;
+    private String apellidos;
+    private Map<String, String> telefonos;
+
+    // Constructor
+    public Persona(String dni, String nombre, String apellidos) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.telefonos = new HashMap<>();
+    }
+
+    // Getters y setters
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public Map<String, String> getTelefonos() {
+        return new HashMap<>(telefonos);
+    }
+
+    // Métodos
+    @Override
+    public int compareTo(Persona otraPersona) {
+        return this.apellidos.compareTo(otraPersona.apellidos);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (!(obj instanceof Persona)) return false;
+        Persona otraPersona = (Persona) obj;
+        return this.dni.equals(otraPersona.dni);
+    }
+
+    @Override
+    public int hashCode() {
+        return dni.hashCode();
+    }
+
+    public void añadirTelefono(String numero, String telefono) {
+        telefonos.put(numero, telefono);
+    }
+
+    public void eliminarTelefono(String numero) {
+        telefonos.remove(numero);
+    }
+
+    public Map<String, String> obtenerTelefonos() {
+        return new HashMap<>(telefonos);
+    }
+}

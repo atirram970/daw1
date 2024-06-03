@@ -1,0 +1,51 @@
+package tareaUD8;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class VehiculosDAO {
+    private Set<Vehiculo> vehiculos;
+    private int numVehiculos;
+    private final int CAPACIDAD_MAX = 500;
+
+    public VehiculosDAO() {
+        this.numVehiculos = 0;
+        this.vehiculos = new TreeSet<Vehiculo>();
+    }
+
+    public int insertarVehiculo(Vehiculo v) {
+        int codReturn = -2;
+        if (numVehiculos >= CAPACIDAD_MAX) {
+            codReturn = -1;
+        } else {
+            try {
+                Connection connection = DatabaseManager.getConnection();
+                String query = "INSERT INTO vehiculos (marca, matricula, num_km, fecha_matriculacion, descripcion, precio, nombre_propietario, dni_propietario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, v.getMarca());
+                preparedStatement.setString(2, v.getMatricula());
+                preparedStatement.setInt(3, v.getNumKM());
+                preparedStatement.setDate(4, java.sql.Date.valueOf(v.getFechaMatriculacion()));
+                preparedStatement.setString(5, v.getDescripcion());
+                preparedStatement.setDouble(6, v.getPrecio());
+                preparedStatement.setString(7, v.getNombrePropietario());
+                preparedStatement.setString(8, v.getDniPropietario());
+                int rowsAffected = preparedStatement.executeUpdate();
+                if (rowsAffected > 0) {
+                    vehiculos.add(v);
+                    numVehiculos++;
+                    codReturn = 0;
+                }
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return codReturn;
+    }
+
+    // Otros métodos CRUD y de gestión
+}

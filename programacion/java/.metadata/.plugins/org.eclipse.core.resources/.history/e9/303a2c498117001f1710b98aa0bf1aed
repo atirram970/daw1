@@ -1,0 +1,5 @@
+package conectarABD;
+
+public class DatabaseManager {
+
+}

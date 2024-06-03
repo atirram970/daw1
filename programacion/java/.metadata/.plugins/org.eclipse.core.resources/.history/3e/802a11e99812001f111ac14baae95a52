@@ -1,0 +1,23 @@
+package unidad6;
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class ejRepaso1 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		 HashSet<String> set = new HashSet<>();
+		String nombre ="";
+		boolean fin = false;
+		do {
+			System.out.println("Dame un nombre: ");
+			nombre = scan.nextLine();
+			if (nombre.equals("fin")) {
+				fin = true;
+			} else {
+				
+			}
+		}while (!fin);
+		scan.close();
+    }
+}

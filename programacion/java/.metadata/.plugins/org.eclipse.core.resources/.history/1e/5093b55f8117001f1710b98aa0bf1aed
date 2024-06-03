@@ -1,0 +1,6 @@
+package conectarABD;
+
+public class DatabaseManager {
+	private static final String URL = "jdbc:mysql://localhost:3306/unidad8";
+	private static final String USER = "";
+}

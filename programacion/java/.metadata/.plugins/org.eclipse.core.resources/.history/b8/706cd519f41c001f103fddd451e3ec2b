@@ -1,0 +1,141 @@
+package tareaUD8;
+
+import java.time.LocalDate;
+import java.util.Set;
+
+/**
+ * La clase Concesionario gestiona las operaciones relacionadas con los vehículos en el concesionario.
+ */
+public class Concesionario {
+    private VehiculosDAO vehiculosDAO;
+
+    /**
+     * Constructor de la clase Concesionario.
+     */
+    public Concesionario() {
+        this.vehiculosDAO = new VehiculosDAO();
+    }
+
+    /**
+     * Inserta un nuevo vehículo en el concesionario.
+     * 
+     * @param v El vehículo a insertar.
+     * @return El resultado de la inserción:
+     *         -2 si el vehículo ya existe,
+     *         -1 si el concesionario está lleno,
+     *         0 si el vehículo se insertó correctamente.
+     */
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class Concesionario {
+        private int capacidad;
+        private List<Vehiculo> vehiculos;
+
+        public Concesionario(int capacidad) {
+            this.capacidad = capacidad;
+            this.vehiculos = new ArrayList<>();
+        }
+
+        // Otros métodos de la clase Concesionario
+
+        public int insertarVehiculo(Vehiculo v) {
+            // Verificar si la matrícula ya está en uso
+            for (Vehiculo vehiculo : vehiculos) {
+                if (vehiculo.getMatricula().equals(v.getMatricula())) {
+                    System.out.println("No se pudo crear el vehículo. La matrícula ya está en uso.");
+                    return -2;
+                }
+            }
+
+            // Si el concesionario está lleno
+            if (vehiculos.size() >= capacidad) {
+                System.out.println("El concesionario está lleno.");
+                return -1;
+            }
+
+            // Insertar el vehículo
+            vehiculos.add(v);
+            return 0;
+        }
+
+
+
+    /**
+     * Lista todos los vehículos almacenados en el concesionario.
+     */
+    public void listarVehiculos() {
+        Set<Vehiculo> vehiculos = vehiculosDAO.listarVehiculos();
+        for (Vehiculo v : vehiculos) {
+            System.out.println(v);
+        }
+    }
+
+    /**
+     * Busca un vehículo por su matrícula en el concesionario.
+     * 
+     * @param matricula La matrícula del vehículo a buscar.
+     * @return El vehículo encontrado o null si no se encontró ningún vehículo con esa matrícula.
+     */
+    public Vehiculo buscaVehiculo(String matricula) {
+        return vehiculosDAO.buscarVehiculo(matricula);
+    }
+
+    /**
+     * Elimina un vehículo del concesionario.
+     * 
+     * @param matricula La matrícula del vehículo a eliminar.
+     * @return true si se eliminó correctamente, false en caso contrario.
+     */
+    public boolean eliminarVehiculo(String matricula) {
+        return vehiculosDAO.eliminarVehiculo(matricula);
+    }
+
+    /**
+     * Actualiza un campo específico de un vehículo en el concesionario.
+     * 
+     * @param matricula La matrícula del vehículo a actualizar.
+     * @param campo El nombre del campo a actualizar.
+     * @param nuevoValor El nuevo valor del campo.
+     * @return true si se actualizó correctamente, false en caso contrario.
+     */
+    public boolean actualizarVehiculo(String matricula, String campo, String nuevoValor) {
+        return vehiculosDAO.actualizarVehiculo(matricula, campo, nuevoValor);
+    }
+
+    /**
+     * Actualiza un campo específico de un vehículo en el concesionario.
+     * 
+     * @param matricula La matrícula del vehículo a actualizar.
+     * @param campo El nombre del campo a actualizar.
+     * @param nuevoValor El nuevo valor del campo.
+     * @return true si se actualizó correctamente, false en caso contrario.
+     */
+    public boolean actualizarVehiculo(String matricula, String campo, int nuevoValor) {
+        return vehiculosDAO.actualizarVehiculo(matricula, campo, nuevoValor);
+    }
+
+    /**
+     * Actualiza un campo específico de un vehículo en el concesionario.
+     * 
+     * @param matricula La matrícula del vehículo a actualizar.
+     * @param campo El nombre del campo a actualizar.
+     * @param nuevoValor El nuevo valor del campo.
+     * @return true si se actualizó correctamente, false en caso contrario.
+     */
+    public boolean actualizarVehiculo(String matricula, String campo, double nuevoValor) {
+        return vehiculosDAO.actualizarVehiculo(matricula, campo, nuevoValor);
+    }
+
+    /**
+     * Actualiza un campo específico de un vehículo en el concesionario.
+     * 
+     * @param matricula La matrícula del vehículo a actualizar.
+     * @param campo El nombre del campo a actualizar.
+     * @param nuevoValor El nuevo valor del campo.
+     * @return true si se actualizó correctamente, false en caso contrario.
+     */
+    public boolean actualizarVehiculo(String matricula, String campo, LocalDate nuevoValor) {
+        return vehiculosDAO.actualizarVehiculo(matricula, campo, nuevoValor);
+    }
+}

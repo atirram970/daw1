@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS gestisimal;
+CREATE DATABASE gestisimal;
+USE gestisimal;
+
+CREATE TABLE articulos (
+	codigo
+	descr
+	pre_compra
+	pre_venta
+);

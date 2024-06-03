@@ -1,0 +1,28 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+div
+{
+    border: 1px solid black;
+}
+
+div#logo
+{
+    width: 15%;
+    height: 220px;
+    overflow: hidden;
+    float: left;
+}
+
+div#titulo
+{
+    width: 85%;
+    height: 220px;
+    float: left;
+    text-align: center;
+    font-size: 80px;
+}
